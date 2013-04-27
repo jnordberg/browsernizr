@@ -1,6 +1,6 @@
 {
   "name": "browsernizr",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Modernizr wrapper for use with browserify",
   "main": "index.js",
   "repository": "",
