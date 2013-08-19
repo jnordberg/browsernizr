@@ -1,11 +1,10 @@
-
 # Browsernizr
 
 Modernizer wrapper for use with browserify (or some other node-style browser module loading system).
 
 ## Usage
 
-`npm install browsernzr`
+`npm install browsernizr`
 
 ```javascript
 
