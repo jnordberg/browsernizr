@@ -2,6 +2,21 @@ var Modernizr = require('./../lib/Modernizr');
 var createElement = require('./../lib/createElement');
 var testStyles = require('./../lib/testStyles');
 
+/*!
+{
+  "name": "Unicode characters",
+  "property": "unicode",
+  "tags": ["encoding"],
+  "warnings": [
+    "positive Unicode support doesn't mean you can use it inside <title>, this seams more related to OS & Language packs"
+  ]
+}
+!*/
+/* DOC
+
+Detects if unicode characters are supported in the current document.
+
+*/
 
   /**
    * Unicode special character support
@@ -9,8 +24,6 @@ var testStyles = require('./../lib/testStyles');
    * Detection is made by testing missing glyph box rendering against star character
    * If widths are the same, this "probably" means the browser didn't support the star character and rendered a glyph box instead
    * Just need to ensure the font characters have different widths
-   *
-   * Warning : positive Unicode support doesn't mean you can use it inside <title>, this seams more related to OS & Language packs
    */
   Modernizr.addTest('unicode', function() {
     var bool;

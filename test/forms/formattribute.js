@@ -2,9 +2,21 @@ var Modernizr = require('./../../lib/Modernizr');
 var createElement = require('./../../lib/createElement');
 var docElement = require('./../../lib/docElement');
 
+/*!
+{
+  "name": "input[form] Attribute",
+  "property": "formattribute",
+  "tags": ["attribute", "forms", "input"]
+}
+!*/
+/* DOC
 
-  // Detects whether input form="form_id" is available on the platform
-  // E.g. IE 10 (and below), don't support this
+Detects whether input form="form_id" is available on the platform
+E.g. IE 10 (and below), don't support this
+
+*/
+
+
   Modernizr.addTest('formattribute', function() {
     var form = createElement('form');
     var input = createElement('input');

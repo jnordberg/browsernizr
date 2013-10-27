@@ -19,5 +19,5 @@ When used on an `<a>`, this attribute signifies that the resource it points to s
 
 */
 
-  Modernizr.addTest('adownload', 'download' in createElement('a'));
+  Modernizr.addTest('adownload', !window.externalHost && 'download' in createElement('a'));
 

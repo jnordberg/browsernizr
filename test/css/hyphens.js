@@ -13,7 +13,8 @@ var addTest = require('./../../lib/addTest');
   "authors": ["David Newton"],
   "warnings": [
     "These tests currently require document.body to be present",
-    "If loading Hyphenator.js via Modernizr.load, be cautious of issue 158: http://code.google.com/p/hyphenator/issues/detail?id=158"
+    "If loading Hyphenator.js via Modernizr.load, be cautious of issue 158: http://code.google.com/p/hyphenator/issues/detail?id=158",
+    "This is very large – only include it if you absolutely need it"
     ],
   "notes": [
     "csshyphens - tests hyphens:auto actually adds hyphens to text",
@@ -198,7 +199,7 @@ var addTest = require('./../../lib/addTest');
 
       addTest("csshyphens", function() {
 
-        if (!testAllProps('hyphens')) return false;
+        if (!testAllProps('hyphens', 'auto', true)) return false;
 
         /* Chrome lies about its hyphens support so we need a more robust test
            crbug.com/107111

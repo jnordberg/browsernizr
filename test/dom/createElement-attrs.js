@@ -1,9 +1,18 @@
 var Modernizr = require('./../../lib/Modernizr');
 var createElement = require('./../../lib/createElement');
 
-
-  // by james a rosen.
-  // https://github.com/Modernizr/Modernizr/issues/258
+/*!
+{
+  "name": "createElement with Attributes",
+  "property": ["createelementattrs", "createelement-attrs"],
+  "tags": ["dom"],
+  "authors": ["James A. Rosen"],
+  "notes": [{
+    "name": "Related Github Issue",
+    "href": "https://github.com/Modernizr/Modernizr/issues/258"
+  }]
+}
+!*/
 
   Modernizr.addTest('createelementattrs', function() {
     try {

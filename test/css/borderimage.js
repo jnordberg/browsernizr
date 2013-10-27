@@ -11,5 +11,5 @@ var testAllProps = require('./../../lib/testAllProps');
 }
 !*/
 
-  Modernizr.addTest('borderimage', testAllProps('borderImage'));
+    Modernizr.addTest('borderimage', testAllProps('borderImage', 'url() 1', true));
 

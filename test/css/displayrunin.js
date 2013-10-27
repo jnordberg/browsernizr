@@ -1,5 +1,5 @@
 var Modernizr = require('./../../lib/Modernizr');
-var testStyles = require('./../../lib/testStyles');
+var testAllProps = require('./../../lib/testAllProps');
 
 /*!
 {
@@ -17,11 +17,6 @@ var testStyles = require('./../../lib/testStyles');
 }
 !*/
 
-  testStyles(' #modernizr { display: run-in; } ', function( elem, rule ) {
-    var ret = (window.getComputedStyle ?
-               getComputedStyle(elem, null).getPropertyValue('display') :
-               elem.currentStyle['display']);
-
-    Modernizr.addTest('displayrunin', ret == 'run-in', { aliases: ['display-runin'] });
-  });
+  Modernizr.addTest('displayrunin', testAllProps('display', 'run-in'),
+    { aliases: ['display-runin'] });
 

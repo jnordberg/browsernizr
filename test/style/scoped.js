@@ -1,11 +1,25 @@
 var Modernizr = require('./../../lib/Modernizr');
 var createElement = require('./../../lib/createElement');
 
+/*!
+{
+  "name": "style[scoped]",
+  "property": "stylescoped",
+  "caniuse": "style-scoped",
+  "tags": ["dom"],
+  "authors": ["Cătălin Mariș"],
+  "notes": [{
+    "name": "WHATWG Specification",
+    "href": "http://www.whatwg.org/specs/web-apps/current-work/multipage/semantics.html#attr-style-scoped"
+  }],
+  "polyfills": ["scoped-styles"]
+}
+!*/
+/* DOC
 
-  // Browser support test for <style scoped>
-  // http://www.w3.org/TR/html5/the-style-element.html#attr-style-scoped
-  //
-  // by @alrra
+Support for the `scoped` attribute of the `<style>` element.
+
+*/
 
   Modernizr.addTest('stylescoped', 'scoped' in createElement('style'));
 

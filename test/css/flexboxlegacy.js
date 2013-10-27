@@ -14,5 +14,5 @@ var testAllProps = require('./../../lib/testAllProps');
 }
 !*/
 
-  Modernizr.addTest('flexboxlegacy', testAllProps('boxDirection'));
+  Modernizr.addTest('flexboxlegacy', testAllProps('boxDirection', 'reverse', true));
 

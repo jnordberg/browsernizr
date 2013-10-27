@@ -11,5 +11,5 @@ var testAllProps = require('./../../lib/testAllProps');
 }
 !*/
 
-  Modernizr.addTest('boxshadow', testAllProps('boxShadow'));
+  Modernizr.addTest('boxshadow', testAllProps('boxShadow', '1px 1px', true));
 

@@ -1,5 +1,13 @@
 var Modernizr = require('./../../lib/Modernizr');
 
+/*!
+{
+  "name": "Session Storage",
+  "property": "sessionstorage",
+  "tags": ["storage"],
+  "polyfills": ["joshuabell-polyfill", "cupcake", "sessionstorage"]
+}
+!*/
 
   // Because we are forced to try/catch this, we'll go aggressive.
 

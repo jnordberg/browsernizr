@@ -1,10 +1,26 @@
 var Modernizr = require('./../../lib/Modernizr');
 var addTest = require('./../../lib/addTest');
 
+/*!
+{
+  "name": "Workers from Blob URIs",
+  "property": "blobworkers",
+  "caniuse" : "blobworkers",
+  "tags": ["performance", "workers"],
+  "notes": [{
+    "name": "W3C Reference",
+    "href": "http://www.w3.org/TR/workers/"
+  }],
+  "knownBugs": ["This test may output garbage to console."],
+  "authors": ["Jussi Kalliokoski"],
+  "async": true
+}
+!*/
+/* DOC
 
-  // by jussi-kalliokoski
-  // This test is asynchronous. Watch out.
-  // The test will potentially add garbage to console.
+Detects support for creating Web Workers from Blob URIs.
+
+*/
 
   Modernizr.addAsyncTest(function() {
     try {

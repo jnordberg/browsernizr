@@ -3,10 +3,25 @@ var prefixed = require('./../../lib/prefixed');
 var docElement = require('./../../lib/docElement');
 var createElement = require('./../../lib/createElement');
 
+/*!
+{
+  "name": "CSS wrap-flow",
+  "property": "wrapflow",
+  "tags": ["css"],
+  "notes": [
+    "This is a separate test from the rest of CSS Exclusions as as IE10 has just implemented this alone.",
+    {
+      "name": "W3C Exclusions spec",
+      "href": "http://www.w3.org/TR/css3-exclusions"
+    },
+    {
+      "name": "Example by Adobe",
+      "href": "http://html.adobe.com/webstandards/cssexclusions"
+    }
+  ]
+}
+!*/
 
-    // http://www.w3.org/TR/css3-exclusions
-    // Examples: http://html.adobe.com/webstandards/cssexclusions
-    // Separate test for `wrap-flow` property as IE10 has just implemented this alone
     Modernizr.addTest('wrapflow', function () {
         var prefixedProperty = prefixed('wrapFlow');
         if (!prefixedProperty)

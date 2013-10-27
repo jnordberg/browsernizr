@@ -14,5 +14,5 @@ var testAllProps = require('./../../lib/testAllProps');
 }
 !*/
 
-  Modernizr.addTest('flexbox', testAllProps('flexWrap'));
+  Modernizr.addTest('flexbox', testAllProps('flexBasis', '1px', true));
 

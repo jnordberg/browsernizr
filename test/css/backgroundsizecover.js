@@ -1,5 +1,5 @@
 var Modernizr = require('./../../lib/Modernizr');
-var testStyles = require('./../../lib/testStyles');
+var testAllProps = require('./../../lib/testAllProps');
 
 /*!
 {
@@ -13,13 +13,6 @@ var testStyles = require('./../../lib/testStyles');
 }
 !*/
 
-
-  testStyles('#modernizr{background-size:cover}', function( elem ) {
-    var style = window.getComputedStyle ?
-      window.getComputedStyle(elem, null)
-      : elem.currentStyle;
-
-    Modernizr.addTest('bgsizecover', style.backgroundSize == 'cover' );
-  });
-
+  // Must test value, as this specifically tests the `cover` value
+  Modernizr.addTest('bgsizecover', testAllProps('backgroundSize', 'cover'));
 

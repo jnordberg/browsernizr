@@ -3,9 +3,20 @@ var testAllProps = require('./../../lib/testAllProps');
 var testStyles = require('./../../lib/testStyles');
 var docElement = require('./../../lib/docElement');
 
+/*!
+{
+  "name": "CSS Transforms 3D",
+  "property": "csstransforms3d",
+  "caniuse": "transforms3d",
+  "tags": ["css"],
+  "warnings": [
+    "Chrome may occassionally fail this test on some systems; more info: https://code.google.com/p/chromium/issues/detail?id=129004"
+  ]
+}
+!*/
 
   Modernizr.addTest('csstransforms3d', function() {
-    var ret = !!testAllProps('perspective');
+    var ret = !!testAllProps('perspective', '1px', true);
 
     // Webkit's 3D transforms are passed off to the browser's own graphics renderer.
     //   It works fine in Safari on Leopard and Snow Leopard, but not in Chrome in
@@ -20,6 +31,7 @@ var docElement = require('./../../lib/docElement');
         ret = node.offsetLeft === 9 && node.offsetHeight === 5;
       });
     }
+
     return ret;
   });
 

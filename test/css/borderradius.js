@@ -15,5 +15,5 @@ var testAllProps = require('./../../lib/testAllProps');
 }
 !*/
 
-  Modernizr.addTest('borderradius', testAllProps('borderRadius'));
+  Modernizr.addTest('borderradius', testAllProps('borderRadius', '0px', true));
 

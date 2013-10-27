@@ -3,13 +3,23 @@ var createElement = require('./../../lib/createElement');
 var docElement = require('./../../lib/docElement');
 var testStyles = require('./../../lib/testStyles');
 
+/*!
+{
+  "name": "Form Validation",
+  "property": "formvalidation",
+  "tags": ["forms", "validation", "attribute"]
+}
+!*/
+/* DOC
 
-  // This implementation only tests support for interactive form validation.
-  // To check validation for a specific type or a specific other constraint,
-  // the test can be combined:
-  //    - Modernizr.inputtypes.numer && Modernizr.formvalidation (browser supports rangeOverflow, typeMismatch etc. for type=number)
-  //    - Modernizr.input.required && Modernizr.formvalidation (browser supports valueMissing)
-  //
+This implementation only tests support for interactive form validation.
+To check validation for a specific type or a specific other constraint,
+the test can be combined:
+
+- `Modernizr.inputtypes.number && Modernizr.formvalidation` (browser supports rangeOverflow, typeMismatch etc. for type=number)
+- `Modernizr.input.required && Modernizr.formvalidation` (browser supports valueMissing)
+
+*/
 
     Modernizr.addTest('formvalidation', function() {
       var form = createElement('form');

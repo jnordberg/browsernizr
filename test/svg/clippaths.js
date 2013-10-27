@@ -1,12 +1,25 @@
 var Modernizr = require('./../../lib/Modernizr');
 var toStringFn = require('./../../lib/toStringFn');
 
+/*!
+{
+  "name": "SVG clip paths",
+  "property": "svgclippaths",
+  "tags": ["svg"],
+  "notes": [{
+    "name": "Demo",
+    "href": "http://srufaculty.sru.edu/david.dailey/svg/newstuff/clipPath4.svg"
+  }]
+}
+!*/
+/* DOC
 
-  // This test is only for clip paths in SVG proper, not clip paths on HTML content
-  // demo: srufaculty.sru.edu/david.dailey/svg/newstuff/clipPath4.svg
+Detects support for clip paths in SVG (only, not on HTML content).
 
-  // However read the comments to dig into applying SVG clippaths to HTML content here:
-  //   github.com/Modernizr/Modernizr/issues/213#issuecomment-1149491
+See [this discussion](http://github.com/Modernizr/Modernizr/issues/213) regarding applying SVG clip paths to HTML content.
+
+*/
+
   Modernizr.addTest('svgclippaths', function() {
     return !!document.createElementNS &&
       /SVGClipPath/.test(toStringFn.call(document.createElementNS('http://www.w3.org/2000/svg', 'clipPath')));

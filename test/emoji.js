@@ -2,9 +2,18 @@ var Modernizr = require('./../lib/Modernizr');
 var createElement = require('./../lib/createElement');
 require('./../lib/test/canvastext');
 
+/*!
+{
+  "name": "Emoji",
+  "property": "emoji"
+}
+!*/
+/* DOC
 
-  // Requires a Modernizr build with `canvastext` included
-  // http://www.modernizr.com/download/#-canvas-canvastext
+Detects support for emoji character sets.
+
+*/
+
   Modernizr.addTest('emoji', function() {
     if (!Modernizr.canvastext) return false;
     var node = createElement('canvas'),

@@ -1,7 +1,19 @@
 var Modernizr = require('./../lib/Modernizr');
 
+/*!
+{
+  "name": "Cookies",
+  "property": "cookies",
+  "tags": ["storage"],
+  "authors": ["tauren"]
+}
+!*/
+/* DOC
 
-  // by tauren
+Detects whether cookie support is enabled.
+
+*/
+
   // https://github.com/Modernizr/Modernizr/issues/191
 
   Modernizr.addTest('cookies', function () {

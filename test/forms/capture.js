@@ -5,8 +5,7 @@ var createElement = require('./../../lib/createElement');
 {
   "name": "input[capture] Attribute",
   "property": "capture",
-  "caniuse" : "capture",
-  "tags": ["video", "image", "sound", "media", "attribute"],
+  "tags": ["video", "image", "audio", "media", "attribute"],
   "notes": [{
     "name": "W3C draft: HTML Media Capture",
     "href": "http://www.w3.org/TR/html-media-capture/"

@@ -3,9 +3,23 @@ var createElement = require('./../../lib/createElement');
 var addTest = require('./../../lib/addTest');
 require('./../../lib/test/canvas');
 
+/*!
+{
+  "name": "Animated PNG",
+  "async": true,
+  "property": "apng",
+  "tags": ["image"],
+  "notes": [{
+    "name": "Wikipedia Article",
+    "href": "http://en.wikipedia.org/wiki/APNG"
+  }]
+}
+!*/
+/* DOC
 
-  // Animated PNG
-  // http://en.wikipedia.org/wiki/APNG
+Test for animated png support.
+
+*/
 
   Modernizr.addAsyncTest(function () {
     if (!Modernizr.canvas) {
@@ -20,7 +34,8 @@ require('./../../lib/test/canvas');
       addTest('apng', function () {
         if (typeof canvas.getContext == 'undefined') {
           return false;
-        } else {
+        }
+        else {
           ctx.drawImage(image, 0, 0);
           return ctx.getImageData(0, 0, 1, 1).data[3] === 0;
         }

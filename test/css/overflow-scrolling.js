@@ -14,5 +14,5 @@ var testAllProps = require('./../../lib/testAllProps');
 }
 !*/
 
-  Modernizr.addTest('overflowscrolling', testAllProps('overflowScrolling'));
+  Modernizr.addTest('overflowscrolling', testAllProps('overflowScrolling', 'touch', true));
 

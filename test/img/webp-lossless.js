@@ -1,12 +1,27 @@
 var Modernizr = require('./../../lib/Modernizr');
 var addTest = require('./../../lib/addTest');
 
+/*!
+{
+  "name": "Webp Lossless",
+  "async": true,
+  "property": ["webplossless", "webp-lossless"],
+  "tags": ["image"],
+  "authors": ["@amandeep", "Rich Bradshaw", "Ryan Seddon", "Paul Irish"],
+  "notes": [{
+    "name": "Webp Info",
+    "href": "http://code.google.com/speed/webp/"
+  },{
+    "name": "Webp Lossless Spec",
+    "href": "https://developers.google.com/speed/webp/docs/webp_lossless_bitstream_specification"
+  }]
+}
+!*/
+/* DOC
 
-  // code.google.com/speed/webp/
-  // tests for lossless webp support, as detailed in https://developers.google.com/speed/webp/docs/webp_lossless_bitstream_specification
-  // by @amandeep - based off of the img-webp-test
+Tests for non-alpha lossless webp support.
 
-  // This test is asynchronous. Watch out.
+*/
 
   Modernizr.addAsyncTest(function(){
     var image = new Image();
@@ -19,6 +34,6 @@ var addTest = require('./../../lib/addTest');
       addTest('webplossless', image.width == 1, { aliases: ['webp-lossless'] });
     };
 
-    image.src = 'data:image/webp;base64,UklGRhoAAABXRUJQVlA4TA0AAAAvAAAAEAcQERGIiP4HAA==';
+    image.src = 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=';
   });
 

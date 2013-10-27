@@ -1,5 +1,5 @@
 var Modernizr = require('./../../lib/Modernizr');
-var testStyles = require('./../../lib/testStyles');
+var testAllProps = require('./../../lib/testAllProps');
 
 /*!
 {
@@ -17,12 +17,7 @@ var testStyles = require('./../../lib/testStyles');
 }
 !*/
 
-  Modernizr.addTest('bgpositionxy', function() {
-    return testStyles('#modernizr {background-position: 3px 5px;}', function( elem ) {
-      var cssStyleDeclaration = window.getComputedStyle ? getComputedStyle(elem, null) : elem.currentStyle;
-      var xSupport = (cssStyleDeclaration.backgroundPositionX == '3px') || (cssStyleDeclaration['background-position-x'] == '3px');
-      var ySupport = (cssStyleDeclaration.backgroundPositionY == '5px') || (cssStyleDeclaration['background-position-y'] == '5px');
-      return xSupport && ySupport;
-    });
+  Modernizr.addTest('bgpositionxy', function () {
+    return testAllProps('backgroundPositionX', '3px', true) && testAllProps('backgroundPositionY', '5px', true);
   });
 

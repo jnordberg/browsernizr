@@ -10,5 +10,5 @@ var testAllProps = require('./../../lib/testAllProps');
 }
 !*/
 
-  Modernizr.addTest('cssreflections', testAllProps('boxReflect'));
+  Modernizr.addTest('cssreflections', testAllProps('boxReflect', 'above', true));
 

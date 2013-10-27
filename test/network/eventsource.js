@@ -1,8 +1,21 @@
 var Modernizr = require('./../../lib/Modernizr');
 
+/*!
+{
+  "name": "Server Sent Events",
+  "property": "eventsource",
+  "tags": ["network"],
+  "notes": [{
+    "name": "W3 Spec",
+    "href": "http://dev.w3.org/html5/eventsource/"
+  }]
+}
+!*/
+/* DOC
 
-  // server sent events aka eventsource
-  // dev.w3.org/html5/eventsource/
+Tests for server sent events aka eventsource.
 
-  Modernizr.addTest('eventsource', !!window.EventSource);
+*/
+
+  Modernizr.addTest('eventsource', 'EventSource' in window);
 

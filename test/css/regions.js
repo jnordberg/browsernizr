@@ -61,7 +61,7 @@ var docElement = require('./../../lib/docElement');
     content.style[flowIntoProperty] = flowName;
     flowedRect = content.getBoundingClientRect();
 
-    delta = flowedRect.left - plainRect.left;
+    delta = parseInt(flowedRect.left - plainRect.left, 10);
     docElement.removeChild(container);
     content = region = container = undefined;
 

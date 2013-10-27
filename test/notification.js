@@ -1,15 +1,26 @@
 var Modernizr = require('./../lib/Modernizr');
-var prefixed = require('./../lib/prefixed');
 
+/*!
+{
+  "name": "Notification",
+  "property": "notification",
+  "caniuse": "notifications",
+  "authors": ["Theodoor van Donge", "Hendrik Beskow"],
+  "notes": [{
+    "name": "HTML5 Rocks tutorial",
+    "href": "http://www.html5rocks.com/en/tutorials/notifications/quick/"
+  },{
+    "name": "W3C spec",
+    "href": "www.w3.org/TR/notifications/"
+  }],
+  "polyfills": ["desktop-notify", "html5-notifications"]
+}
+!*/
+/* DOC
 
-  // Notifications
-  // By Theodoor van Donge
+Detects support for the Notifications API
 
-  // window.webkitNotifications is only used by Chrome
-  // http://www.html5rocks.com/en/tutorials/notifications/quick/
+*/
 
-  // window.Notification only exist in the draft specs
-  // http://dev.w3.org/2006/webapi/WebNotifications/publish/Notifications.html#idl-if-Notification
-
-  Modernizr.addTest('notification', !!prefixed('Notifications', window));
+  Modernizr.addTest('notification', 'Notification' in window && 'permission' in window.Notification && 'requestPermission' in window.Notification);
 

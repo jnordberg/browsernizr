@@ -1,24 +1,34 @@
 var Modernizr = require('./../lib/Modernizr');
 var addTest = require('./../lib/addTest');
 
+/*!
+{
+  "name": "EXIF Orientation",
+  "property": "exiforientation",
+  "tags": ["image"],
+  "async": true,
+  "authors": ["Paul Sayre"],
+  "notes": [{
+    "name": "Article by Dave Perrett",
+    "href": "http://recursive-design.com/blog/2012/07/28/exif-orientation-handling-is-a-ghetto/"
+  },{
+    "name": "Article by Calvin Hass",
+    "href": "http://www.impulseadventure.com/photo/exif-orientation.html"
+  }]
+}
+!*/
+/* DOC
 
-  // EXIF Orientation test
+Detects support for EXIF Orientation in JPEG images.
 
-  // iOS looks at the EXIF Orientation flag in jpgs and rotates the image
-  // accordingly. Looks like most desktop browsers just ignore this data.
+iOS looks at the EXIF Orientation flag in JPEGs and rotates the image accordingly. Most desktop browsers just ignore this data.
 
-  // description:
-  //    recursive-design.com/blog/2012/07/28/exif-orientation-handling-is-a-ghetto/
-  //    www.impulseadventure.com/photo/exif-orientation.html
+*/
 
   // Bug trackers:
   //    bugzil.la/298619 (unimplemented)
   //    crbug.com/56845 (looks incomplete)
   //    webk.it/19688 (available upstream but its up all ports to turn on individually)
-  //
-
-  // detect by Paul Sayre
-
   Modernizr.addAsyncTest(function() {
     var img = new Image();
 

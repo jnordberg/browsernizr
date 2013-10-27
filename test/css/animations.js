@@ -16,5 +16,5 @@ var testAllProps = require('./../../lib/testAllProps');
 }
 !*/
 
-  Modernizr.addTest('cssanimations', testAllProps('animationName'));
+  Modernizr.addTest('cssanimations', testAllProps('animationName', 'a', true));
 

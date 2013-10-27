@@ -11,5 +11,5 @@ var testAllProps = require('./../../lib/testAllProps');
 }
 !*/
 
-  Modernizr.addTest('csscolumns', testAllProps('columnCount'));
+  Modernizr.addTest('csscolumns', testAllProps('columnCount', '1', true));
 
