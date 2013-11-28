@@ -3,7 +3,6 @@ var prefixed = require('./../../lib/prefixed');
 
 /*!
 {
-  "async": false,
   "authors": ["Cătălin Mariș"],
   "name": "Speech Synthesis API",
   "notes": [

@@ -10,6 +10,7 @@ var addTest = require('./../../lib/addTest');
   "caniuse": "css-hyphens",
   "property": ["csshyphens", "softhyphens", "softhyphensfind"],
   "tags": ["css"],
+  "async" : true,
   "authors": ["David Newton"],
   "warnings": [
     "These tests currently require document.body to be present",

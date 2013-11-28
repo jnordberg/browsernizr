@@ -3,7 +3,7 @@ var Modernizr = require('./../../lib/Modernizr');
 /*!
 {
   "name": "Web Cryptography API getRandomValues method",
-  "property": "window.crypto.getRandomValues",
+  "property": "getrandomvalues",
   "caniuse": "window.crypto.getRandomValues",
   "tags": ["crypto"],
   "authors": ["komachi"],
