@@ -19,4 +19,4 @@ Check if browser implements ECMAScript 5 Object strict mode.
 
 */
 
-  Modernizr.addTest('strictmode', (function(){ "use strict"; 
+  Modernizr.addTest('strictmode', (function(){ "use strict";}));
