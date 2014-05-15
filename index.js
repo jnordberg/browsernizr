@@ -2,7 +2,8 @@ var Modernizr = require('./lib/Modernizr'),
     ModernizrProto = require('./lib/ModernizrProto'),
     classes = require('./lib/classes'),
     testRunner = require('./lib/testRunner'),
-    setClasses = require('./lib/setClasses');
+    setClasses = require('./lib/setClasses'),
+    html5 = require('./lib/html5shiv');
 
 // Run each test
 testRunner();
