@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "Web Workers",
@@ -20,10 +18,7 @@ var Modernizr = require('./../../lib/Modernizr');
 }
 !*/
 /* DOC
-
 Detects support for the basic `Worker` API from the Web Workers spec. Web Workers provide a simple means for web content to run scripts in background threads.
-
 */
 
   Modernizr.addTest('webworkers', 'Worker' in window);
-

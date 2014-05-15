@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var addTest = require('./../../lib/addTest');
-
 /*!
 {
   "name": "JPEG XR (extended range)",
@@ -15,9 +12,7 @@ var addTest = require('./../../lib/addTest');
 }
 !*/
 /* DOC
-
 Test for JPEG XR support
-
 */
 
 
@@ -30,4 +25,3 @@ Test for JPEG XR support
 
     image.src = 'data:image/vnd.ms-photo;base64,SUm8AQgAAAAFAAG8AQAQAAAASgAAAIC8BAABAAAAAQAAAIG8BAABAAAAAQAAAMC8BAABAAAAWgAAAMG8BAABAAAAHwAAAAAAAAAkw91vA07+S7GFPXd2jckNV01QSE9UTwAZAYBxAAAAABP/gAAEb/8AAQAAAQAAAA==';
   });
-

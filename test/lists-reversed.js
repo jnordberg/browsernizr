@@ -1,6 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var createElement = require('./../lib/createElement');
-
 /*!
 {
   "name": "Reverse Ordered Lists",
@@ -9,14 +6,12 @@ var createElement = require('./../lib/createElement');
     "name": "Impressive Webs article",
     "href": "http://impressivewebs.com/reverse-ordered-lists-html5"
   }],
-  "polyfills": ["impressivewebs"]
+  "polyfills": ["impressivewebs"],
+  "builderAliases": ["lists_reversed"]
 }
 !*/
 /* DOC
-
 Detects support for the `reversed` attribute on the `<ol>` element.
-
 */
 
   Modernizr.addTest('olreversed', 'reversed' in createElement('ol'));
-

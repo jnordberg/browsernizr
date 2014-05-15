@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var addTest = require('./../../lib/addTest');
-
 /*!
 {
   "name": "Webp Lossless",
@@ -18,9 +15,7 @@ var addTest = require('./../../lib/addTest');
 }
 !*/
 /* DOC
-
 Tests for non-alpha lossless webp support.
-
 */
 
   Modernizr.addAsyncTest(function(){
@@ -36,4 +31,3 @@ Tests for non-alpha lossless webp support.
 
     image.src = 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=';
   });
-

@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "CSS Font rem Units",
@@ -8,6 +5,7 @@ var createElement = require('./../../lib/createElement');
   "authors": ["nsfmc"],
   "property": "cssremunit",
   "tags": ["css"],
+  "builderAliases": ["css_remunit"],
   "notes": [{
     "name": "W3C Spec",
     "href": "http://www.w3.org/TR/css3-values/#relative0"
@@ -30,4 +28,3 @@ var createElement = require('./../../lib/createElement');
     catch( er ) {}
     return (/rem/).test(div.style.fontSize);
   });
-

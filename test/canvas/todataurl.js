@@ -1,12 +1,9 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-require('./../../lib/test/canvas');
-
 /*!
 {
   "name": "canvas.toDataURL type support",
   "property": ["todataurljpeg", "todataurlpng", "todataurlwebp"],
   "tags": ["canvas"],
+  "builderAliases": ["canvas_todataurl_type"],
   "async" : false,
   "notes": [{
     "name": "HTML5 Spec",
@@ -27,5 +24,4 @@ require('./../../lib/test/canvas');
   Modernizr.addTest('todataurlwebp', function() {
     return !!Modernizr.canvas && canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
   });
-
 

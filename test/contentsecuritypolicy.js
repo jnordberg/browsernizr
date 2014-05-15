@@ -1,10 +1,7 @@
-var Modernizr = require('./../lib/Modernizr');
-
 /*!
 {
   "name": "Content Security Policy",
   "property": "contentsecuritypolicy",
-  "caniuse": "contentsecuritypolicy",
   "tags": ["security"],
   "notes": [{
     "name": "W3C spec",
@@ -16,10 +13,7 @@ var Modernizr = require('./../lib/Modernizr');
 }
 !*/
 /* DOC
-
 Detects support for the Content Security Policy protocol for mitigating and reporting security attacks.
-
 */
 
-  Modernizr.addTest('contentsecuritypolicy', 'SecurityPolicy' in document);
-
+  Modernizr.addTest('contentsecuritypolicy', ('securityPolicy' in document || 'SecurityPolicy' in document));

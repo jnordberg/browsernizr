@@ -1,5 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-
 /*!
 {
   "name": "WebSockets Support",
@@ -28,4 +26,3 @@ var Modernizr = require('./../lib/Modernizr');
 !*/
 
   Modernizr.addTest('websockets', 'WebSocket' in window && window.WebSocket.CLOSING === 2);
-

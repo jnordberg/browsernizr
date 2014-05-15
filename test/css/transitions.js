@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testAllProps = require('./../../lib/testAllProps');
-
 /*!
 {
   "name": "CSS Transitions",
@@ -11,4 +8,3 @@ var testAllProps = require('./../../lib/testAllProps');
 !*/
 
   Modernizr.addTest('csstransitions', testAllProps('transition', 'all', true));
-

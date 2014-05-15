@@ -1,7 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-var domPrefixes = require('./../../lib/domPrefixes');
-
 /*!
 {
   "name": "input[directory] Attribute",
@@ -11,11 +7,9 @@ var domPrefixes = require('./../../lib/domPrefixes');
 }
 !*/
 /* DOC
-
 When used on an `<input type="file">`, the `directory` attribute instructs
 the user agent to present a directory selection dialog instead of the usual
 file selection dialog.
-
 */
 
   Modernizr.addTest('fileinputdirectory', function() {
@@ -32,4 +26,3 @@ file selection dialog.
     }
     return false;
   });
-

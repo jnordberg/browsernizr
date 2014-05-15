@@ -1,7 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var prefixes = require('./../lib/prefixes');
-var testStyles = require('./../lib/testStyles');
-
 /*!
 {
   "name": "Touch Events",
@@ -22,7 +18,6 @@ var testStyles = require('./../lib/testStyles');
 }
 !*/
 /* DOC
-
 Indicates if the browser supports the W3C Touch Events API.
 
 This *does not* necessarily reflect a touchscreen device:
@@ -37,7 +32,6 @@ See this article: [You Can't Detect A Touchscreen](http://www.stucox.com/blog/yo
 It's recommended to bind both mouse and touch/pointer events simultaneously – see [this HTML5 Rocks tutorial](http://www.html5rocks.com/en/mobile/touchandmouse/).
 
 This test will also return `true` for Firefox 4 Multitouch support.
-
 */
 
   // Chrome (desktop) used to lie about its support on this, but that has since been rectified: http://crbug.com/36415
@@ -53,4 +47,3 @@ This test will also return `true` for Firefox 4 Multitouch support.
     }
     return bool;
   });
-

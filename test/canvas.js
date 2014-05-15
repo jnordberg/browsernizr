@@ -1,6 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var createElement = require('./../lib/createElement');
-
 /*!
 {
   "name": "Canvas",
@@ -11,9 +8,7 @@ var createElement = require('./../lib/createElement');
 }
 !*/
 /* DOC
-
 Detects support for the `<canvas>` element for 2D drawing.
-
 */
 
   // On the S60 and BB Storm, getContext exists, but always returns undefined
@@ -23,4 +18,3 @@ Detects support for the `<canvas>` element for 2D drawing.
     var elem = createElement('canvas');
     return !!(elem.getContext && elem.getContext('2d'));
   });
-

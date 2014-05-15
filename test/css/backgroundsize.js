@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testAllProps = require('./../../lib/testAllProps');
-
 /*!
 {
   "name": "Background Size",
@@ -15,4 +12,3 @@ var testAllProps = require('./../../lib/testAllProps');
 !*/
 
   Modernizr.addTest('backgroundsize', testAllProps('backgroundSize', '100%', true));
-

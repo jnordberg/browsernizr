@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "CSS rgba",
@@ -21,4 +18,3 @@ var createElement = require('./../../lib/createElement');
 
     return ('' + style.backgroundColor).indexOf('rgba') > -1;
   });
-

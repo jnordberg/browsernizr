@@ -1,6 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var prefixed = require('./../lib/prefixed');
-
 /*!
 {
   "name": "requestAnimationFrame",
@@ -17,10 +14,7 @@ var prefixed = require('./../lib/prefixed');
 }
 !*/
 /* DOC
-
 Detects support for the `window.requestAnimationFrame` API, for offloading animation repainting to the browser for optimized performance.
-
 */
 
   Modernizr.addTest('requestanimationframe', !!prefixed('requestAnimationFrame', window), { aliases: ['raf'] });
-

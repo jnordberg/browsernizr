@@ -1,11 +1,9 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "output Element",
   "property": "outputelem",
   "tags": ["elem"],
+  "builderAliases": ["elem_output"],
   "notes": [{
     "name": "WhatWG Spec",
     "href": "http://www.whatwg.org/specs/web-apps/current-work/multipage/the-button-element.html#the-output-element"
@@ -14,4 +12,3 @@ var createElement = require('./../../lib/createElement');
 !*/
 
   Modernizr.addTest('outputelem', 'value' in createElement('output'));
-

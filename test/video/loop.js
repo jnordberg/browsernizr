@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "Video Loop Attribute",
@@ -9,5 +6,4 @@ var createElement = require('./../../lib/createElement');
 }
 !*/
 
-    Modernizr.addTest('videoloop', 'loop' in createElement('video'));
-
+  Modernizr.addTest('videoloop', 'loop' in createElement('video'));

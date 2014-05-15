@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testXhrType = require('./../../lib/testXhrType');
-
 /*!
 {
   "name": "XMLHttpRequest xhr.responseType='blob'",
@@ -13,10 +10,7 @@ var testXhrType = require('./../../lib/testXhrType');
 }
 !*/
 /* DOC
-
 Tests for XMLHttpRequest xhr.responseType='blob'.
-
 */
 
   Modernizr.addTest('xhrresponsetypeblob', testXhrType('blob'));
-

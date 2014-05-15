@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testAllProps = require('./../../lib/testAllProps');
-
 /*!
 {
   "name": "Flexbox (legacy)",
@@ -15,4 +12,3 @@ var testAllProps = require('./../../lib/testAllProps');
 !*/
 
   Modernizr.addTest('flexboxlegacy', testAllProps('boxDirection', 'reverse', true));
-

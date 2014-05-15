@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testAllProps = require('./../../lib/testAllProps');
-
 /*!
 {
   "name": "CSS text-overflow ellipsis",
@@ -14,4 +11,3 @@ var testAllProps = require('./../../lib/testAllProps');
 !*/
 
   Modernizr.addTest('ellipsis', testAllProps('textOverflow', 'ellipsis'));
-

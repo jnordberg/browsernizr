@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "XMLHttpRequest xhr.responseType",
@@ -12,9 +10,7 @@ var Modernizr = require('./../../lib/Modernizr');
 }
 !*/
 /* DOC
-
 Tests for XMLHttpRequest xhr.responseType.
-
 */
 
   Modernizr.addTest('xhrresponsetype', (function() {
@@ -25,4 +21,3 @@ Tests for XMLHttpRequest xhr.responseType.
     xhr.open('get', '/', true);
     return 'response' in xhr;
   }()));
-

@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testAllProps = require('./../../lib/testAllProps');
-
 /*!
 {
   "name": "CSS user-select",
@@ -8,6 +5,7 @@ var testAllProps = require('./../../lib/testAllProps');
   "caniuse": "user-select-none",
   "authors": ["ryan seddon"],
   "tags": ["css"],
+  "builderAliases": ["css_userselect"],
   "notes": [{
     "name": "Related Modernizr Issue",
     "href": "https://github.com/Modernizr/Modernizr/issues/250"
@@ -17,4 +15,3 @@ var testAllProps = require('./../../lib/testAllProps');
 
   //https://github.com/Modernizr/Modernizr/issues/250
   Modernizr.addTest('userselect', testAllProps('userSelect', 'none', true));
-

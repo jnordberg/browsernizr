@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var prefixed = require('./../../lib/prefixed');
-
 /*!
 {
   "name": "RTC Peer Connection",
@@ -15,4 +12,3 @@ var prefixed = require('./../../lib/prefixed');
 !*/
 
   Modernizr.addTest('peerconnection', !!prefixed('RTCPeerConnection', window));
-

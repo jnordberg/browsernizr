@@ -1,12 +1,10 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testAllProps = require('./../../lib/testAllProps');
-
 /*!
 {
   "name": "CSS UI Resize",
   "property": "cssresize",
   "caniuse": "css-resize",
   "tags": ["css"],
+  "builderAliases": ["css_resize"],
   "notes": [{
     "name": "W3C Specification",
     "href": "http://www.w3.org/TR/css3-ui/#resize"
@@ -17,10 +15,7 @@ var testAllProps = require('./../../lib/testAllProps');
 }
 !*/
 /* DOC
-
 Test for CSS 3 UI "resize" property
-
 */
 
   Modernizr.addTest('cssresize', testAllProps('resize', 'both', true));
-

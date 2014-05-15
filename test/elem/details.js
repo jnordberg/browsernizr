@@ -1,14 +1,10 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-var docElement = require('./../../lib/docElement');
-var testStyles = require('./../../lib/testStyles');
-
 /*!
 {
   "name": "details Element",
   "caniuse": "details",
   "property": "details",
   "tags": ["elem"],
+  "builderAliases": ["elem_details"],
   "authors": ["@mathias"],
   "notes": [{
     "name": "Mathias' Original",
@@ -37,4 +33,3 @@ var testStyles = require('./../../lib/testStyles');
 
     return diff;
   });
-

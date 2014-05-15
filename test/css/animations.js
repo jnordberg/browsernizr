@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testAllProps = require('./../../lib/testAllProps');
-
 /*!
 {
   "name": "CSS Animations",
@@ -15,6 +12,8 @@ var testAllProps = require('./../../lib/testAllProps');
   }]
 }
 !*/
+/* DOC
+Detects wether or not elements can be animated using CSS
+*/
 
   Modernizr.addTest('cssanimations', testAllProps('animationName', 'a', true));
-

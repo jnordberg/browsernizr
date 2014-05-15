@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "ES5 Object",
@@ -14,13 +12,11 @@ var Modernizr = require('./../../lib/Modernizr');
 }
 !*/
 /* DOC
-
 Check if browser implements ECMAScript 5 Object per specification.
-
 */
 
   Modernizr.addTest('es5object', function () {
-    return Object.keys &&
+    return !!(Object.keys &&
       Object.create &&
       Object.getPrototypeOf &&
       Object.getOwnPropertyNames &&
@@ -32,6 +28,5 @@ Check if browser implements ECMAScript 5 Object per specification.
       Object.defineProperties &&
       Object.seal &&
       Object.freeze &&
-      Object.preventExtensions;
+      Object.preventExtensions);
   });
-

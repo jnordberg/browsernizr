@@ -1,11 +1,9 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "createElement with Attributes",
   "property": ["createelementattrs", "createelement-attrs"],
   "tags": ["dom"],
+  "builderAliases": ["dom_createElement_attrs"],
   "authors": ["James A. Rosen"],
   "notes": [{
     "name": "Related Github Issue",
@@ -23,4 +21,3 @@ var createElement = require('./../../lib/createElement');
   }, {
     aliases: ['createelement-attrs']
   });
-

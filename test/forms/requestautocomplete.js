@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "form#requestAutocomplete()",
@@ -13,11 +10,8 @@ var createElement = require('./../../lib/createElement');
 }
 !*/
 /* DOC
-
 When used with input[autocomplete] to annotate a form, form.requestAutocomplete() shows a dialog in Chrome that speeds up
 checkout flows (payments specific for now).
-
 */
 
   Modernizr.addTest('requestautocomplete', !!Modernizr.prefixed('requestAutocomplete', createElement('form')));
-

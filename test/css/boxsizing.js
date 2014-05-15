@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testAllProps = require('./../../lib/testAllProps');
-
 /*!
 {
   "name": "Box Sizing",
@@ -8,6 +5,7 @@ var testAllProps = require('./../../lib/testAllProps');
   "caniuse": "css3-boxsizing",
   "polyfills": ["borderboxmodel", "boxsizingpolyfill", "borderbox"],
   "tags": ["css"],
+  "builderAliases": ["css_boxsizing"],
   "notes": [{
     "name": "MDN Docs",
     "href": "http://developer.mozilla.org/en/CSS/box-sizing"
@@ -19,4 +17,3 @@ var testAllProps = require('./../../lib/testAllProps');
 !*/
 
   Modernizr.addTest('boxsizing', testAllProps('boxSizing', 'border-box', true) && (document.documentMode === undefined || document.documentMode > 7));
-

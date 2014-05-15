@@ -1,6 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var testStyles = require('./../lib/testStyles');
-
 /*!
 {
   "name": "MathML",
@@ -15,9 +12,7 @@ var testStyles = require('./../lib/testStyles');
 }
 !*/
 /* DOC
-
 Detects support for MathML, for mathematic equations in web pages.
-
 */
 
   // Based on work by Davide (@dpvc) and David (@davidcarlisle)
@@ -26,12 +21,11 @@ Detects support for MathML, for mathematic equations in web pages.
   Modernizr.addTest('mathml', function() {
     var ret;
 
-    Modernizr.testStyles("#modernizr{position:absolute}", function(node){
-      node.innerHTML = "<math><mfrac><mi>xx</mi><mi>yy</mi></mfrac></math>";
+    testStyles('#modernizr{position:absolute}', function(node){
+      node.innerHTML = '<math><mfrac><mi>xx</mi><mi>yy</mi></mfrac></math>';
 
       ret = node.offsetHeight > node.offsetWidth;
     });
 
     return ret;
   });
-

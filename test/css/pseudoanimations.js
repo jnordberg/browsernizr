@@ -1,7 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-require('./../../lib/testStyles');
-require('./../../lib/test/css/animations');
-
 /*!
 {
   "name": "CSS Generated Content Animations",
@@ -30,4 +26,3 @@ require('./../../lib/test/css/animations');
 
     return result;
   });
-

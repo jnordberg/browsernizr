@@ -1,12 +1,10 @@
-var Modernizr = require('./../../lib/Modernizr');
-var addTest = require('./../../lib/addTest');
-
 /*!
 {
   "name": "Webp",
   "async": true,
   "property": "webp",
   "tags": ["image"],
+  "builderAliases": ["img_webp"],
   "authors": ["Rich Bradshaw", "Ryan Seddon", "Paul Irish"],
   "notes": [{
     "name": "Webp Info",
@@ -15,9 +13,7 @@ var addTest = require('./../../lib/addTest');
 }
 !*/
 /* DOC
-
 Tests for lossy, non-alpha webp support.
-
 */
 
   Modernizr.addAsyncTest(function(){
@@ -33,4 +29,3 @@ Tests for lossy, non-alpha webp support.
 
     image.src = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=';
   });
-

@@ -1,10 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var inputElem = require('./../lib/inputElem');
-var docElement = require('./../lib/docElement');
-var inputtypes = require('./../lib/inputtypes');
-var inputs = require('./../lib/inputs');
-var smile = require('./../lib/smile');
-
 /*!
 {
   "name": "Form input types",
@@ -30,7 +23,6 @@ var smile = require('./../lib/smile');
 }
 !*/
 /* DOC
-
 Detects support for HTML5 form input types and exposes Boolean subproperties with the results:
 
 ```javascript
@@ -48,7 +40,6 @@ Modernizr.inputtypes.time
 Modernizr.inputtypes.url
 Modernizr.inputtypes.week
 ```
-
 */
 
   // Run through HTML5's new input types to see if the UA understands any.
@@ -111,4 +102,3 @@ Modernizr.inputtypes.week
     }
     return inputs;
   })(inputtypes);
-

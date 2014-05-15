@@ -1,12 +1,14 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-var prefixes = require('./../../lib/prefixes');
-
 /*!
 {
   "name": "CSS position: sticky",
   "property": "csspositionsticky",
-  "tags": ["css"]
+  "tags": ["css"],
+  "builderAliases": ["css_positionsticky"],
+  "notes": [
+    "using position:sticky on anything but top aligned elements is buggy in Chrome < 37 and iOS <=7+", {
+    "name": "Chrome bug report",
+    "href":"https://code.google.com/p/chromium/issues/detail?id=322972"
+  }]
 }
 !*/
 
@@ -22,4 +24,3 @@ var prefixes = require('./../../lib/prefixes');
 
     return mStyle.position.indexOf(value) !== -1;
   });
-

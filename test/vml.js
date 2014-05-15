@@ -1,6 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var createElement = require('./../lib/createElement');
-
 /*!
 {
   "name": "VML",
@@ -18,17 +15,14 @@ var createElement = require('./../lib/createElement');
 }
 !*/
 /* DOC
-
 Detects support for VML.
-
 */
 
   Modernizr.addTest('vml', function() {
     var containerDiv = createElement('div');
     containerDiv.innerHTML = '<v:shape id="vml_flag1" adj="1" />';
     var shape = containerDiv.firstChild;
-    shape.style.behavior = "url(#default#VML)";
-    var supportsVml = shape ? typeof shape.adj == "object": true;
+    shape.style.behavior = 'url(#default#VML)';
+    var supportsVml = shape ? typeof shape.adj == 'object': true;
     return supportsVml;
   });
-

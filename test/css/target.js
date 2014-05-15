@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "CSS :target pseudo-class",
@@ -15,9 +13,7 @@ var Modernizr = require('./../../lib/Modernizr');
 }
 !*/
 /* DOC
-
 Detects support for the ':target' CSS pseudo-class.
-
 */
 
   // querySelector
@@ -34,4 +30,3 @@ Detects support for the ':target' CSS pseudo-class.
       return false;
     }
   });
-

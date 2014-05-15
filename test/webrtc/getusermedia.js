@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var prefixed = require('./../../lib/prefixed');
-
 /*!
 {
   "name": "getUserMedia",
@@ -17,4 +14,3 @@ var prefixed = require('./../../lib/prefixed');
 !*/
 
   Modernizr.addTest('getusermedia', !!prefixed('getUserMedia', navigator));
-

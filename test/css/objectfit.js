@@ -1,12 +1,10 @@
-var Modernizr = require('./../../lib/Modernizr');
-var prefixed = require('./../../lib/prefixed');
-
 /*!
 {
   "name": "CSS Object Fit",
   "caniuse": "object-fit",
   "property": "objectfit",
   "tags": ["css"],
+  "builderAliases": ["css_objectfit"],
   "notes": [{
     "name": "Opera Article on Object Fit",
     "href": "http://dev.opera.com/articles/view/css3-object-fit-object-position/"
@@ -15,4 +13,3 @@ var prefixed = require('./../../lib/prefixed');
 !*/
 
   Modernizr.addTest('objectfit', !!prefixed('objectFit'), { aliases: ['object-fit'] });
-

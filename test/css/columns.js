@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testAllProps = require('./../../lib/testAllProps');
-
 /*!
 {
   "name": "CSS Columns",
@@ -44,5 +41,4 @@ var testAllProps = require('./../../lib/testAllProps');
 
 
   })();
-
 

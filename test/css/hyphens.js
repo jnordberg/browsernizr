@@ -1,20 +1,15 @@
-var Modernizr = require('./../../lib/Modernizr');
-var prefixes = require('./../../lib/prefixes');
-var createElement = require('./../../lib/createElement');
-var testAllProps = require('./../../lib/testAllProps');
-var addTest = require('./../../lib/addTest');
-
 /*!
 {
   "name": "CSS Hyphens",
   "caniuse": "css-hyphens",
   "property": ["csshyphens", "softhyphens", "softhyphensfind"],
   "tags": ["css"],
+  "builderAliases": ["css_hyphens"],
   "async" : true,
   "authors": ["David Newton"],
   "warnings": [
     "These tests currently require document.body to be present",
-    "If loading Hyphenator.js via Modernizr.load, be cautious of issue 158: http://code.google.com/p/hyphenator/issues/detail?id=158",
+    "If loading Hyphenator.js via yepnope, be cautious of issue 158: http://code.google.com/p/hyphenator/issues/detail?id=158",
     "This is very large – only include it if you absolutely need it"
     ],
   "notes": [
@@ -198,7 +193,7 @@ var addTest = require('./../../lib/addTest');
         }
       }
 
-      addTest("csshyphens", function() {
+      addTest('csshyphens', function() {
 
         if (!testAllProps('hyphens', 'auto', true)) return false;
 
@@ -212,7 +207,7 @@ var addTest = require('./../../lib/addTest');
         }
       });
 
-      addTest("softhyphens", function() {
+      addTest('softhyphens', function() {
         try {
           // use numeric entity instead of &shy; in case it's XHTML
           return test_hyphens('&#173;', true) && test_hyphens('&#8203;', false);
@@ -221,7 +216,7 @@ var addTest = require('./../../lib/addTest');
         }
       });
 
-      addTest("softhyphensfind", function() {
+      addTest('softhyphensfind', function() {
         try {
           return test_hyphens_find('&#173;') && test_hyphens_find('&#8203;');
         } catch(e) {
@@ -231,4 +226,3 @@ var addTest = require('./../../lib/addTest');
 
     }
   });
-

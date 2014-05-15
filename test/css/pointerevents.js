@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "CSS Pointer Events",
@@ -8,6 +5,7 @@ var createElement = require('./../../lib/createElement');
   "property": "csspointerevents",
   "authors": ["ausi"],
   "tags": ["css"],
+  "builderAliases": ["css_pointerevents"],
   "notes": [
     {
       "name": "MDN Docs",
@@ -32,4 +30,3 @@ var createElement = require('./../../lib/createElement');
     element.style.cssText = 'pointer-events:auto';
     return element.style.pointerEvents === 'auto';
   });
-

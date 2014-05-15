@@ -1,6 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var createElement = require('./../lib/createElement');
-
 /*!
 {
   "name": "HTML5 Video",
@@ -21,7 +18,6 @@ var createElement = require('./../lib/createElement');
 }
 !*/
 /* DOC
-
 Detects support for the video element, as well as testing what types of content it supports.
 
 Subproperties are provided to describe support for `ogg`, `h264` and `webm` formats, e.g.:
@@ -30,7 +26,6 @@ Subproperties are provided to describe support for `ogg`, `h264` and `webm` form
 Modernizr.video         // true
 Modernizr.video.ogg     // 'probably'
 ```
-
 */
 
   // Codec values from : github.com/NielsLeenheer/html5test/blob/9106a8/index.html#L845
@@ -52,12 +47,15 @@ Modernizr.video.ogg     // 'probably'
         bool.ogg = elem.canPlayType('video/ogg; codecs="theora"').replace(/^no$/,'');
 
         // Without QuickTime, this value will be `undefined`. github.com/Modernizr/Modernizr/issues/546
-        bool.h264 = elem.canPlayType('video/mp4; codecs="avc1.42E01E"') .replace(/^no$/,'');
+        bool.h264 = elem.canPlayType('video/mp4; codecs="avc1.42E01E"').replace(/^no$/,'');
 
         bool.webm = elem.canPlayType('video/webm; codecs="vp8, vorbis"').replace(/^no$/,'');
+
+        bool.vp9 = elem.canPlayType('video/webm; codecs="vp9"').replace(/^no$/,'');
+
+        bool.hls = elem.canPlayType('application/x-mpegURL; codecs="avc1.42E01E"').replace(/^no$/,'');
       }
     } catch(e){}
 
     return bool;
   });
-

@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "File API",
@@ -10,18 +8,16 @@ var Modernizr = require('./../../lib/Modernizr');
     "href": "http://www.w3.org/TR/FileAPI/"
   }],
   "tags": ["file"],
+  "builderAliases": ["file_api"],
   "knownBugs": ["Will fail in Safari 5 due to its lack of support for the standards defined FileReader object"]
 }
 !*/
 /* DOC
-
 `filereader` tests for the File API specification
 
 Tests for objects specific to the File API W3C specification without
 being redundant (don't bother testing for Blob since it is assumed
 to be the File object's prototype.)
-
 */
 
   Modernizr.addTest('filereader', !!(window.File && window.FileList && window.FileReader));
-

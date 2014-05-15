@@ -1,12 +1,10 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "progress Element",
   "caniuse": "progressmeter",
   "property": ["progressbar", "meter"],
   "tags": ["elem"],
+  "builderAliases": ["elem_progress_meter"],
   "authors": ["Stefan Wallin"]
 }
 !*/
@@ -16,4 +14,3 @@ var createElement = require('./../../lib/createElement');
 
   // Tests for meter-support. All browsers that don't support meters returns undefined =)
   Modernizr.addTest('meter', createElement('meter').max !== undefined);
-

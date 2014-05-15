@@ -1,12 +1,10 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testStyles = require('./../../lib/testStyles');
-
 /*!
 {
   "name": "CSS vw unit",
   "property": "cssvwunit",
   "caniuse": "viewport-units",
   "tags": ["css"],
+  "builderAliases": ["css_vwunit"],
   "notes": [{
     "name": "Related Modernizr Issue",
     "href": "https://github.com/Modernizr/Modernizr/issues/572"
@@ -17,12 +15,11 @@ var testStyles = require('./../../lib/testStyles');
 }
 !*/
 
-  testStyles('#modernizr { width: 50vw; }', function( elem, rule ) {
-    var width = parseInt(window.innerWidth/2,10);
+  testStyles('#modernizr { width: 50vw; }', function( elem ) {
+    var width = parseInt(window.innerWidth / 2, 10);
     var compStyle = parseInt((window.getComputedStyle ?
                               getComputedStyle(elem, null) :
-                              elem.currentStyle)['width'],10);
+                              elem.currentStyle).width, 10);
 
     Modernizr.addTest('cssvwunit', compStyle == width);
   });
-

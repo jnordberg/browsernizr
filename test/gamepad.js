@@ -1,6 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var prefixed = require('./../lib/prefixed');
-
 /*!
 {
   "name": "GamePad API",
@@ -19,9 +16,7 @@ var prefixed = require('./../lib/prefixed');
 }
 !*/
 /* DOC
-
 Detects support for the Gamepad API, for access to gamepads and controllers.
-
 */
 
   // FF has Gamepad API support only in special builds, but not in any release (even behind a flag)
@@ -30,4 +25,3 @@ Detects support for the Gamepad API, for access to gamepads and controllers.
   //   https://bugzilla.mozilla.org/show_bug.cgi?id=690935
 
   Modernizr.addTest('gamepads', !!prefixed('getGamepads', navigator));
-

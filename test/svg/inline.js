@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "Inline SVG",
@@ -15,9 +12,7 @@ var createElement = require('./../../lib/createElement');
 }
 !*/
 /* DOC
-
 Detects support for inline SVG in HTML (not within XHTML).
-
 */
 
   Modernizr.addTest('inlinesvg', function() {
@@ -25,4 +20,3 @@ Detects support for inline SVG in HTML (not within XHTML).
     div.innerHTML = '<svg/>';
     return (div.firstChild && div.firstChild.namespaceURI) == 'http://www.w3.org/2000/svg';
   });
-

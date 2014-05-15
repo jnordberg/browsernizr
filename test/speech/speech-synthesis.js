@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var prefixed = require('./../../lib/prefixed');
-
 /*!
 {
   "authors": ["Cătălin Mariș"],
@@ -18,4 +15,3 @@ var prefixed = require('./../../lib/prefixed');
 
 
   Modernizr.addTest('speechsynthesis', 'SpeechSynthesisUtterance' in window);
-

@@ -1,14 +1,11 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-var prefixes = require('./../../lib/prefixes');
-
 /*!
 {
   "name": "CSS Filters",
   "property": "cssfilters",
   "caniuse": "css-filters",
   "polyfills": ["polyfilter"],
-  "tags": ["css"]
+  "tags": ["css"],
+  "builderAliases": ["css_filters"]
 }
 !*/
 
@@ -19,5 +16,4 @@ var prefixes = require('./../../lib/prefixes');
     el.style.cssText = prefixes.join('filter:blur(2px); ');
     return !!el.style.length && ((document.documentMode === undefined || document.documentMode > 9));
   });
-
 

@@ -1,17 +1,13 @@
-var Modernizr = require('./../lib/Modernizr');
-var createElement = require('./../lib/createElement');
-
 /*!
 {
   "name" : "HTML5 Audio Element",
   "property": "audio",
-  "aliases" : [],
-  "tags" : ["html5", "audio", "media"],
-  "doc" : "/docs/#audio",
-  "knownBugs": [],
-  "authors" : []
+  "tags" : ["html5", "audio", "media"]
 }
 !*/
+/* DOC
+Detects the audio element
+*/
 
   // This tests evaluates support of the audio element, as well as
   // testing what types of content it supports.
@@ -49,4 +45,3 @@ var createElement = require('./../lib/createElement');
 
     return bool;
   });
-

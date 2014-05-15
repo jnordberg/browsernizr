@@ -1,13 +1,10 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-var docElement = require('./../../lib/docElement');
-
 /*!
 {
   "name": "ruby, rp, rt Elements",
   "caniuse": "ruby",
   "property": "ruby",
   "tags": ["elem"],
+  "builderAliases": ["elem_ruby"],
   "authors": ["Cătălin Mariș"],
   "notes": [{
     "name": "WHATWG Specification",
@@ -64,5 +61,4 @@ var docElement = require('./../../lib/docElement');
     }
 
   });
-
 

@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "Session Storage",
@@ -24,4 +22,3 @@ var Modernizr = require('./../../lib/Modernizr');
       return false;
     }
   });
-

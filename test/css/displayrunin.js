@@ -1,12 +1,10 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testAllProps = require('./../../lib/testAllProps');
-
 /*!
 {
   "name": "CSS Display run-in",
   "property": "display-runin",
   "authors": ["alanhogan"],
   "tags": ["css"],
+  "builderAliases": ["css_displayrunin"],
   "notes": [{
     "name": "CSS Tricks Article",
     "href": "http://css-tricks.com/596-run-in/"
@@ -19,4 +17,3 @@ var testAllProps = require('./../../lib/testAllProps');
 
   Modernizr.addTest('displayrunin', testAllProps('display', 'run-in'),
     { aliases: ['display-runin'] });
-

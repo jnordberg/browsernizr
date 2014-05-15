@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testStyles = require('./../../lib/testStyles');
-
 /*!
 {
   "name": "CSS :nth-child pseudo-selector",
@@ -22,9 +19,7 @@ var testStyles = require('./../../lib/testStyles');
 }
 !*/
 /* DOC
-
 Detects support for the ':nth-child()' CSS pseudo-selector.
-
 */
 
   // 5 `<div>` elements with `1px` width are created.
@@ -43,4 +38,3 @@ Detects support for the ':nth-child()' CSS pseudo-selector.
       return test;
     });
   }, 5);
-

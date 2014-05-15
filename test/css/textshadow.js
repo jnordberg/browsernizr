@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testProp = require('./../../lib/testProp');
-
 /*!
 {
   "name": "CSS textshadow",
@@ -12,4 +9,3 @@ var testProp = require('./../../lib/testProp');
 !*/
 
   Modernizr.addTest('textshadow', testProp('textShadow', '1px 1px'));
-

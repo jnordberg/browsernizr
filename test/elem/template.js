@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "Template Tag",
@@ -17,4 +14,3 @@ var createElement = require('./../../lib/createElement');
 !*/
 
   Modernizr.addTest('template', 'content' in createElement('template'));
-

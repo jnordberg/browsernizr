@@ -1,7 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var createElement = require('./../lib/createElement');
-var docElement = require('./../lib/docElement');
-
 /*!
 {
   "name": "Content Editable",
@@ -14,9 +10,7 @@ var docElement = require('./../lib/docElement');
 }
 !*/
 /* DOC
-
 Detects support for the `contenteditable` attribute of elements, allowing their DOM text contents to be edited directly by the user.
-
 */
 
   Modernizr.addTest('contenteditable', function() {
@@ -29,6 +23,5 @@ Detects support for the `contenteditable` attribute of elements, allowing their 
 
     var div = createElement('div');
     div.contentEditable = true;
-    return div.contentEditable === "true";
+    return div.contentEditable === 'true';
   });
-

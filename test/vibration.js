@@ -1,6 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var prefixed = require('./../lib/prefixed');
-
 /*!
 {
   "name": "Vibration API",
@@ -15,10 +12,7 @@ var prefixed = require('./../lib/prefixed');
 }
 !*/
 /* DOC
-
 Detects support for the API that provides access to the vibration mechanism of the hosting device, to provide tactile feedback.
-
 */
 
   Modernizr.addTest('vibrate', !!prefixed('vibrate', navigator));
-

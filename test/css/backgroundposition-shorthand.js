@@ -1,11 +1,9 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "Background Position Shorthand",
   "property": "bgpositionshorthand",
   "tags": ["css"],
+  "builderAliases": ["css_backgroundposition_shorthand"],
   "notes": [{
     "name": "MDN Docs",
     "href": "https://developer.mozilla.org/en/CSS/background-position"
@@ -18,6 +16,12 @@ var createElement = require('./../../lib/createElement');
   }]
 }
 !*/
+/*
+Detects if you can use the shorthand method to define multiple parts of an
+element's background-position simultaniously.
+
+eg `background-position: right 10px bottom 10px`
+*/
 
   Modernizr.addTest('bgpositionshorthand', function() {
     var elem = createElement('a');
@@ -26,4 +30,3 @@ var createElement = require('./../../lib/createElement');
     eStyle.cssText = 'background-position: ' + val + ';';
     return (eStyle.backgroundPosition === val);
   });
-
