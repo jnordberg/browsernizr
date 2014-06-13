@@ -14,7 +14,7 @@
     "Modernizr": "git://github.com/Modernizr/Modernizr.git"
   },
   "scripts": {
-    "build" : "./bin/build"
+    "postinstall" : "./bin/build"
   },
   "author": "Johan Nordberg <its@johan-nordberg.com>",
   "license": "MIT"
