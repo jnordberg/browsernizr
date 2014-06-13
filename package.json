@@ -9,7 +9,7 @@
     "modernizer",
     "browserify"
   ],
-  "devDependencies": {
+  "dependencies": {
     "shelljs": "*",
     "Modernizr": "git://github.com/Modernizr/Modernizr.git"
   },
