@@ -13,6 +13,9 @@
     "shelljs": "*",
     "Modernizr": "git://github.com/Modernizr/Modernizr.git"
   },
+  "scripts": {
+    "postinall" : "npm install && ./bin/build"
+  },
   "author": "Johan Nordberg <its@johan-nordberg.com>",
   "license": "MIT"
 }
