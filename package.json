@@ -9,9 +9,17 @@
     "modernizer",
     "browserify"
   ],
+  "dependencies": {
+    "Modernizr": "git://github.com/Modernizr/Modernizr.git"
+  },
   "devDependencies": {
     "shelljs": "*",
-    "Modernizr": "git://github.com/Modernizr/Modernizr.git"
+    "coffee-script": "*"
+  },
+  "scripts": {
+    "prepublish": "coffee -c bin/build.coffee",
+    "clean": "rm -rf lib/ test/",
+    "postinstall": "node bin/build.js"
   },
   "author": "Johan Nordberg <its@johan-nordberg.com>",
   "license": "MIT"

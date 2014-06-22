@@ -1,5 +1,3 @@
-#!/usr/bin/env coffee
-
 path = require 'path'
 fs = require 'fs'
 
@@ -54,6 +52,3 @@ for file in findFiles '.'
     libPath += '../'
   libPath += 'lib/'
   unAMD(src, libPath).to file
-
-
-

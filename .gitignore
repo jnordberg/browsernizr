@@ -1,1 +1,4 @@
 node_modules/
+lib/
+test/
+bin/build.js
