@@ -10,10 +10,10 @@
     "browserify"
   ],
   "dependencies": {
+    "shelljs": "*",
     "Modernizr": "git://github.com/Modernizr/Modernizr.git"
   },
   "devDependencies": {
-    "shelljs": "*",
     "coffee-script": "*"
   },
   "scripts": {
