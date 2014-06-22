@@ -29,8 +29,11 @@ lib_dir = path.join work_dir, './lib'
 tests_dir = path.join work_dir, './test'
 
 # cleanup
-rm '-rf', "#{ lib_dir }/*"
-rm '-rf', "#{ tests_dir }/*"
+if test '-d', lib_dir
+  rm '-rf', "#{ lib_dir }/*"
+  
+if test '-d', tests_dir
+  rm '-rf', "#{ tests_dir }/*"
 
 # copy modernizr source
 cd modernizr_dir
