@@ -1,5 +1,3 @@
-#!/usr/bin/env coffee
-
 path = require 'path'
 fs = require 'fs'
 
@@ -26,13 +24,16 @@ findFiles = (location) ->
   find(location).filter (file) -> !fs.statSync(file).isDirectory()
 
 work_dir = path.resolve __dirname, './../'
-modernizr_dir = path.join work_dir, './node_modules/Modernizr'
+modernizr_dir = path.join work_dir, './node_modules/modernizr'
 lib_dir = path.join work_dir, './lib'
 tests_dir = path.join work_dir, './test'
 
 # cleanup
-rm '-rf', "#{ lib_dir }/*"
-rm '-rf', "#{ tests_dir }/*"
+if test '-d', lib_dir
+  rm '-rf', "#{ lib_dir }/*"
+  
+if test '-d', tests_dir
+  rm '-rf', "#{ tests_dir }/*"
 
 # copy modernizr source
 cd modernizr_dir
@@ -54,6 +55,3 @@ for file in findFiles '.'
     libPath += '../'
   libPath += 'lib/'
   unAMD(src, libPath).to file
-
-
-

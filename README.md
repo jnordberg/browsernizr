@@ -20,13 +20,3 @@ require('browsernizr');
 var Modernizr = require('browsernizr');
 
 ```
-
-## Development
-
-To build the latest version of modernizr
-
-```bash
-  .. clone repo ..
-  npm install
-  ./bin/build
-```
