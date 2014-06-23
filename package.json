@@ -11,7 +11,7 @@
   ],
   "dependencies": {
     "shelljs": "*",
-    "Modernizr": "git://github.com/Modernizr/Modernizr.git"
+    "modernizr": "git://github.com/Modernizr/Modernizr.git"
   },
   "devDependencies": {
     "coffee-script": "*"

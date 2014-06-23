@@ -24,7 +24,7 @@ findFiles = (location) ->
   find(location).filter (file) -> !fs.statSync(file).isDirectory()
 
 work_dir = path.resolve __dirname, './../'
-modernizr_dir = path.join work_dir, './node_modules/Modernizr'
+modernizr_dir = path.join work_dir, './node_modules/modernizr'
 lib_dir = path.join work_dir, './lib'
 tests_dir = path.join work_dir, './test'
 
