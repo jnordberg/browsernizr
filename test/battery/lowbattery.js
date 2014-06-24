@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var prefixed = require('./../../lib/prefixed');
+
 /*!
 {
   "name": "Low Battery Level",
@@ -20,3 +23,4 @@ Enable a developer to remove CPU intensive CSS/JS when battery is low
     var battery = prefixed('battery', navigator);
     return !!(battery && !battery.charging && battery.level <= minLevel);
   });
+

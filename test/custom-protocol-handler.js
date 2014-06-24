@@ -1,3 +1,5 @@
+var Modernizr = require('./../lib/Modernizr');
+
 /*!
 {
   "name": "Custom protocol handler",
@@ -36,3 +38,4 @@ sites to register themselves as possible handlers for particular protocols.
 
     return false;
   });
+

@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var testAllProps = require('./../../lib/testAllProps');
+
 /*!
 {
   "name": "CSS Overflow Scrolling",
@@ -13,3 +16,4 @@
 !*/
 
   Modernizr.addTest('overflowscrolling', testAllProps('overflowScrolling', 'touch', true));
+

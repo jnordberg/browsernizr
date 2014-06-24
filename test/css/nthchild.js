@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var testStyles = require('./../../lib/testStyles');
+
 /*!
 {
   "name": "CSS :nth-child pseudo-selector",
@@ -38,3 +41,4 @@ Detects support for the ':nth-child()' CSS pseudo-selector.
       return test;
     });
   }, 5);
+

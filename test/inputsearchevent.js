@@ -1,3 +1,6 @@
+var Modernizr = require('./../lib/Modernizr');
+var hasEvent = require('./../lib/hasEvent');
+
 /*!
 {
   "name": "input[search] search event",
@@ -18,3 +21,4 @@ There is a custom `search` event implemented in webkit browsers when using an `i
 */
 
   Modernizr.addTest('inputsearchevent',  hasEvent('search'));
+

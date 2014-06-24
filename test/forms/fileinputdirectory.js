@@ -1,3 +1,7 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+var domPrefixes = require('./../../lib/domPrefixes');
+
 /*!
 {
   "name": "input[directory] Attribute",
@@ -26,3 +30,4 @@ file selection dialog.
     }
     return false;
   });
+

@@ -1,3 +1,7 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+require('./../../lib/test/webgl');
+
 /*!
 {
   "name": "WebGL Extensions",
@@ -63,3 +67,4 @@ if ('OES_vertex_array_object' in Modernizr.webglextensions) {
 
     canvas = undefined;
   });
+

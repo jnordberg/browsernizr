@@ -1,3 +1,7 @@
+var Modernizr = require('./../../lib/Modernizr');
+var prefixes = require('./../../lib/prefixes');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "CSS Gradients",
@@ -42,3 +46,4 @@
     // IE6 returns undefined so cast to string
     return ('' + style.backgroundImage).indexOf('gradient') > -1;
   });
+

@@ -1,3 +1,6 @@
+var Modernizr = require('./../lib/Modernizr');
+var prefixed = require('./../lib/prefixed');
+
 /*!
 {
   "name": "Pointer Lock API",
@@ -12,3 +15,4 @@
 
   // https://developer.mozilla.org/en-US/docs/API/Pointer_Lock_API
   Modernizr.addTest('pointerlock', !!prefixed('exitPointerLock', document));
+

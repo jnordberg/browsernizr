@@ -1,3 +1,7 @@
+var Modernizr = require('./../lib/Modernizr');
+var prefixes = require('./../lib/prefixes');
+var testStyles = require('./../lib/testStyles');
+
 /*!
 {
   "name": "Touch Events",
@@ -47,3 +51,4 @@ This test will also return `true` for Firefox 4 Multitouch support.
     }
     return bool;
   });
+

@@ -1,3 +1,10 @@
+var Modernizr = require('./../lib/Modernizr');
+var inputElem = require('./../lib/inputElem');
+var docElement = require('./../lib/docElement');
+var inputtypes = require('./../lib/inputtypes');
+var inputs = require('./../lib/inputs');
+var smile = require('./../lib/smile');
+
 /*!
 {
   "name": "Form input types",
@@ -102,3 +109,4 @@ Modernizr.inputtypes.week
     }
     return inputs;
   })(inputtypes);
+

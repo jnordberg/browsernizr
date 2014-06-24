@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "CSS Supports",
@@ -19,4 +21,5 @@
 !*/
 
   // Relies on the fact that a browser vendor should expose the CSSSupportsRule interface
-  Modernizr.addTest('supports', 'CSSRule' in window && 'SUPPORTS_RULE' in window.CSSRule);
+  Modernizr.addTest('supports', 'CSS' in window && 'supports' in window.CSS);
+

@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "srcset attribute",
@@ -17,3 +20,4 @@ Test for the srcset attribute of images
 */
 
   Modernizr.addTest('srcset', 'srcset' in createElement('img'));
+

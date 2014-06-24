@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "ES5 Strict Mode",

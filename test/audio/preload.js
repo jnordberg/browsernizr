@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "Audio Preload Attribute",
@@ -10,3 +13,4 @@ Detects if audio can be downloaded in the background before it starts playing in
 */
 
   Modernizr.addTest('audiopreload', 'preload' in createElement('audio'));
+

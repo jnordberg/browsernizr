@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "microdata",
@@ -12,3 +14,4 @@
 !*/
 
   Modernizr.addTest('microdata', 'getItems' in document);
+

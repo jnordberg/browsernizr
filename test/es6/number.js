@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "ES6 Number",
@@ -25,3 +27,4 @@ Check if browser implements ECMAScript 6 Number per specification.
     Number.isInteger(Number.MAX_SAFE_INTEGER) &&
     Number.isInteger(Number.MIN_SAFE_INTEGER) &&
     Number.isFinite(Number.EPSILON)));
+

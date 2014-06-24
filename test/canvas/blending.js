@@ -1,3 +1,7 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+require('./../../lib/test/canvas');
+
 /*!
 {
   "name": "canvas blending support",
@@ -26,4 +30,5 @@ Detects if Photoshop style blending modes are available in canvas
     ctx.globalCompositeOperation = 'screen';
     return ctx.globalCompositeOperation === 'screen';
   });
+
 

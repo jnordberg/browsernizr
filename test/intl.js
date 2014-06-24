@@ -1,3 +1,6 @@
+var Modernizr = require('./../lib/Modernizr');
+var prefixed = require('./../lib/prefixed');
+
 /*!
  {
  "name": "Internationalization API",
@@ -17,3 +20,4 @@ based on a locale
 */
 
   Modernizr.addTest('intl', !!prefixed('Intl', window));
+

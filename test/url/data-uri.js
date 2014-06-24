@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var addTest = require('./../../lib/addTest');
+
 /*!
 {
   "name": "Data URI",
@@ -77,3 +80,4 @@ Modernizr.datauri.over32kb  // false in IE8
     }
 
   });
+

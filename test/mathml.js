@@ -1,3 +1,6 @@
+var Modernizr = require('./../lib/Modernizr');
+var testStyles = require('./../lib/testStyles');
+
 /*!
 {
   "name": "MathML",
@@ -29,3 +32,4 @@ Detects support for MathML, for mathematic equations in web pages.
 
     return ret;
   });
+

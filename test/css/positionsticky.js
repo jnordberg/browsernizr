@@ -1,3 +1,7 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+var prefixes = require('./../../lib/prefixes');
+
 /*!
 {
   "name": "CSS position: sticky",
@@ -24,3 +28,4 @@
 
     return mStyle.position.indexOf(value) !== -1;
   });
+

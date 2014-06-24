@@ -1,3 +1,10 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+var docElement = require('./../../lib/docElement');
+var getBody = require('./../../lib/getBody');
+require('./../../lib/test/inputtypes');
+require('./../../lib/test/forms/validation');
+
 /*!
 {
   "name": "input[type=\"number\"] Localization",
@@ -44,4 +51,5 @@ Detects whether input type="number" is capable of receiving and displaying local
     body.fake && root.parentNode.removeChild(root);
     return diff;
   });
+
 

@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "Video Preload Attribute",
@@ -7,3 +10,4 @@
 !*/
 
   Modernizr.addTest('videopreload', 'preload' in createElement('video'));
+

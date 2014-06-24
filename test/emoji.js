@@ -1,3 +1,7 @@
+var Modernizr = require('./../lib/Modernizr');
+var createElement = require('./../lib/createElement');
+require('./../lib/test/canvastext');
+
 /*!
 {
   "name": "Emoji",
@@ -12,8 +16,10 @@ Detects support for emoji character sets.
     if (!Modernizr.canvastext) return false;
     var node = createElement('canvas'),
     ctx = node.getContext('2d');
+    ctx.fillStyle = '#f00';
     ctx.textBaseline = 'top';
     ctx.font = '32px Arial';
-    ctx.fillText('\ud83d\ude03', 0, 0); // "smiling face with open mouth" emoji
+    ctx.fillText('\ud83d\udc28', 0, 0); // U+1F428 KOALA
     return ctx.getImageData(16, 16, 1, 1).data[0] !== 0;
   });
+

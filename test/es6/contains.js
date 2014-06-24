@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var is = require('./../../lib/is');
+
 /*!
 {
   "name": "ES5 String.prototype.contains",
@@ -11,3 +14,4 @@ Check if browser implements ECMAScript 6 `String.prototype.contains` per specifi
 */
 
   Modernizr.addTest('contains', is(String.prototype.contains, 'function'));
+

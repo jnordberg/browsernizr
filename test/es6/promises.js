@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "ES6 Promises",
@@ -38,3 +40,4 @@ Check if browser implements ECMAScript 6 Promises per specification.
       return typeof resolve === 'function';
     }());
   });
+

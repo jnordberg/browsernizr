@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "picture Element",
@@ -15,3 +17,4 @@
 !*/
 
   Modernizr.addTest('picture', 'HTMLPictureElement' in window );
+

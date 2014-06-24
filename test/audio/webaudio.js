@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "Web Audio API",
@@ -24,3 +26,4 @@ Detects the older non standard webaudio API, (as opposed to the standards based 
     if (Modernizr._config.usePrefixes) return prefixed || unprefixed;
     return unprefixed;
   });
+

@@ -1,3 +1,7 @@
+var Modernizr = require('./../../lib/Modernizr');
+var testStyles = require('./../../lib/testStyles');
+var prefixes = require('./../../lib/prefixes');
+
 /*!
 {
   "name": "CSS Stylable Scrollbars",
@@ -15,3 +19,4 @@
   function( node ) {
     Modernizr.addTest('cssscrollbar', node.scrollWidth == 40);
   });
+

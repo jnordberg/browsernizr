@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var testStyles = require('./../../lib/testStyles');
+
 /*!
 {
   "name": "CSS Display table",
@@ -28,3 +31,4 @@ More testing neccessary perhaps.
     ret = child[0].offsetLeft < child[1].offsetLeft;
     Modernizr.addTest('displaytable', ret, { aliases: ['display-table'] });
   },2);
+

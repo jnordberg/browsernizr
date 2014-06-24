@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "ES6 Array",
@@ -26,3 +28,4 @@ Check if browser implements ECMAScript 6 Array per specification.
     Array.prototype.values &&
     Array.from &&
     Array.of));
+

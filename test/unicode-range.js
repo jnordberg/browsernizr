@@ -1,3 +1,7 @@
+var Modernizr = require('./../lib/Modernizr');
+var testStyles = require('./../lib/testStyles');
+var createElement = require('./../lib/createElement');
+
 /*!
 {
   "name": "Unicode Range",
@@ -34,3 +38,4 @@
       return (testGlyphs[0] !== testGlyphs[1] && testGlyphs[2] === testGlyphs[3]);
     });
   });
+

@@ -1,3 +1,5 @@
+var Modernizr = require('./../lib/Modernizr');
+
 /*!
 {
   "name": "DataView",
@@ -16,3 +18,4 @@ Detects support for the DataView interface for reading data from an ArrayBuffer 
 */
 
   Modernizr.addTest('dataview', (typeof DataView !== 'undefined' && 'getFloat64' in DataView.prototype));
+

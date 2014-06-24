@@ -1,3 +1,5 @@
+var Modernizr = require('./../lib/Modernizr');
+
 /*!
 {
   "name": "IE8 compat mode",
@@ -15,3 +17,4 @@ Detects whether or not the current browser is IE8 in compatibility mode (i.e. ac
   // james.padolsey.com/javascript/detect-ie-in-js-using-conditional-comments/
 
   Modernizr.addTest('ie8compat', (!window.addEventListener && !!document.documentMode && document.documentMode === 7));
+

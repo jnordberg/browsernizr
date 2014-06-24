@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var addTest = require('./../../lib/addTest');
+
 /*!
 {
   "name": "Webp",
@@ -29,3 +32,4 @@ Tests for lossy, non-alpha webp support.
 
     image.src = 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=';
   });
+

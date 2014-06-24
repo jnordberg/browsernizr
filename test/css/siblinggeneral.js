@@ -1,3 +1,7 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+var testStyles = require('./../../lib/testStyles');
+
 /*!
 {
   "name": "CSS general sibling selector",
@@ -16,3 +20,4 @@
       return elem.lastChild.offsetWidth == 200;
     }, 2);
   });
+

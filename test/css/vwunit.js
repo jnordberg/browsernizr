@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var testStyles = require('./../../lib/testStyles');
+
 /*!
 {
   "name": "CSS vw unit",
@@ -23,3 +26,4 @@
 
     Modernizr.addTest('cssvwunit', compStyle == width);
   });
+

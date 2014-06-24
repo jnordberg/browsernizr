@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "CSS Font rem Units",
@@ -28,3 +31,4 @@
     catch( er ) {}
     return (/rem/).test(div.style.fontSize);
   });
+

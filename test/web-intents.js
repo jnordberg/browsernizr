@@ -1,3 +1,6 @@
+var Modernizr = require('./../lib/Modernizr');
+var prefixed = require('./../lib/prefixed');
+
 /*!
 {
   "name": "Web Intents",
@@ -19,3 +22,4 @@ development in both the API and specific user experience in Chrome". No other br
 */
 
   Modernizr.addTest('webintents', !!prefixed('startActivity', navigator));
+

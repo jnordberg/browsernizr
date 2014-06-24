@@ -1,3 +1,9 @@
+var Modernizr = require('./../lib/Modernizr');
+var createElement = require('./../lib/createElement');
+var attrs = require('./../lib/attrs');
+var inputattrs = require('./../lib/inputattrs');
+var inputElem = require('./../lib/inputElem');
+
 /*!
 {
   "name": "Input attributes",
@@ -46,3 +52,4 @@ Modernizr.input.step
     }
     return attrs;
   })(inputattrs);
+

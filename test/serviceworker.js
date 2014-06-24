@@ -1,3 +1,5 @@
+var Modernizr = require('./../lib/Modernizr');
+
 /*!
 {
   "name": "ServiceWorker API",
@@ -13,3 +15,4 @@ ServiceWorkers (formerly Navigation Controllers) are a way to persistently cache
 */
 
   Modernizr.addTest('serviceworker', 'serviceWorker' in navigator);
+

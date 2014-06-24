@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "ES5 Immutable Undefined",
@@ -29,3 +31,4 @@ Check if browser prevents assignment to global `undefined` per ECMAScript 5.
     }
     return result;
   });
+

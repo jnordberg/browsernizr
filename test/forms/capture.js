@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "input[capture] Attribute",
@@ -15,3 +18,4 @@ When used on an `<input>`, this attribute signifies that the resource it takes s
 
   // testing for capture attribute in inputs
   Modernizr.addTest('capture', ('capture' in createElement('input')));
+

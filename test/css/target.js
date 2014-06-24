@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "CSS :target pseudo-class",
@@ -30,3 +32,4 @@ Detects support for the ':target' CSS pseudo-class.
       return false;
     }
   });
+

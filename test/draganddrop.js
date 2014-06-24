@@ -1,3 +1,6 @@
+var Modernizr = require('./../lib/Modernizr');
+var createElement = require('./../lib/createElement');
+
 /*!
 {
   "name": "Drag & Drop",
@@ -19,3 +22,4 @@ Detects support for native drag & drop of elements.
     var div = createElement('div');
     return ('draggable' in div) || ('ondragstart' in div && 'ondrop' in div);
   });
+

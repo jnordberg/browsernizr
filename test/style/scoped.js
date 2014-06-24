@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "style[scoped]",
@@ -18,3 +21,4 @@ Support for the `scoped` attribute of the `<style>` element.
 */
 
   Modernizr.addTest('stylescoped', 'scoped' in createElement('style'));
+

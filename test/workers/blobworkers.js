@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var addTest = require('./../../lib/addTest');
+
 /*!
 {
   "name": "Workers from Blob URIs",
@@ -80,3 +83,4 @@ Detects support for creating Web Workers from Blob URIs.
       }
     }
   });
+

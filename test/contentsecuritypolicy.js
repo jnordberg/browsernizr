@@ -1,3 +1,5 @@
+var Modernizr = require('./../lib/Modernizr');
+
 /*!
 {
   "name": "Content Security Policy",
@@ -17,3 +19,4 @@ Detects support for the Content Security Policy protocol for mitigating and repo
 */
 
   Modernizr.addTest('contentsecuritypolicy', ('securityPolicy' in document || 'SecurityPolicy' in document));
+

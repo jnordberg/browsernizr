@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "Server Sent Events",
@@ -15,3 +17,4 @@ Tests for server sent events aka eventsource.
 */
 
   Modernizr.addTest('eventsource', 'EventSource' in window);
+

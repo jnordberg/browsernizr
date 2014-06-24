@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "iframe[srcdoc] Attribute",
@@ -15,3 +18,4 @@ Test for `srcdoc` attribute in iframes.
 */
 
   Modernizr.addTest('srcdoc', 'srcdoc' in createElement('iframe'));
+

@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "iframe[seamless] Attribute",
@@ -15,3 +18,4 @@ Test for `seamless` attribute in iframes.
 */
 
   Modernizr.addTest('seamless', 'seamless' in createElement('iframe'));
+

@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "Track element and Timed Text Track API",
@@ -20,3 +23,4 @@
 
   // a more strict test for track including UI support: document.createElement('track').kind === 'subtitles'
   Modernizr.addTest('track', 'kind' in createElement('track'));
+

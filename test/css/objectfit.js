@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var prefixed = require('./../../lib/prefixed');
+
 /*!
 {
   "name": "CSS Object Fit",
@@ -13,3 +16,4 @@
 !*/
 
   Modernizr.addTest('objectfit', !!prefixed('objectFit'), { aliases: ['object-fit'] });
+

@@ -1,3 +1,6 @@
+var Modernizr = require('./../lib/Modernizr');
+var prefixed = require('./../lib/prefixed');
+
 /*!
 {
   "name": "Battery API",
@@ -17,3 +20,4 @@ Detect support for the Battery API, for accessing information about the system's
 */
 
   Modernizr.addTest('batteryapi', !!prefixed('battery', navigator), { aliases: ['battery-api'] });
+

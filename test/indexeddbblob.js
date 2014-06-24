@@ -1,3 +1,8 @@
+var Modernizr = require('./../lib/Modernizr');
+var addTest = require('./../lib/addTest');
+var prefixed = require('./../lib/prefixed');
+require('./../lib/test/indexeddb');
+
 /*!
 {
   "name": "IndexedDB Blob",
@@ -52,3 +57,4 @@ Detects if the browser can save File/Blob objects to IndexedDB
       addTest('indexeddbblob', false);
     }
   });
+

@@ -1,3 +1,6 @@
+var Modernizr = require('./../lib/Modernizr');
+var createElement = require('./../lib/createElement');
+
 /*!
 {
   "name": "VML",
@@ -26,3 +29,4 @@ Detects support for VML.
     var supportsVml = shape ? typeof shape.adj == 'object': true;
     return supportsVml;
   });
+

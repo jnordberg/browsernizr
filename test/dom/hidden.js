@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "[hidden] Attribute",
@@ -19,3 +22,4 @@ Does the browser support the HTML5 [hidden] attribute?
 */
 
   Modernizr.addTest('hidden', 'hidden' in createElement('a'));
+

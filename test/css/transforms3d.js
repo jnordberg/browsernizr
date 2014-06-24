@@ -1,3 +1,8 @@
+var Modernizr = require('./../../lib/Modernizr');
+var testAllProps = require('./../../lib/testAllProps');
+var testStyles = require('./../../lib/testStyles');
+var docElement = require('./../../lib/docElement');
+
 /*!
 {
   "name": "CSS Transforms 3D",
@@ -34,3 +39,4 @@
 
     return ret;
   });
+

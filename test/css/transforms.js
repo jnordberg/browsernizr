@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var testAllProps = require('./../../lib/testAllProps');
+
 /*!
 {
   "name": "CSS Transforms",
@@ -7,4 +10,10 @@
 }
 !*/
 
-  Modernizr.addTest('csstransforms', testAllProps('transform', 'scale(1)', true));
+  Modernizr.addTest('csstransforms', function() {
+    // Android < 3.0 is buggy, so we sniff and blacklist
+    // http://git.io/hHzL7w
+    return navigator.userAgent.indexOf('Android 2.') === -1 &&
+           testAllProps('transform', 'scale(1)', true);
+  });
+

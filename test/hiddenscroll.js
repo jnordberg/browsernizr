@@ -1,3 +1,6 @@
+var Modernizr = require('./../lib/Modernizr');
+var testStyles = require('./../lib/testStyles');
+
 /*!
 {
   "name": "Hidden Scrollbar",
@@ -14,3 +17,4 @@ Detects whether scrollbars on overflowed blocks are hidden (a-la iPhone)
       return elem.offsetWidth === elem.clientWidth;
     });
   });
+

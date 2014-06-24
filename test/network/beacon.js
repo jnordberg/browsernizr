@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "Beacon API",
@@ -18,3 +20,4 @@ Detects support for an API that allows for asynchronous transfer of small HTTP d
 */
 
   Modernizr.addTest('beacon', 'sendBeacon' in navigator);
+

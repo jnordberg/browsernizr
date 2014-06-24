@@ -1,3 +1,5 @@
+var Modernizr = require('./../lib/Modernizr');
+
 /*!
 {
   "name": "Application Cache",
@@ -18,3 +20,4 @@ The API has been [heavily criticized](http://alistapart.com/article/application-
 */
 
   Modernizr.addTest('applicationcache', 'applicationCache' in window);
+

@@ -1,3 +1,7 @@
+var Modernizr = require('./../lib/Modernizr');
+var createElement = require('./../lib/createElement');
+var testStyles = require('./../lib/testStyles');
+
 /*!
 {
   "name": "Unicode characters",
@@ -38,3 +42,4 @@ Detects if unicode characters are supported in the current document.
     return bool;
 
   });
+

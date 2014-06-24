@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "output Element",
@@ -12,3 +15,4 @@
 !*/
 
   Modernizr.addTest('outputelem', 'value' in createElement('output'));
+

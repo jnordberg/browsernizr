@@ -1,3 +1,6 @@
+var Modernizr = require('./../lib/Modernizr');
+var hasEvent = require('./../lib/hasEvent');
+
 /*!
 {
   "name": "Ambient Light Events",
@@ -13,3 +16,4 @@ Detects support for the API that provides information about the ambient light le
 */
 
   Modernizr.addTest('devicelight', hasEvent('devicelight', window));
+

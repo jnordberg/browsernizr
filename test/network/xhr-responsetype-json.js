@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var testXhrType = require('./../../lib/testXhrType');
+
 /*!
 {
   "name": "XMLHttpRequest xhr.responseType='json'",
@@ -17,3 +20,4 @@ Tests for XMLHttpRequest xhr.responseType='json'.
 */
 
   Modernizr.addTest('xhrresponsetypejson', testXhrType('json'));
+

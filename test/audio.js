@@ -1,3 +1,6 @@
+var Modernizr = require('./../lib/Modernizr');
+var createElement = require('./../lib/createElement');
+
 /*!
 {
   "name" : "HTML5 Audio Element",
@@ -45,3 +48,4 @@ Detects the audio element
 
     return bool;
   });
+

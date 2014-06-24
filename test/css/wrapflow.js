@@ -1,3 +1,8 @@
+var Modernizr = require('./../../lib/Modernizr');
+var prefixed = require('./../../lib/prefixed');
+var docElement = require('./../../lib/docElement');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "CSS wrap-flow",
@@ -48,3 +53,4 @@
 
     return (leftOffset == 150);
   });
+

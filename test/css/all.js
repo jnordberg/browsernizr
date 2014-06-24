@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var docElement = require('./../../lib/docElement');
+
 /*!
 {
   "name": "cssall",
@@ -15,3 +18,4 @@ css properties (except direction and unicode-bidi) to their original value
 
 
   Modernizr.addTest('cssall', 'all' in docElement.style);
+

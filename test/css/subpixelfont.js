@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var testStyles = require('./../../lib/testStyles');
+
 /*!
 {
   "name": "CSS Subpixel Fonts",
@@ -30,3 +33,4 @@
       window.getComputedStyle(subpixel, null).getPropertyValue('width') !== '44px'
     : false);
   }, 1, ['subpixel']);
+

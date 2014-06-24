@@ -1,3 +1,6 @@
+var Modernizr = require('./../lib/Modernizr');
+var prefixed = require('./../lib/prefixed');
+
 /*!
 {
   "name": "Vibration API",
@@ -16,3 +19,4 @@ Detects support for the API that provides access to the vibration mechanism of t
 */
 
   Modernizr.addTest('vibrate', !!prefixed('vibrate', navigator));
+

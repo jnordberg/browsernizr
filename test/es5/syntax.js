@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "ES5 Syntax",
@@ -39,3 +41,4 @@ Check if browser accepts ECMAScript 5 syntax.
       return false;
     }
   });
+

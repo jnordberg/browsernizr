@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var docElement = require('./../../lib/docElement');
+
 /*!
 {
   "name": "classList",
@@ -13,3 +16,4 @@
 !*/
 
   Modernizr.addTest('classlist', 'classList' in docElement);
+

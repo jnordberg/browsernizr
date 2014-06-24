@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "ES5 Array",
@@ -28,3 +30,4 @@ Check if browser implements ECMAScript 5 Array per specification.
       Array.prototype.reduceRight &&
       Array.isArray);
   });
+

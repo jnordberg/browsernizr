@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "ES6 String",
@@ -23,3 +25,4 @@ Check if browser implements ECMAScript 6 String per specification.
     String.prototype.startsWith &&
     String.prototype.endsWith &&
     String.prototype.contains));
+

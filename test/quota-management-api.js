@@ -1,3 +1,6 @@
+var Modernizr = require('./../lib/Modernizr');
+var prefixed = require('./../lib/prefixed');
+
 /*!
 {
   "name": "Quota Storage Management API",
@@ -20,3 +23,4 @@ Detects the ability to request a specific amount of space for filesystem access
 
     return !!(tempStorage && persStorage);
   });
+

@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var testStyles = require('./../../lib/testStyles');
+
 /*!
 {
   "name": "@font-face",
@@ -46,3 +49,4 @@
       Modernizr.addTest('fontface', bool);
     });
   }
+

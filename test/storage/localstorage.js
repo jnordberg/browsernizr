@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "Local Storage",
@@ -45,3 +47,4 @@
       return false;
     }
   });
+

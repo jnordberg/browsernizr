@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "input formtarget",
@@ -20,3 +23,4 @@ Detect support for the formtarget attribute on form inputs, which overrides the 
 */
 
   Modernizr.addTest('inputformtarget', !!('formtarget' in createElement('input')), { aliases: ['input-formtarget'] });
+

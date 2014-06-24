@@ -1,3 +1,5 @@
+var Modernizr = require('./../lib/Modernizr');
+
 /*!
 {
   "name": "History API",
@@ -38,3 +40,4 @@ Detects support for the History API for manipulating the browser session history
     // Return the regular check
     return (window.history && 'pushState' in window.history);
   });
+

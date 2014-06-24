@@ -1,3 +1,7 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+require('./../../lib/test/canvas');
+
 /*!
 {
   "name": "canvas winding support",
@@ -23,4 +27,5 @@ Determines if winding rules, which controls if a path can go clockwise or counte
     ctx.rect(2, 2, 6, 6);
     return ctx.isPointInPath(5, 5, 'evenodd') === false;
   });
+
 

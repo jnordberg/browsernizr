@@ -1,3 +1,7 @@
+var Modernizr = require('./../lib/Modernizr');
+var domPrefixes = require('./../lib/domPrefixes');
+var prefixed = require('./../lib/prefixed');
+
 /*!
 {
   "name": "Fullscreen API",
@@ -14,3 +18,4 @@
 
   // github.com/Modernizr/Modernizr/issues/739
   Modernizr.addTest('fullscreen', !!(prefixed('exitFullscreen', document, false) || prefixed('cancelFullScreen', document, false)));
+

@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "input[file] Attribute",
@@ -21,3 +24,4 @@ E.g. iOS < 6 and some android version don't support this
     elem.type = 'file';
     return !elem.disabled;
   });
+

@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "ES6 Generators",
@@ -19,3 +21,4 @@ Check if browser implements ECMAScript 6 Generators per specification.
     }
     return true;
   });
+

@@ -1,3 +1,5 @@
+var Modernizr = require('./../lib/Modernizr');
+
 /*!
 {
   "name": "Geolocation API",
@@ -32,3 +34,4 @@ Detects support for the Geolocation API for users to provide their location to w
   // a false positive that would throw an exception: bugzil.la/688158
 
   Modernizr.addTest('geolocation', 'geolocation' in navigator);
+

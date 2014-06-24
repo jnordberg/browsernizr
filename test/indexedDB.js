@@ -1,3 +1,6 @@
+var Modernizr = require('./../lib/Modernizr');
+var prefixed = require('./../lib/prefixed');
+
 /*!
 {
   "name": "IndexedDB",
@@ -22,3 +25,4 @@ Detects support for the IndexedDB client-side storage API (final spec).
   if (!!indexeddb) {
     Modernizr.addTest('indexeddb.deletedatabase', 'deleteDatabase' in indexeddb);
   }
+

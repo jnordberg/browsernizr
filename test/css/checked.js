@@ -1,3 +1,7 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+var testStyles = require('./../../lib/testStyles');
+
 /*!
 {
   "name": "CSS :checked pseudo-selector",
@@ -20,3 +24,4 @@
       return cb.offsetLeft === 20;
     });
   });
+

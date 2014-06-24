@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "Unknown Elements",
@@ -23,3 +26,4 @@ Does the browser support HTML with non-standard / new elements?
     a.innerHTML = '<xyz></xyz>';
     return a.childNodes.length === 1;
   });
+

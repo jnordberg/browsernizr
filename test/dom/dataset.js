@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "dataset API",
@@ -15,3 +18,4 @@
     n.setAttribute('data-a-b', 'c');
     return !!(n.dataset && n.dataset.aB === 'c');
   });
+

@@ -1,3 +1,7 @@
+var Modernizr = require('./../../lib/Modernizr');
+var docElement = require('./../../lib/docElement');
+var testStyles = require('./../../lib/testStyles');
+
 /*!
 {
   "name": "CSS vmax unit",
@@ -23,3 +27,4 @@
                           elem.currentStyle)['width'],10);
     Modernizr.addTest('cssvmaxunit', parseInt(Math.max(one_vw, one_vh)*50,10) == compWidth );
   });
+

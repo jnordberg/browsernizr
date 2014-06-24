@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var prefixed = require('./../../lib/prefixed');
+
 /*!
 {
   "name": "Filesystem API",
@@ -15,3 +18,4 @@
 !*/
 
   Modernizr.addTest('filesystem', !!prefixed('requestFileSystem', window));
+

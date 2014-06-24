@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "Binary WebSockets",
@@ -26,3 +28,4 @@
 
     return false;
   });
+

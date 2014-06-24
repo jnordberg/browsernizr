@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var testAllProps = require('./../../lib/testAllProps');
+
 /*!
 {
   "name": "CSS Shapes",
@@ -17,3 +20,4 @@
 !*/
 
   Modernizr.addTest('shapes', testAllProps('shapeOutside', 'content-box', true));
+

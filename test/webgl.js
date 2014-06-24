@@ -1,3 +1,6 @@
+var Modernizr = require('./../lib/Modernizr');
+var createElement = require('./../lib/createElement');
+
 /*!
 {
   "name": "WebGL",
@@ -15,3 +18,4 @@
     }
     return !!window.WebGLRenderingContext;
   });
+

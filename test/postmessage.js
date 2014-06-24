@@ -1,3 +1,5 @@
+var Modernizr = require('./../lib/Modernizr');
+
 /*!
 {
   "name": "postMessage",
@@ -15,3 +17,4 @@ Detects support for the `window.postMessage` protocol for cross-document messagi
 */
 
   Modernizr.addTest('postmessage', 'postMessage' in window);
+

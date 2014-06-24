@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var testStyles = require('./../../lib/testStyles');
+
 /*!
 {
   "name": "CSS vh unit",
@@ -22,3 +25,4 @@
                               elem.currentStyle)['height'],10);
     Modernizr.addTest('cssvhunit', compStyle == height);
   });
+

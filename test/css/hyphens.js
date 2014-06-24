@@ -1,3 +1,9 @@
+var Modernizr = require('./../../lib/Modernizr');
+var prefixes = require('./../../lib/prefixes');
+var createElement = require('./../../lib/createElement');
+var testAllProps = require('./../../lib/testAllProps');
+var addTest = require('./../../lib/addTest');
+
 /*!
 {
   "name": "CSS Hyphens",
@@ -226,3 +232,4 @@
 
     }
   });
+

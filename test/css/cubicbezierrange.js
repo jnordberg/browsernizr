@@ -1,3 +1,7 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+var prefixes = require('./../../lib/prefixes');
+
 /*!
 {
   "name": "CSS Cubic Bezier Range",
@@ -15,3 +19,4 @@
     el.style.cssText = prefixes.join('transition-timing-function:cubic-bezier(1,0,0,1.1); ');
     return !!el.style.length;
   });
+

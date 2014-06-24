@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var docElement = require('./../../lib/docElement');
+
 /*!
 {
   "name": "will-change",
@@ -14,3 +17,4 @@ browser that an element will be animating.
 */
 
   Modernizr.addTest('willchange', 'willChange' in docElement.style);
+

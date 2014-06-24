@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "input formenctype",
@@ -20,3 +23,4 @@ Detect support for the formenctype attribute on form inputs, which overrides the
 */
 
   Modernizr.addTest('inputformenctype', !!('formEnctype' in createElement('input')), { aliases: ['input-formenctype'] });
+

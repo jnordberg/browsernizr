@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var addTest = require('./../../lib/addTest');
+
 /*!
 {
   "name": "Webp Alpha",
@@ -35,3 +38,4 @@ Tests for transparent webp support.
 
     image.src = 'data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==';
   });
+

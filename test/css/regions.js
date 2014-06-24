@@ -1,3 +1,7 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+var docElement = require('./../../lib/docElement');
+
 /*!
 {
   "name": "CSS Regions",
@@ -64,3 +68,4 @@
 
     return (delta == 42);
   });
+

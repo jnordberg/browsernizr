@@ -1,3 +1,6 @@
+var Modernizr = require('./../lib/Modernizr');
+var prefixed = require('./../lib/prefixed');
+
 /*!
 {
   "name": "Page Visibility API",
@@ -22,3 +25,4 @@ Detects support for the Page Visibility API, which can be used to disable unnece
 */
 
   Modernizr.addTest('pagevisibility', !!prefixed('hidden', document, false));
+

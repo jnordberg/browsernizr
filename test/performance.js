@@ -1,3 +1,6 @@
+var Modernizr = require('./../lib/Modernizr');
+var prefixed = require('./../lib/prefixed');
+
 /*!
 {
   "name": "Navigation Timing API",
@@ -20,3 +23,4 @@ Detects support for the Navigation Timing API, for measuring browser and connect
 */
 
   Modernizr.addTest('performance', !!prefixed('performance', window));
+

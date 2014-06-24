@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "Web Workers",
@@ -22,3 +24,4 @@ Detects support for the basic `Worker` API from the Web Workers spec. Web Worker
 */
 
   Modernizr.addTest('webworkers', 'Worker' in window);
+

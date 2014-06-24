@@ -1,3 +1,5 @@
+var Modernizr = require('./../lib/Modernizr');
+
 /*!
 {
   "name": "Blob constructor",
@@ -25,3 +27,4 @@ Detects support for the Blob constructor, for creating file-like objects of immu
   }, {
     aliases: ['blob-constructor']
   });
+

@@ -1,3 +1,9 @@
+var Modernizr = require('./../lib/Modernizr');
+var createElement = require('./../lib/createElement');
+var docElement = require('./../lib/docElement');
+var addTest = require('./../lib/addTest');
+var getBody = require('./../lib/getBody');
+
 /*!
   {
   "name": "Flash",
@@ -84,3 +90,4 @@ Detects support flash, as well as flash blocking plugins
       }, 10);
     }
   });
+

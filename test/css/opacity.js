@@ -1,3 +1,7 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+var prefixes = require('./../../lib/prefixes');
+
 /*!
 {
   "name": "CSS Opacity",
@@ -22,3 +26,4 @@
     // github.com/Modernizr/Modernizr/issues/#issue/59/comment/516632
     return (/^0.55$/).test(style.opacity);
   });
+

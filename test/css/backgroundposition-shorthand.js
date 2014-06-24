@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "Background Position Shorthand",
@@ -30,3 +33,4 @@ eg `background-position: right 10px bottom 10px`
     eStyle.cssText = 'background-position: ' + val + ';';
     return (eStyle.backgroundPosition === val);
   });
+

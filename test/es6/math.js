@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "ES6 Math",
@@ -34,3 +36,4 @@ Check if browser implements ECMAScript 6 Math per specification.
     Math.hypot &&
     Math.trunc &&
     Math.fround));
+

@@ -1,3 +1,9 @@
+var Modernizr = require('./../../lib/Modernizr');
+var docElement = require('./../../lib/docElement');
+var createElement = require('./../../lib/createElement');
+var testStyles = require('./../../lib/testStyles');
+var hasEvent = require('./../../lib/hasEvent');
+
 /*!
 {
   "name": "onInput Event",
@@ -52,3 +58,4 @@
       return supportsOnInput;
     } catch (e) {}
   });
+

@@ -1,3 +1,5 @@
+var Modernizr = require('./../lib/Modernizr');
+
 /*!
 {
   "name": "QuerySelector",
@@ -17,3 +19,4 @@ Detects support for querySelector.
 */
 
   Modernizr.addTest('queryselector', 'querySelector' in document && 'querySelectorAll' in document);
+

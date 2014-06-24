@@ -1,3 +1,5 @@
+var Modernizr = require('./../lib/Modernizr');
+
 /*!
 {
   "name": "Cross-Origin Resource Sharing",
@@ -16,3 +18,4 @@ Detects support for Cross-Origin Resource Sharing: method of performing XMLHttpR
 */
 
   Modernizr.addTest('cors', 'XMLHttpRequest' in window && 'withCredentials' in new XMLHttpRequest());
+

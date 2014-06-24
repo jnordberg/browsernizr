@@ -1,3 +1,7 @@
+var Modernizr = require('./../../lib/Modernizr');
+require('./../../lib/testStyles');
+require('./../../lib/test/css/transitions');
+
 /*!
 {
   "name": "CSS Generated Content Transitions",
@@ -26,3 +30,4 @@
 
     return result;
   });
+

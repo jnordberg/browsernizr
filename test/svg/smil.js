@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var toStringFn = require('./../../lib/toStringFn');
+
 /*!
 {
   "name": "SVG SMIL animation",
@@ -16,3 +19,4 @@
     return !!document.createElementNS &&
       /SVGAnimate/.test(toStringFn.call(document.createElementNS('http://www.w3.org/2000/svg', 'animate')));
   });
+

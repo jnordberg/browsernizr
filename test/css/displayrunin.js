@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var testAllProps = require('./../../lib/testAllProps');
+
 /*!
 {
   "name": "CSS Display run-in",
@@ -17,3 +20,4 @@
 
   Modernizr.addTest('displayrunin', testAllProps('display', 'run-in'),
     { aliases: ['display-runin'] });
+

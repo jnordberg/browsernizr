@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "ES5 Date",
@@ -29,3 +31,4 @@ Check if browser implements ECMAScript 5 Date per specification.
       Date.prototype.toJSON &&
       canParseISODate);
   });
+

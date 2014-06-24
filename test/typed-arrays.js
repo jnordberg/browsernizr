@@ -1,3 +1,5 @@
+var Modernizr = require('./../lib/Modernizr');
+
 /*!
 {
   "name": "Typed arrays",
@@ -33,3 +35,4 @@ Does not check for DataView support; use `Modernizr.dataview` for that.
   // Blackberry Browser < 10.0
 
   Modernizr.addTest('typedarrays', 'ArrayBuffer' in window );
+

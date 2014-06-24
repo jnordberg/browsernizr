@@ -1,3 +1,7 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+var prefixes = require('./../../lib/prefixes');
+
 /*!
 {
   "name": "CSS Filters",
@@ -16,4 +20,5 @@
     el.style.cssText = prefixes.join('filter:blur(2px); ');
     return !!el.style.length && ((document.documentMode === undefined || document.documentMode > 9));
   });
+
 

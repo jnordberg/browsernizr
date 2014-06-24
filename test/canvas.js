@@ -1,3 +1,6 @@
+var Modernizr = require('./../lib/Modernizr');
+var createElement = require('./../lib/createElement');
+
 /*!
 {
   "name": "Canvas",
@@ -18,3 +21,4 @@ Detects support for the `<canvas>` element for 2D drawing.
     var elem = createElement('canvas');
     return !!(elem.getContext && elem.getContext('2d'));
   });
+

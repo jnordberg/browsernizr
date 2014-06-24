@@ -1,3 +1,5 @@
+var Modernizr = require('./../lib/Modernizr');
+
 /*!
 {
   "name": "HTML Imports",
@@ -19,3 +21,4 @@
 
 
   Modernizr.addTest('htmlimports', 'import' in document.createElement('link'));
+

@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "CSS Pointer Events",
@@ -30,3 +33,4 @@
     element.style.cssText = 'pointer-events:auto';
     return element.style.pointerEvents === 'auto';
   });
+

@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "sizes attribute",
@@ -18,3 +21,4 @@ Test for the `sizes` attribute on images
 */
 
   Modernizr.addTest('sizes', 'sizes' in createElement('img'));
+

@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "SVG filters",
@@ -23,3 +25,4 @@
     catch(e) {}
     return result;
   });
+

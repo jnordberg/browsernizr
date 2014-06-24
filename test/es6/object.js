@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "ES6 Object",
@@ -19,3 +21,4 @@ Check if browser implements ECMAScript 6 Object per specification.
   Modernizr.addTest('es6object', !!(Object.assign &&
     Object.is &&
     Object.setPrototypeOf));
+

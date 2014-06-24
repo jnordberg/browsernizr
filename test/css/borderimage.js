@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var testAllProps = require('./../../lib/testAllProps');
+
 /*!
 {
   "name": "Border Image",
@@ -10,3 +13,4 @@
 !*/
 
   Modernizr.addTest('borderimage', testAllProps('borderImage', 'url() 1', true));
+

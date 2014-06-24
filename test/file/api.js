@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "File API",
@@ -21,3 +23,4 @@ to be the File object's prototype.)
 */
 
   Modernizr.addTest('filereader', !!(window.File && window.FileList && window.FileReader));
+

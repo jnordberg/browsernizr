@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var testAllProps = require('./../../lib/testAllProps');
+
 /*!
 {
   "name": "CSS Background Clip Text",
@@ -28,3 +31,4 @@ extends beyond its border in CSS
   Modernizr.addTest('backgroundcliptext', function() {
     return testAllProps('backgroundClip', 'text');
   });
+

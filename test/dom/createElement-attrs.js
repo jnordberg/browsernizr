@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "createElement with Attributes",
@@ -21,3 +24,4 @@
   }, {
     aliases: ['createelement-attrs']
   });
+

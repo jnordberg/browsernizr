@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var testAllProps = require('./../../lib/testAllProps');
+
 /*!
 {
   "name": "CSS Mask",
@@ -28,3 +31,4 @@
 !*/
 
   Modernizr.addTest('cssmask', testAllProps('maskRepeat', 'repeat-x', true));
+

@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var testAllProps = require('./../../lib/testAllProps');
+
 /*!
 {
   "name": "Border Radius",
@@ -13,3 +16,4 @@
 !*/
 
   Modernizr.addTest('borderradius', testAllProps('borderRadius', '0px', true));
+

@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "input formmethod",
@@ -19,3 +22,4 @@ Detect support for the formmethod attribute on form inputs
 */
 
   Modernizr.addTest('inputformmethod', !!('formMethod' in createElement('input')));
+

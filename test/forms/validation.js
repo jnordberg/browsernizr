@@ -1,3 +1,8 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+var docElement = require('./../../lib/docElement');
+var testStyles = require('./../../lib/testStyles');
+
 /*!
 {
   "name": "Form Validation",
@@ -63,3 +68,4 @@ the test can be combined:
 
     return invalidFired;
   });
+

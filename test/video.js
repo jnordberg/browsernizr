@@ -1,3 +1,6 @@
+var Modernizr = require('./../lib/Modernizr');
+var createElement = require('./../lib/createElement');
+
 /*!
 {
   "name": "HTML5 Video",
@@ -59,3 +62,4 @@ Modernizr.video.ogg     // 'probably'
 
     return bool;
   });
+

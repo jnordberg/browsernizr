@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var testAllProps = require('./../../lib/testAllProps');
+
 /*!
 {
   "name": "CSS Reflections",
@@ -8,3 +11,4 @@
 !*/
 
   Modernizr.addTest('cssreflections', testAllProps('boxReflect', 'above', true));
+

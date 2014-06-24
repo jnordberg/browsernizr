@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "ES5 String",
@@ -18,3 +20,4 @@ Check if browser implements ECMAScript 5 String per specification.
   Modernizr.addTest('es5string', function () {
     return !!(String.prototype && String.prototype.trim);
   });
+

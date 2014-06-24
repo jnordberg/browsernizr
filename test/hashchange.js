@@ -1,3 +1,6 @@
+var Modernizr = require('./../lib/Modernizr');
+var hasEvent = require('./../lib/hasEvent');
+
 /*!
 {
   "name": "Hashchange event",
@@ -30,3 +33,4 @@ Detects support for the `hashchange` event, fired when the current location frag
     //   which false positives.
     return (document.documentMode === undefined || document.documentMode > 7);
   });
+

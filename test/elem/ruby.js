@@ -1,3 +1,7 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+var docElement = require('./../../lib/docElement');
+
 /*!
 {
   "name": "ruby, rp, rt Elements",
@@ -61,4 +65,5 @@
     }
 
   });
+
 

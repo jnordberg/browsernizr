@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var toStringFn = require('./../../lib/toStringFn');
+
 /*!
 {
   "name": "SVG clip paths",
@@ -19,3 +22,4 @@ See [this discussion](http://github.com/Modernizr/Modernizr/issues/213) regardin
     return !!document.createElementNS &&
       /SVGClipPath/.test(toStringFn.call(document.createElementNS('http://www.w3.org/2000/svg', 'clipPath')));
   });
+

@@ -1,3 +1,7 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+var prefixes = require('./../../lib/prefixes');
+
 /*!
 {
   "name": "CSS Calc",
@@ -27,3 +31,4 @@ Method of allowing calculated values for length units. For example:
 
     return !!el.style.length;
   });
+

@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "Device Orientation and Motion Events",
@@ -28,3 +30,4 @@ Part of Device Access aspect of HTML5, same category as geolocation.
 
   Modernizr.addTest('devicemotion', 'DeviceMotionEvent' in window);
   Modernizr.addTest('deviceorientation', 'DeviceOrientationEvent' in window);
+

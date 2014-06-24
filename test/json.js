@@ -1,3 +1,5 @@
+var Modernizr = require('./../lib/Modernizr');
+
 /*!
 {
   "name": "JSON",
@@ -18,3 +20,4 @@ Detects native support for JSON handling functions.
   //   ... but that should be obvious. :)
 
   Modernizr.addTest('json', 'JSON' in window && 'parse' in JSON && 'stringify' in JSON);
+

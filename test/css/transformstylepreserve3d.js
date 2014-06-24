@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var testAllProps = require('./../../lib/testAllProps');
+
 /*!
 {
   "name": "CSS Transform Style preserve-3d",
@@ -18,3 +21,4 @@ Detects support for `transform-style: preserve-3d`, for getting a proper 3D pers
 */
 
   Modernizr.addTest('preserve3d', testAllProps('transformStyle', 'preserve-3d'));
+

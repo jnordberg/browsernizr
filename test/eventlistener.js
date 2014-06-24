@@ -1,3 +1,5 @@
+var Modernizr = require('./../lib/Modernizr');
+
 /*!
 {
   "name": "Event Listener",
@@ -15,3 +17,4 @@ Detects native support for addEventListener
 */
 
   Modernizr.addTest('eventlistener', 'addEventListener' in window);
+

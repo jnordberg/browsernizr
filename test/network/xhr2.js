@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "XML HTTP Request Level 2 XHR2",
@@ -21,3 +23,4 @@ Tests for XHR2.
   //   !!(window.ProgressEvent);
   //   'XMLHttpRequest' in window && 'withCredentials' in new XMLHttpRequest
   Modernizr.addTest('xhr2', 'XMLHttpRequest' in window && 'withCredentials' in new XMLHttpRequest());
+

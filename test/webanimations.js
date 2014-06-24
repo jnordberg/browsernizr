@@ -1,3 +1,5 @@
+var Modernizr = require('./../lib/Modernizr');
+
 /*!
 {
   "name": "Web Animation API",
@@ -15,3 +17,4 @@ Detects support for the Web Animation API, a way to create css animations in js
 */
 
   Modernizr.addTest('webanimations', 'Animation' in window);
+

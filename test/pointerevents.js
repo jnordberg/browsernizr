@@ -1,3 +1,7 @@
+var Modernizr = require('./../lib/Modernizr');
+var domPrefixes = require('./../lib/domPrefixes');
+var hasEvent = require('./../lib/hasEvent');
+
 /*!
 {
   "name": "DOM Pointer Events API",
@@ -36,3 +40,4 @@ Detects support for the DOM Pointer Events API, which provides a unified event i
     }
     return bool;
   });
+

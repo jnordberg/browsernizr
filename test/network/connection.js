@@ -1,3 +1,5 @@
+var Modernizr = require('./../../lib/Modernizr');
+
 /*!
 {
   "name": "Low Bandwidth Connection",
@@ -33,3 +35,4 @@ For more rigorous network testing, consider boomerang.js: http://github.com/blue
       connection.type == 4 || // connection.CELL_3G
       /^[23]g$/.test(connection.type); // string value in new spec
   });
+

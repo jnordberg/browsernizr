@@ -1,3 +1,6 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+
 /*!
 {
   "name": "CSS Multiple Backgrounds",
@@ -20,3 +23,4 @@
     // of the string "url(" in the return value for elemStyle.background
     return (/(url\s*\(.*?){3}/).test(style.background);
   });
+

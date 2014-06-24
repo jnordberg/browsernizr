@@ -1,3 +1,7 @@
+var Modernizr = require('./../../lib/Modernizr');
+var createElement = require('./../../lib/createElement');
+var docElement = require('./../../lib/docElement');
+
 /*!
 {
   "name": "input[form] Attribute",
@@ -44,3 +48,4 @@ E.g. IE 10 (and below), don't support this
     div.parentNode.removeChild(div);
     return bool;
   });
+
