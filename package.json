@@ -9,6 +9,9 @@
     "modernizer",
     "browserify"
   ],
+  "scripts": {
+    "postinstall" : "node bin/build.js"
+  },
   "dependencies": {
     "shelljs": "*",
     "Modernizr": "git://github.com/Modernizr/Modernizr.git"

@@ -12,7 +12,7 @@ testRunner();
 setClasses(classes);
 
 delete ModernizrProto.addTest;
-delete ModernizrProto.addAsyncT est;
+delete ModernizrProto.addAsyncTest;
 
 // Run the things that are supposed to run after the tests
 for (var i = 0; i < Modernizr._q.length; i++) {
