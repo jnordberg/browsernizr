@@ -13,9 +13,7 @@ var testXhrType = require('./../../lib/testXhrType');
 }
 !*/
 /* DOC
-
 Tests for XMLHttpRequest xhr.responseType='arraybuffer'.
-
 */
 
   Modernizr.addTest('xhrresponsetypearraybuffer', testXhrType('arraybuffer'));

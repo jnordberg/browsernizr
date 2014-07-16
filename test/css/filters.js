@@ -8,7 +8,8 @@ var prefixes = require('./../../lib/prefixes');
   "property": "cssfilters",
   "caniuse": "css-filters",
   "polyfills": ["polyfilter"],
-  "tags": ["css"]
+  "tags": ["css"],
+  "builderAliases": ["css_filters"]
 }
 !*/
 

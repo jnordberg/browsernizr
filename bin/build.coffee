@@ -54,6 +54,3 @@ for file in findFiles '.'
     libPath += '../'
   libPath += 'lib/'
   unAMD(src, libPath).to file
-
-
-

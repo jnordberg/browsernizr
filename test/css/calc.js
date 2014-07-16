@@ -8,10 +8,11 @@ var prefixes = require('./../../lib/prefixes');
   "property": "csscalc",
   "caniuse": "calc",
   "tags": ["css"],
+  "builderAliases": ["css_calc"],
   "authors": ["@calvein"]
 }
-!*//* DOC
-
+!*/
+/* DOC
 Method of allowing calculated values for length units. For example:
 
 ```css
@@ -19,7 +20,6 @@ Method of allowing calculated values for length units. For example:
   width: calc(100% - 3em);
 }
 ```
-
 */
 
   Modernizr.addTest('csscalc', function() {

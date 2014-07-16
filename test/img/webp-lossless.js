@@ -18,9 +18,7 @@ var addTest = require('./../../lib/addTest');
 }
 !*/
 /* DOC
-
 Tests for non-alpha lossless webp support.
-
 */
 
   Modernizr.addAsyncTest(function(){

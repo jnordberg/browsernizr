@@ -20,9 +20,7 @@ var Modernizr = require('./../lib/Modernizr');
 }
 !*/
 /* DOC
-
 Detects support for the Geolocation API for users to provide their location to web applications.
-
 */
 
   // geolocation is often considered a trivial feature detect...

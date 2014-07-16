@@ -30,7 +30,6 @@ var smile = require('./../lib/smile');
 }
 !*/
 /* DOC
-
 Detects support for HTML5 form input types and exposes Boolean subproperties with the results:
 
 ```javascript
@@ -48,7 +47,6 @@ Modernizr.inputtypes.time
 Modernizr.inputtypes.url
 Modernizr.inputtypes.week
 ```
-
 */
 
   // Run through HTML5's new input types to see if the UA understands any.

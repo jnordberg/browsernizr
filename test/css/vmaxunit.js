@@ -1,4 +1,5 @@
 var Modernizr = require('./../../lib/Modernizr');
+var docElement = require('./../../lib/docElement');
 var testStyles = require('./../../lib/testStyles');
 
 /*!
@@ -7,6 +8,7 @@ var testStyles = require('./../../lib/testStyles');
   "property": "cssvmaxunit",
   "caniuse": "viewport-units",
   "tags": ["css"],
+  "builderAliases": ["css_vmaxunit"],
   "notes": [{
     "name": "Related Modernizr Issue",
     "href": "https://github.com/Modernizr/Modernizr/issues/572"
@@ -17,9 +19,9 @@ var testStyles = require('./../../lib/testStyles');
 }
 !*/
 
-  testStyles('#modernizr { width: 50vmax; }', function( elem, rule ) {
-    var one_vw = window.innerWidth/100;
-    var one_vh = window.innerHeight/100;
+  testStyles('#modernizr { width: 50vmax; }', function( elem ) {
+    var one_vw = docElement.clientWidth/100;
+    var one_vh = docElement.clientHeight/100;
     var compWidth = parseInt((window.getComputedStyle ?
                           getComputedStyle(elem, null) :
                           elem.currentStyle)['width'],10);

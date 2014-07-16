@@ -10,13 +10,12 @@ var Modernizr = require('./../../lib/Modernizr');
     "href": "http://www.ecma-international.org/ecma-262/5.1/"
   }],
   "authors": ["@kangax"],
-  "tags": ["es5"]
+  "tags": ["es5"],
+  "builderAliases": ["es5_strictmode"]
 }
 !*/
 /* DOC
-
 Check if browser implements ECMAScript 5 Object strict mode.
-
 */
 
-  Modernizr.addTest('strictmode', (function(){ "use strict"; 
+  Modernizr.addTest('strictmode', (function(){'use strict'; 

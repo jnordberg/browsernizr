@@ -7,7 +7,10 @@ var testAllProps = require('./../../lib/testAllProps');
   "property": "boxshadow",
   "caniuse": "css-boxshadow",
   "tags": ["css"],
-  "knownBugs": ["WebOS false positives on this test."]
+  "knownBugs": [
+    "WebOS false positives on this test.",
+    "The Kindle Silk browser false positives"
+  ]
 }
 !*/
 

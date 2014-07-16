@@ -6,7 +6,8 @@ var prefixes = require('./../../lib/prefixes');
 {
   "name": "CSS Stylable Scrollbars",
   "property": "cssscrollbar",
-  "tags": ["css"]
+  "tags": ["css"],
+  "builderAliases": ["css_scrollbars"]
 }
 !*/
 

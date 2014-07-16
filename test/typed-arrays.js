@@ -18,11 +18,9 @@ var Modernizr = require('./../lib/Modernizr');
 }
 !*/
 /* DOC
-
 Detects support for native binary data manipulation via Typed Arrays in JavaScript.
 
 Does not check for DataView support; use `Modernizr.dataview` for that.
-
 */
 
   // Should fail in:

@@ -8,6 +8,7 @@ var createElement = require('./../../lib/createElement');
   "property": "csspointerevents",
   "authors": ["ausi"],
   "tags": ["css"],
+  "builderAliases": ["css_pointerevents"],
   "notes": [
     {
       "name": "MDN Docs",

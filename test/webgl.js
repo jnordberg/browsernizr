@@ -1,4 +1,5 @@
 var Modernizr = require('./../lib/Modernizr');
+var createElement = require('./../lib/createElement');
 
 /*!
 {
@@ -10,6 +11,11 @@ var Modernizr = require('./../lib/Modernizr');
 }
 !*/
 
-  // webk.it/70117 is tracking a legit WebGL feature detect proposal
-  Modernizr.addTest('webgl', 'WebGLRenderingContext' in window);
+  Modernizr.addTest('webgl', function() {
+    var canvas = createElement('canvas');
+    if ('supportsContext' in canvas) {
+      return canvas.supportsContext('webgl') || canvas.supportsContext('experimental-webgl');
+    }
+    return !!window.WebGLRenderingContext;
+  });
 

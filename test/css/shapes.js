@@ -1,8 +1,5 @@
 var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-var docElement = require('./../../lib/docElement');
-var prefixed = require('./../../lib/prefixed');
-var testStyles = require('./../../lib/testStyles');
+var testAllProps = require('./../../lib/testAllProps');
 
 /*!
 {
@@ -22,18 +19,5 @@ var testStyles = require('./../../lib/testStyles');
 }
 !*/
 
-    Modernizr.addTest('shapes', function () {
-        var prefixedProperty = prefixed('shapeOutside');
-
-        if (!prefixedProperty)
-            return false;
-
-        var shapeOutsideProperty = prefixedProperty.replace(/([A-Z])/g, function (str, m1) { return '-' + m1.toLowerCase(); }).replace(/^ms-/, '-ms-');
-
-        return testStyles('#modernizr { float: left; ' + shapeOutsideProperty + ':rectangle(0,0,0,0,0,0) }', function (elem) {
-            // Check against computed value
-            var styleObj = window.getComputedStyle ? getComputedStyle(elem, null) : elem.currentStyle;
-            return styleObj[prefixed('shapeOutside', docElement.style, false)] == 'rectangle(0px, 0px, 0px, 0px, 0px, 0px)';
-        });
-    });
+  Modernizr.addTest('shapes', testAllProps('shapeOutside', 'content-box', true));
 

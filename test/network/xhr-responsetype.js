@@ -12,9 +12,7 @@ var Modernizr = require('./../../lib/Modernizr');
 }
 !*/
 /* DOC
-
 Tests for XMLHttpRequest xhr.responseType.
-
 */
 
   Modernizr.addTest('xhrresponsetype', (function() {
