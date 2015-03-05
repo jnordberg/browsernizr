@@ -2,7 +2,7 @@ var Modernizr = require('./../../lib/Modernizr');
 var addTest = require('./../../lib/addTest');
 var docElement = require('./../../lib/docElement');
 var createElement = require('./../../lib/createElement');
-require('./../../lib/test/video');
+require('./../../test/video');
 
 /*!
 {
