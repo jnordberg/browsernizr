@@ -1,0 +1,563 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'version', 'minor' ]
+2 info using npm@2.8.3
+3 info using node@v0.12.2
+4 verbose node symlink /usr/local/bin/node
+5 info git [ 'status', '--porcelain' ]
+6 verbose stack Error: Git working directory not clean.
+6 verbose stack M  lib/ModernizrProto.js
+6 verbose stack M  lib/addTest.js
+6 verbose stack A  lib/atRule.js
+6 verbose stack M  lib/createElement.js
+6 verbose stack A  lib/cssToDOM.js
+6 verbose stack M  lib/cssomPrefixes.js
+6 verbose stack M  lib/domPrefixes.js
+6 verbose stack A  lib/domToCSS.js
+6 verbose stack D  lib/domToHyphenated.js
+6 verbose stack M  lib/fnBind.js
+6 verbose stack M  lib/generate.js
+6 verbose stack M  lib/getBody.js
+6 verbose stack M  lib/hasOwnProp.js
+6 verbose stack M  lib/html5printshiv.js
+6 verbose stack M  lib/html5shiv.js
+6 verbose stack M  lib/injectElementWithStyles.js
+6 verbose stack M  lib/isEventSupported.js
+6 verbose stack A  lib/isSVG.js
+6 verbose stack M  lib/load.js
+6 verbose stack M  lib/mq.js
+6 verbose stack M  lib/nativeTestProps.js
+6 verbose stack M  lib/omPrefixes.js
+6 verbose stack M  lib/prefixed.js
+6 verbose stack A  lib/prefixedCSS.js
+6 verbose stack M  lib/prefixes.js
+6 verbose stack D  lib/require.js
+6 verbose stack A  lib/roundedEquals.js
+6 verbose stack M  lib/setClasses.js
+6 verbose stack M  lib/setCss.js
+6 verbose stack D  lib/setCssAll.js
+6 verbose stack M  lib/testAllProps.js
+6 verbose stack M  lib/testDOMProps.js
+6 verbose stack M  lib/testProp.js
+6 verbose stack M  lib/testProps.js
+6 verbose stack M  lib/testPropsAll.js
+6 verbose stack M  lib/testRunner.js
+6 verbose stack M  lib/testXhrType.js
+6 verbose stack A  npm-debug.log
+6 verbose stack M  test/a/download.js
+6 verbose stack A  test/ambientlight.js
+6 verbose stack M  test/applicationcache.js
+6 verbose stack M  test/audio.js
+6 verbose stack M  test/audio/loop.js
+6 verbose stack M  test/audio/preload.js
+6 verbose stack M  test/audio/webaudio.js
+6 verbose stack M  test/battery.js
+6 verbose stack M  test/battery/lowbattery.js
+6 verbose stack M  test/blob.js
+6 verbose stack M  test/canvas.js
+6 verbose stack A  test/canvas/blending.js
+6 verbose stack M  test/canvas/todataurl.js
+6 verbose stack A  test/canvas/winding.js
+6 verbose stack M  test/canvastext.js
+6 verbose stack M  test/contenteditable.js
+6 verbose stack D  test/contentsecuritypolicy.js
+6 verbose stack M  test/contextmenu.js
+6 verbose stack M  test/cookies.js
+6 verbose stack M  test/cors.js
+6 verbose stack M  test/crypto/getrandomvalues.js
+6 verbose stack A  test/css/all.js
+6 verbose stack M  test/css/animations.js
+6 verbose stack A  test/css/appearance.js
+6 verbose stack A  test/css/backgroundblendmode.js
+6 verbose stack M  test/css/backgroundcliptext.js
+6 verbose stack M  test/css/backgroundposition-shorthand.js
+6 verbose stack M  test/css/backgroundposition-xy.js
+6 verbose stack M  test/css/backgroundrepeat.js
+6 verbose stack M  test/css/backgroundsizecover.js
+6 verbose stack M  test/css/borderimage.js
+6 verbose stack M  test/css/boxshadow.js
+6 verbose stack M  test/css/boxsizing.js
+6 verbose stack M  test/css/calc.js
+6 verbose stack M  test/css/checked.js
+6 verbose stack A  test/css/chunit.js
+6 verbose stack M  test/css/cubicbezierrange.js
+6 verbose stack M  test/css/displayrunin.js
+6 verbose stack M  test/css/displaytable.js
+6 verbose stack A  test/css/escape.js
+6 verbose stack A  test/css/exunit.js
+6 verbose stack M  test/css/filters.js
+6 verbose stack M  test/css/flexbox.js
+6 verbose stack M  test/css/flexboxtweener.js
+6 verbose stack M  test/css/flexwrap.js
+6 verbose stack M  test/css/fontface.js
+6 verbose stack M  test/css/generatedcontent.js
+6 verbose stack M  test/css/gradients.js
+6 verbose stack M  test/css/hsla.js
+6 verbose stack M  test/css/hyphens.js
+6 verbose stack A  test/css/invalid.js
+6 verbose stack M  test/css/lastchild.js
+6 verbose stack M  test/css/mask.js
+6 verbose stack M  test/css/mediaqueries.js
+6 verbose stack M  test/css/multiplebgs.js
+6 verbose stack M  test/css/nthchild.js
+6 verbose stack M  test/css/objectfit.js
+6 verbose stack M  test/css/opacity.js
+6 verbose stack M  test/css/overflow-scrolling.js
+6 verbose stack M  test/css/pointerevents.js
+6 verbose stack M  test/css/positionsticky.js
+6 verbose stack M  test/css/regions.js
+6 verbose stack M  test/css/remunit.js
+6 verbose stack M  test/css/resize.js
+6 verbose stack M  test/css/rgba.js
+6 verbose stack M  test/css/scrollbars.js
+6 verbose stack M  test/css/shapes.js
+6 verbose stack M  test/css/siblinggeneral.js
+6 verbose stack M  test/css/subpixelfont.js
+6 verbose stack M  test/css/supports.js
+6 verbose stack M  test/css/target.js
+6 verbose stack A  test/css/textalignlast.js
+6 verbose stack M  test/css/transforms.js
+6 verbose stack M  test/css/transforms3d.js
+6 verbose stack M  test/css/transformstylepreserve3d.js
+6 verbose stack M  test/css/userselect.js
+6 verbose stack A  test/css/valid.js
+6 verbose stack M  test/css/vhunit.js
+6 verbose stack M  test/css/vmaxunit.js
+6 verbose stack M  test/css/vminunit.js
+6 verbose stack M  test/css/vwunit.js
+6 verbose stack A  test/css/will-change.js
+6 verbose stack M  test/css/wrapflow.js
+6 verbose stack M  test/custom-protocol-handler.js
+6 verbose stack A  test/customevent.js
+6 verbose stack M  test/dart.js
+6 verbose stack M  test/dataview-api.js
+6 verbose stack M  test/dom/classlist.js
+6 verbose stack M  test/dom/createElement-attrs.js
+6 verbose stack M  test/dom/dataset.js
+6 verbose stack M  test/dom/documentfragment.js
+6 verbose stack A  test/dom/hidden.js
+6 verbose stack M  test/dom/microdata.js
+6 verbose stack A  test/dom/mutationObserver.js
+6 verbose stack M  test/draganddrop.js
+6 verbose stack M  test/elem/datalist.js
+6 verbose stack M  test/elem/details.js
+6 verbose stack M  test/elem/output.js
+6 verbose stack A  test/elem/picture.js
+6 verbose stack M  test/elem/progress-meter.js
+6 verbose stack M  test/elem/ruby.js
+6 verbose stack M  test/elem/time.js
+6 verbose stack M  test/elem/track.js
+6 verbose stack A  test/elem/unknown.js
+6 verbose stack M  test/emoji.js
+6 verbose stack M  test/es5/array.js
+6 verbose stack M  test/es5/date.js
+6 verbose stack M  test/es5/function.js
+6 verbose stack M  test/es5/object.js
+6 verbose stack A  test/es5/specification.js
+6 verbose stack M  test/es5/strictmode.js
+6 verbose stack M  test/es5/string.js
+6 verbose stack A  test/es5/syntax.js
+6 verbose stack A  test/es5/undefined.js
+6 verbose stack A  test/es6/array.js
+6 verbose stack M  test/es6/contains.js
+6 verbose stack A  test/es6/generators.js
+6 verbose stack A  test/es6/math.js
+6 verbose stack A  test/es6/number.js
+6 verbose stack A  test/es6/object.js
+6 verbose stack A  test/es6/promises.js
+6 verbose stack A  test/es6/string.js
+6 verbose stack M  test/event/deviceorientation-motion.js
+6 verbose stack M  test/event/oninput.js
+6 verbose stack A  test/eventlistener.js
+6 verbose stack M  test/exif-orientation.js
+6 verbose stack M  test/file/api.js
+6 verbose stack M  test/file/filesystem.js
+6 verbose stack M  test/flash.js
+6 verbose stack M  test/forms/capture.js
+6 verbose stack M  test/forms/fileinput.js
+6 verbose stack M  test/forms/fileinputdirectory.js
+6 verbose stack M  test/forms/formattribute.js
+6 verbose stack M  test/forms/inputnumber-l10n.js
+6 verbose stack M  test/forms/placeholder.js
+6 verbose stack M  test/forms/requestautocomplete.js
+6 verbose stack D  test/forms/speechinput.js
+6 verbose stack M  test/forms/validation.js
+6 verbose stack M  test/fullscreen-api.js
+6 verbose stack M  test/gamepad.js
+6 verbose stack M  test/geolocation.js
+6 verbose stack M  test/hashchange.js
+6 verbose stack A  test/hiddenscroll.js
+6 verbose stack M  test/history.js
+6 verbose stack A  test/htmlimports.js
+6 verbose stack M  test/ie8compat.js
+6 verbose stack M  test/iframe/sandbox.js
+6 verbose stack M  test/iframe/seamless.js
+6 verbose stack M  test/iframe/srcdoc.js
+6 verbose stack M  test/img/apng.js
+6 verbose stack M  test/img/jpegxr.js
+6 verbose stack A  test/img/sizes.js
+6 verbose stack A  test/img/srcset.js
+6 verbose stack A  test/img/webp-alpha.js
+6 verbose stack A  test/img/webp-animation.js
+6 verbose stack M  test/img/webp-lossless.js
+6 verbose stack M  test/img/webp.js
+6 verbose stack M  test/indexedDB.js
+6 verbose stack A  test/indexeddbblob.js
+6 verbose stack M  test/input.js
+6 verbose stack A  test/input/formaction.js
+6 verbose stack A  test/input/formenctype.js
+6 verbose stack A  test/input/formmethod.js
+6 verbose stack A  test/input/formtarget.js
+6 verbose stack M  test/inputsearchevent.js
+6 verbose stack M  test/inputtypes.js
+6 verbose stack A  test/intl.js
+6 verbose stack M  test/json.js
+6 verbose stack M  test/lists-reversed.js
+6 verbose stack M  test/mathml.js
+6 verbose stack A  test/network/beacon.js
+6 verbose stack M  test/network/connection.js
+6 verbose stack M  test/network/eventsource.js
+6 verbose stack M  test/network/xhr-responsetype-arraybuffer.js
+6 verbose stack M  test/network/xhr-responsetype-blob.js
+6 verbose stack M  test/network/xhr-responsetype-document.js
+6 verbose stack M  test/network/xhr-responsetype-json.js
+6 verbose stack M  test/network/xhr-responsetype-text.js
+6 verbose stack M  test/network/xhr-responsetype.js
+6 verbose stack M  test/network/xhr2.js
+6 verbose stack M  test/notification.js
+6 verbose stack M  test/pagevisibility-api.js
+6 verbose stack M  test/performance.js
+6 verbose stack M  test/pointerevents.js
+6 verbose stack M  test/pointerlock-api.js
+6 verbose stack M  test/postmessage.js
+6 verbose stack A  test/proximity.js
+6 verbose stack A  test/queryselector.js
+6 verbose stack M  test/quota-management-api.js
+6 verbose stack M  test/requestanimationframe.js
+6 verbose stack M  test/script/async.js
+6 verbose stack M  test/script/defer.js
+6 verbose stack M  test/serviceworker.js
+6 verbose stack M  test/speech/speech-synthesis.js
+6 verbose stack M  test/storage/localstorage.js
+6 verbose stack M  test/style/scoped.js
+6 verbose stack M  test/svg.js
+6 verbose stack M  test/svg/asimg.js
+6 verbose stack M  test/svg/clippaths.js
+6 verbose stack M  test/svg/filters.js
+6 verbose stack A  test/svg/foreignobject.js
+6 verbose stack M  test/svg/inline.js
+6 verbose stack M  test/svg/smil.js
+6 verbose stack A  test/templatestrings.js
+6 verbose stack A  test/textarea/maxlength.js
+6 verbose stack M  test/touchevents.js
+6 verbose stack M  test/typed-arrays.js
+6 verbose stack A  test/unicode-range.js
+6 verbose stack M  test/unicode.js
+6 verbose stack A  test/url/bloburls.js
+6 verbose stack M  test/url/data-uri.js
+6 verbose stack A  test/url/parser.js
+6 verbose stack M  test/userdata.js
+6 verbose stack M  test/vibration.js
+6 verbose stack M  test/video.js
+6 verbose stack M  test/video/autoplay.js
+6 verbose stack M  test/video/loop.js
+6 verbose stack M  test/video/preload.js
+6 verbose stack M  test/vml.js
+6 verbose stack M  test/web-intents.js
+6 verbose stack M  test/webanimations.js
+6 verbose stack M  test/webgl.js
+6 verbose stack M  test/webgl/extensions.js
+6 verbose stack A  test/webrtc/datachannel.js
+6 verbose stack M  test/websockets/binary.js
+6 verbose stack M  test/window/framed.js
+6 verbose stack A  test/window/matchmedia.js
+6 verbose stack M  test/workers/blobworkers.js
+6 verbose stack M  test/workers/dataworkers.js
+6 verbose stack M  test/workers/sharedworkers.js
+6 verbose stack A  test/workers/transferables.js
+6 verbose stack M  test/workers/webworkers.js
+6 verbose stack     at /usr/local/lib/node_modules/npm/lib/version.js:138:37
+6 verbose stack     at ChildProcess.exithandler (child_process.js:742:7)
+6 verbose stack     at ChildProcess.emit (events.js:110:17)
+6 verbose stack     at maybeClose (child_process.js:1015:16)
+6 verbose stack     at Socket.<anonymous> (child_process.js:1183:11)
+6 verbose stack     at Socket.emit (events.js:107:17)
+6 verbose stack     at Pipe.close (net.js:485:12)
+7 verbose cwd /Users/alden/Source/browsernizr
+8 error Darwin 14.3.0
+9 error argv "node" "/usr/local/bin/npm" "version" "minor"
+10 error node v0.12.2
+11 error npm  v2.8.3
+12 error Git working directory not clean.
+12 error M  lib/ModernizrProto.js
+12 error M  lib/addTest.js
+12 error A  lib/atRule.js
+12 error M  lib/createElement.js
+12 error A  lib/cssToDOM.js
+12 error M  lib/cssomPrefixes.js
+12 error M  lib/domPrefixes.js
+12 error A  lib/domToCSS.js
+12 error D  lib/domToHyphenated.js
+12 error M  lib/fnBind.js
+12 error M  lib/generate.js
+12 error M  lib/getBody.js
+12 error M  lib/hasOwnProp.js
+12 error M  lib/html5printshiv.js
+12 error M  lib/html5shiv.js
+12 error M  lib/injectElementWithStyles.js
+12 error M  lib/isEventSupported.js
+12 error A  lib/isSVG.js
+12 error M  lib/load.js
+12 error M  lib/mq.js
+12 error M  lib/nativeTestProps.js
+12 error M  lib/omPrefixes.js
+12 error M  lib/prefixed.js
+12 error A  lib/prefixedCSS.js
+12 error M  lib/prefixes.js
+12 error D  lib/require.js
+12 error A  lib/roundedEquals.js
+12 error M  lib/setClasses.js
+12 error M  lib/setCss.js
+12 error D  lib/setCssAll.js
+12 error M  lib/testAllProps.js
+12 error M  lib/testDOMProps.js
+12 error M  lib/testProp.js
+12 error M  lib/testProps.js
+12 error M  lib/testPropsAll.js
+12 error M  lib/testRunner.js
+12 error M  lib/testXhrType.js
+12 error A  npm-debug.log
+12 error M  test/a/download.js
+12 error A  test/ambientlight.js
+12 error M  test/applicationcache.js
+12 error M  test/audio.js
+12 error M  test/audio/loop.js
+12 error M  test/audio/preload.js
+12 error M  test/audio/webaudio.js
+12 error M  test/battery.js
+12 error M  test/battery/lowbattery.js
+12 error M  test/blob.js
+12 error M  test/canvas.js
+12 error A  test/canvas/blending.js
+12 error M  test/canvas/todataurl.js
+12 error A  test/canvas/winding.js
+12 error M  test/canvastext.js
+12 error M  test/contenteditable.js
+12 error D  test/contentsecuritypolicy.js
+12 error M  test/contextmenu.js
+12 error M  test/cookies.js
+12 error M  test/cors.js
+12 error M  test/crypto/getrandomvalues.js
+12 error A  test/css/all.js
+12 error M  test/css/animations.js
+12 error A  test/css/appearance.js
+12 error A  test/css/backgroundblendmode.js
+12 error M  test/css/backgroundcliptext.js
+12 error M  test/css/backgroundposition-shorthand.js
+12 error M  test/css/backgroundposition-xy.js
+12 error M  test/css/backgroundrepeat.js
+12 error M  test/css/backgroundsizecover.js
+12 error M  test/css/borderimage.js
+12 error M  test/css/boxshadow.js
+12 error M  test/css/boxsizing.js
+12 error M  test/css/calc.js
+12 error M  test/css/checked.js
+12 error A  test/css/chunit.js
+12 error M  test/css/cubicbezierrange.js
+12 error M  test/css/displayrunin.js
+12 error M  test/css/displaytable.js
+12 error A  test/css/escape.js
+12 error A  test/css/exunit.js
+12 error M  test/css/filters.js
+12 error M  test/css/flexbox.js
+12 error M  test/css/flexboxtweener.js
+12 error M  test/css/flexwrap.js
+12 error M  test/css/fontface.js
+12 error M  test/css/generatedcontent.js
+12 error M  test/css/gradients.js
+12 error M  test/css/hsla.js
+12 error M  test/css/hyphens.js
+12 error A  test/css/invalid.js
+12 error M  test/css/lastchild.js
+12 error M  test/css/mask.js
+12 error M  test/css/mediaqueries.js
+12 error M  test/css/multiplebgs.js
+12 error M  test/css/nthchild.js
+12 error M  test/css/objectfit.js
+12 error M  test/css/opacity.js
+12 error M  test/css/overflow-scrolling.js
+12 error M  test/css/pointerevents.js
+12 error M  test/css/positionsticky.js
+12 error M  test/css/regions.js
+12 error M  test/css/remunit.js
+12 error M  test/css/resize.js
+12 error M  test/css/rgba.js
+12 error M  test/css/scrollbars.js
+12 error M  test/css/shapes.js
+12 error M  test/css/siblinggeneral.js
+12 error M  test/css/subpixelfont.js
+12 error M  test/css/supports.js
+12 error M  test/css/target.js
+12 error A  test/css/textalignlast.js
+12 error M  test/css/transforms.js
+12 error M  test/css/transforms3d.js
+12 error M  test/css/transformstylepreserve3d.js
+12 error M  test/css/userselect.js
+12 error A  test/css/valid.js
+12 error M  test/css/vhunit.js
+12 error M  test/css/vmaxunit.js
+12 error M  test/css/vminunit.js
+12 error M  test/css/vwunit.js
+12 error A  test/css/will-change.js
+12 error M  test/css/wrapflow.js
+12 error M  test/custom-protocol-handler.js
+12 error A  test/customevent.js
+12 error M  test/dart.js
+12 error M  test/dataview-api.js
+12 error M  test/dom/classlist.js
+12 error M  test/dom/createElement-attrs.js
+12 error M  test/dom/dataset.js
+12 error M  test/dom/documentfragment.js
+12 error A  test/dom/hidden.js
+12 error M  test/dom/microdata.js
+12 error A  test/dom/mutationObserver.js
+12 error M  test/draganddrop.js
+12 error M  test/elem/datalist.js
+12 error M  test/elem/details.js
+12 error M  test/elem/output.js
+12 error A  test/elem/picture.js
+12 error M  test/elem/progress-meter.js
+12 error M  test/elem/ruby.js
+12 error M  test/elem/time.js
+12 error M  test/elem/track.js
+12 error A  test/elem/unknown.js
+12 error M  test/emoji.js
+12 error M  test/es5/array.js
+12 error M  test/es5/date.js
+12 error M  test/es5/function.js
+12 error M  test/es5/object.js
+12 error A  test/es5/specification.js
+12 error M  test/es5/strictmode.js
+12 error M  test/es5/string.js
+12 error A  test/es5/syntax.js
+12 error A  test/es5/undefined.js
+12 error A  test/es6/array.js
+12 error M  test/es6/contains.js
+12 error A  test/es6/generators.js
+12 error A  test/es6/math.js
+12 error A  test/es6/number.js
+12 error A  test/es6/object.js
+12 error A  test/es6/promises.js
+12 error A  test/es6/string.js
+12 error M  test/event/deviceorientation-motion.js
+12 error M  test/event/oninput.js
+12 error A  test/eventlistener.js
+12 error M  test/exif-orientation.js
+12 error M  test/file/api.js
+12 error M  test/file/filesystem.js
+12 error M  test/flash.js
+12 error M  test/forms/capture.js
+12 error M  test/forms/fileinput.js
+12 error M  test/forms/fileinputdirectory.js
+12 error M  test/forms/formattribute.js
+12 error M  test/forms/inputnumber-l10n.js
+12 error M  test/forms/placeholder.js
+12 error M  test/forms/requestautocomplete.js
+12 error D  test/forms/speechinput.js
+12 error M  test/forms/validation.js
+12 error M  test/fullscreen-api.js
+12 error M  test/gamepad.js
+12 error M  test/geolocation.js
+12 error M  test/hashchange.js
+12 error A  test/hiddenscroll.js
+12 error M  test/history.js
+12 error A  test/htmlimports.js
+12 error M  test/ie8compat.js
+12 error M  test/iframe/sandbox.js
+12 error M  test/iframe/seamless.js
+12 error M  test/iframe/srcdoc.js
+12 error M  test/img/apng.js
+12 error M  test/img/jpegxr.js
+12 error A  test/img/sizes.js
+12 error A  test/img/srcset.js
+12 error A  test/img/webp-alpha.js
+12 error A  test/img/webp-animation.js
+12 error M  test/img/webp-lossless.js
+12 error M  test/img/webp.js
+12 error M  test/indexedDB.js
+12 error A  test/indexeddbblob.js
+12 error M  test/input.js
+12 error A  test/input/formaction.js
+12 error A  test/input/formenctype.js
+12 error A  test/input/formmethod.js
+12 error A  test/input/formtarget.js
+12 error M  test/inputsearchevent.js
+12 error M  test/inputtypes.js
+12 error A  test/intl.js
+12 error M  test/json.js
+12 error M  test/lists-reversed.js
+12 error M  test/mathml.js
+12 error A  test/network/beacon.js
+12 error M  test/network/connection.js
+12 error M  test/network/eventsource.js
+12 error M  test/network/xhr-responsetype-arraybuffer.js
+12 error M  test/network/xhr-responsetype-blob.js
+12 error M  test/network/xhr-responsetype-document.js
+12 error M  test/network/xhr-responsetype-json.js
+12 error M  test/network/xhr-responsetype-text.js
+12 error M  test/network/xhr-responsetype.js
+12 error M  test/network/xhr2.js
+12 error M  test/notification.js
+12 error M  test/pagevisibility-api.js
+12 error M  test/performance.js
+12 error M  test/pointerevents.js
+12 error M  test/pointerlock-api.js
+12 error M  test/postmessage.js
+12 error A  test/proximity.js
+12 error A  test/queryselector.js
+12 error M  test/quota-management-api.js
+12 error M  test/requestanimationframe.js
+12 error M  test/script/async.js
+12 error M  test/script/defer.js
+12 error M  test/serviceworker.js
+12 error M  test/speech/speech-synthesis.js
+12 error M  test/storage/localstorage.js
+12 error M  test/style/scoped.js
+12 error M  test/svg.js
+12 error M  test/svg/asimg.js
+12 error M  test/svg/clippaths.js
+12 error M  test/svg/filters.js
+12 error A  test/svg/foreignobject.js
+12 error M  test/svg/inline.js
+12 error M  test/svg/smil.js
+12 error A  test/templatestrings.js
+12 error A  test/textarea/maxlength.js
+12 error M  test/touchevents.js
+12 error M  test/typed-arrays.js
+12 error A  test/unicode-range.js
+12 error M  test/unicode.js
+12 error A  test/url/bloburls.js
+12 error M  test/url/data-uri.js
+12 error A  test/url/parser.js
+12 error M  test/userdata.js
+12 error M  test/vibration.js
+12 error M  test/video.js
+12 error M  test/video/autoplay.js
+12 error M  test/video/loop.js
+12 error M  test/video/preload.js
+12 error M  test/vml.js
+12 error M  test/web-intents.js
+12 error M  test/webanimations.js
+12 error M  test/webgl.js
+12 error M  test/webgl/extensions.js
+12 error A  test/webrtc/datachannel.js
+12 error M  test/websockets/binary.js
+12 error M  test/window/framed.js
+12 error A  test/window/matchmedia.js
+12 error M  test/workers/blobworkers.js
+12 error M  test/workers/dataworkers.js
+12 error M  test/workers/sharedworkers.js
+12 error A  test/workers/transferables.js
+12 error M  test/workers/webworkers.js
+13 error If you need help, you may report this error at:
+13 error     <https://github.com/npm/npm/issues>
+14 verbose exit [ 1, true ]

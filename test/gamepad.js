@@ -19,9 +19,7 @@ var prefixed = require('./../lib/prefixed');
 }
 !*/
 /* DOC
-
 Detects support for the Gamepad API, for access to gamepads and controllers.
-
 */
 
   // FF has Gamepad API support only in special builds, but not in any release (even behind a flag)

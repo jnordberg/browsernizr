@@ -21,9 +21,7 @@ var hasEvent = require('./../lib/hasEvent');
 }
 !*/
 /* DOC
-
 Detects support for the `hashchange` event, fired when the current location fragment changes.
-
 */
 
   Modernizr.addTest('hashchange', function() {

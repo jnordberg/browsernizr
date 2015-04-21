@@ -1,6 +1,7 @@
 var Modernizr = require('./../lib/Modernizr');
 var createElement = require('./../lib/createElement');
 var testStyles = require('./../lib/testStyles');
+var isSVG = require('./../lib/isSVG');
 
 /*!
 {
@@ -8,14 +9,12 @@ var testStyles = require('./../lib/testStyles');
   "property": "unicode",
   "tags": ["encoding"],
   "warnings": [
-    "positive Unicode support doesn't mean you can use it inside <title>, this seams more related to OS & Language packs"
+    "positive Unicode support doesn't mean you can use it inside <title>, this seems more related to OS & Language packs"
   ]
 }
 !*/
 /* DOC
-
 Detects if unicode characters are supported in the current document.
-
 */
 
   /**
@@ -28,12 +27,12 @@ Detects if unicode characters are supported in the current document.
   Modernizr.addTest('unicode', function() {
     var bool;
     var missingGlyph = createElement('span');
-    var star = document.createElement('span');
+    var star = createElement('span');
 
     testStyles('#modernizr{font-family:Arial,sans;font-size:300em;}', function( node ) {
 
-      missingGlyph.innerHTML = '&#5987';
-      star.innerHTML = '&#9734';
+      missingGlyph.innerHTML = isSVG ? '\u5987' : '&#5987';
+      star.innerHTML = isSVG ? '\u2606' : '&#9734';
 
       node.appendChild(missingGlyph);
       node.appendChild(star);

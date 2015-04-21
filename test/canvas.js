@@ -11,9 +11,7 @@ var createElement = require('./../lib/createElement');
 }
 !*/
 /* DOC
-
 Detects support for the `<canvas>` element for 2D drawing.
-
 */
 
   // On the S60 and BB Storm, getContext exists, but always returns undefined

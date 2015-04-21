@@ -13,9 +13,7 @@ var prefixed = require('./../lib/prefixed');
 }
 !*/
 /* DOC
-
 Detects native support for the Dart programming language.
-
 */
 
   Modernizr.addTest('dart', !!prefixed('startDart', navigator));

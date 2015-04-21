@@ -14,8 +14,7 @@ var Modernizr = require('./../../lib/Modernizr');
     "cupcake",
     "storagepolyfill",
     "amplifyjs",
-    "yui-cacheoffline",
-    "textstorage"
+    "yui-cacheoffline"
   ]
 }
 !*/

@@ -8,6 +8,7 @@ var createElement = require('./../../lib/createElement');
   "authors": ["nsfmc"],
   "property": "cssremunit",
   "tags": ["css"],
+  "builderAliases": ["css_remunit"],
   "notes": [{
     "name": "W3C Spec",
     "href": "http://www.w3.org/TR/css3-values/#relative0"
@@ -23,11 +24,11 @@ var createElement = require('./../../lib/createElement');
   // you can test by checking if the prop was ditched
 
   Modernizr.addTest('cssremunit', function() {
-    var div = createElement('div');
+    var style = createElement('a').style;
     try {
-      div.style.fontSize = '3rem';
+      style.fontSize = '3rem';
     }
-    catch( er ) {}
-    return (/rem/).test(div.style.fontSize);
+    catch(e) {}
+    return (/rem/).test(style.fontSize);
   });
 

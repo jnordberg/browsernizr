@@ -7,6 +7,7 @@ var createElement = require('./../../lib/createElement');
   "property": "adownload",
   "caniuse" : "download",
   "tags": ["media", "attribute"],
+  "builderAliases": ["a_download"],
   "notes": [{
     "name": "WhatWG Reference",
     "href": "http://developers.whatwg.org/links.html#downloading-resources"
@@ -14,9 +15,7 @@ var createElement = require('./../../lib/createElement');
 }
 !*/
 /* DOC
-
 When used on an `<a>`, this attribute signifies that the resource it points to should be downloaded by the browser rather than navigating to it.
-
 */
 
   Modernizr.addTest('adownload', !window.externalHost && 'download' in createElement('a'));

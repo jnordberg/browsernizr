@@ -15,9 +15,7 @@ var addTest = require('./../../lib/addTest');
 }
 !*/
 /* DOC
-
 Test for JPEG XR support
-
 */
 
 
