@@ -10,8 +10,10 @@
     "browserify"
   ],
   "devDependencies": {
-    "shelljs": "*",
-    "Modernizr": "git://github.com/Modernizr/Modernizr.git"
+    "coffee-script": "^1.9.2",
+    "modernizr": "3.0.0-alpha.4",
+    "shelljs": "^0.4.0"
+  },
   },
   "author": "Johan Nordberg <its@johan-nordberg.com>",
   "license": "MIT"
