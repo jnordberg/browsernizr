@@ -14,6 +14,8 @@
     "modernizr": "3.0.0-alpha.4",
     "shelljs": "^0.4.0"
   },
+  "scripts": {
+    "build": "bin/build"
   },
   "author": "Johan Nordberg <its@johan-nordberg.com>",
   "license": "MIT"
