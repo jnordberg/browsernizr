@@ -9,18 +9,19 @@ require('./../lib/test/canvastext');
 }
 !*/
 /* DOC
-
 Detects support for emoji character sets.
-
 */
 
   Modernizr.addTest('emoji', function() {
     if (!Modernizr.canvastext) return false;
-    var node = createElement('canvas'),
-    ctx = node.getContext('2d');
+    var pixelRatio = window.devicePixelRatio || 1;
+    var offset = 12 * pixelRatio;
+    var node = createElement('canvas');
+    var ctx = node.getContext('2d');
+    ctx.fillStyle = '#f00';
     ctx.textBaseline = 'top';
     ctx.font = '32px Arial';
-    ctx.fillText('\ud83d\ude03', 0, 0); // "smiling face with open mouth" emoji
-    return ctx.getImageData(16, 16, 1, 1).data[0] !== 0;
+    ctx.fillText('\ud83d\udc28', 0, 0); // U+1F428 KOALA
+    return ctx.getImageData(offset, offset, 1, 1).data[0] !== 0;
   });
 

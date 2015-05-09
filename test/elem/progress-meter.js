@@ -7,6 +7,7 @@ var createElement = require('./../../lib/createElement');
   "caniuse": "progressmeter",
   "property": ["progressbar", "meter"],
   "tags": ["elem"],
+  "builderAliases": ["elem_progress_meter"],
   "authors": ["Stefan Wallin"]
 }
 !*/

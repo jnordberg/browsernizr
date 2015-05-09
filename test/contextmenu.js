@@ -17,9 +17,7 @@ var docElement = require('./../lib/docElement');
 }
 !*/
 /* DOC
-
 Detects support for custom context menus.
-
 */
 
   Modernizr.addTest(

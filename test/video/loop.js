@@ -9,5 +9,5 @@ var createElement = require('./../../lib/createElement');
 }
 !*/
 
-    Modernizr.addTest('videoloop', 'loop' in createElement('video'));
+  Modernizr.addTest('videoloop', 'loop' in createElement('video'));
 

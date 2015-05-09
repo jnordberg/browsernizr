@@ -14,9 +14,7 @@ var createElement = require('./../lib/createElement');
 }
 !*/
 /* DOC
-
 Detects support for IE userData for persisting data, an API similar to localStorage but supported since IE5.
-
 */
 
   Modernizr.addTest('userdata', !!createElement('div').addBehavior);

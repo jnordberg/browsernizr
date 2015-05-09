@@ -8,6 +8,7 @@ var docElement = require('./../../lib/docElement');
   "caniuse": "ruby",
   "property": "ruby",
   "tags": ["elem"],
+  "builderAliases": ["elem_ruby"],
   "authors": ["Cătălin Mariș"],
   "notes": [{
     "name": "WHATWG Specification",

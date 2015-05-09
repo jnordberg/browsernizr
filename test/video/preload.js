@@ -9,5 +9,5 @@ var createElement = require('./../../lib/createElement');
 }
 !*/
 
-    Modernizr.addTest('videopreload', 'preload' in createElement('video'));
+  Modernizr.addTest('videopreload', 'preload' in createElement('video'));
 

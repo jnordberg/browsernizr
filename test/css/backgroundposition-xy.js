@@ -6,6 +6,7 @@ var testAllProps = require('./../../lib/testAllProps');
   "name": "Background Position XY",
   "property": "bgpositionxy",
   "tags": ["css"],
+  "builderAliases": ["css_backgroundposition_xy"],
   "authors": ["Allan Lei", "Brandom Aaron"],
   "notes": [{
     "name": "Demo",
@@ -16,6 +17,9 @@ var testAllProps = require('./../../lib/testAllProps');
   }]
 }
 !*/
+/* DOC
+Detects the ability to control an element's background position using css
+*/
 
   Modernizr.addTest('bgpositionxy', function () {
     return testAllProps('backgroundPositionX', '3px', true) && testAllProps('backgroundPositionY', '5px', true);

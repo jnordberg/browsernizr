@@ -2,7 +2,7 @@ var Modernizr = require('./../../lib/Modernizr');
 
 /*!
 {
-  "name": "XMLHttpRequest xhr.responseType",
+  "name": "XHR responseType",
   "property": "xhrresponsetype",
   "tags": ["network"],
   "notes": [{
@@ -12,9 +12,7 @@ var Modernizr = require('./../../lib/Modernizr');
 }
 !*/
 /* DOC
-
 Tests for XMLHttpRequest xhr.responseType.
-
 */
 
   Modernizr.addTest('xhrresponsetype', (function() {

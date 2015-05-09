@@ -1,4 +1,5 @@
 var Modernizr = require('./../lib/Modernizr');
+var createElement = require('./../lib/createElement');
 
 /*!
 {
@@ -6,10 +7,16 @@ var Modernizr = require('./../lib/Modernizr');
   "property": "webgl",
   "caniuse": "webgl",
   "tags": ["webgl", "graphics"],
-  "polyfills": ["jebgl", "webglcompat", "cwebgl", "iewebgl"]
+  "polyfills": ["jebgl", "cwebgl", "iewebgl"]
 }
 !*/
 
-  // webk.it/70117 is tracking a legit WebGL feature detect proposal
-  Modernizr.addTest('webgl', 'WebGLRenderingContext' in window);
+  Modernizr.addTest('webgl', function() {
+    var canvas = createElement('canvas');
+    var supports = 'probablySupportsContext' in canvas ? 'probablySupportsContext' :  'supportsContext';
+    if (supports in canvas) {
+      return canvas[supports]('webgl') || canvas[supports]('experimental-webgl');
+    }
+    return 'WebGLRenderingContext' in window;
+  });
 

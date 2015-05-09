@@ -1,6 +1,7 @@
 var Modernizr = require('./../../lib/Modernizr');
 var createElement = require('./../../lib/createElement');
 var docElement = require('./../../lib/docElement');
+var isSVG = require('./../../lib/isSVG');
 
 /*!
 {
@@ -9,6 +10,7 @@ var docElement = require('./../../lib/docElement');
   "authors": ["Mihai Balan"],
   "property": "regions",
   "tags": ["css"],
+  "builderAliases": ["css_regions"],
   "notes": [{
     "name": "W3C Specification",
     "href": "http://www.w3.org/TR/css3-regions/"
@@ -21,16 +23,24 @@ var docElement = require('./../../lib/docElement');
 
   Modernizr.addTest('regions', function() {
 
-    /* Get the 'flowFrom' property name available in the browser. Either default or vendor prefixed.
-       If the property name can't be found we'll get Boolean 'false' and fail quickly */
-    var flowFromProperty = Modernizr.prefixed("flowFrom");
-    var flowIntoProperty = Modernizr.prefixed("flowInto");
-
-    if (!flowFromProperty || !flowIntoProperty){
+    if (isSVG) {
+      // css regions don't work inside of SVG elements. Rather than update the
+      // below test to work in an SVG context, just exit early to save bytes
       return false;
     }
 
+    /* Get the 'flowFrom' property name available in the browser. Either default or vendor prefixed.
+       If the property name can't be found we'll get Boolean 'false' and fail quickly */
+    var flowFromProperty = Modernizr.prefixed('flowFrom');
+    var flowIntoProperty = Modernizr.prefixed('flowInto');
+    var result = false;
+
+    if (!flowFromProperty || !flowIntoProperty){
+      return result;
+    }
+
     /* If CSS parsing is there, try to determine if regions actually work. */
+    var iframeContainer = createElement('iframe');
     var container = createElement('div');
     var content = createElement('div');
     var region = createElement('div');
@@ -63,8 +73,27 @@ var docElement = require('./../../lib/docElement');
 
     delta = parseInt(flowedRect.left - plainRect.left, 10);
     docElement.removeChild(container);
-    content = region = container = undefined;
 
-    return (delta == 42);
+    if (delta == 42) {
+      result = true;
+    } else {
+      /* IE only allows for the content to come from iframes. This has the
+       * side effect of automatic collapsing of iframes once they get the flow-into
+       * property set. checking for a change on the height allows us to detect this
+       * in a sync way, without having to wait for a frame to load */
+
+      docElement.appendChild(iframeContainer);
+      plainRect = iframeContainer.getBoundingClientRect();
+      iframeContainer.style[flowIntoProperty] = flowName;
+      flowedRect = iframeContainer.getBoundingClientRect();
+
+      if (plainRect.height > 0 && plainRect.height !== flowedRect.height && flowedRect.height === 0) {
+        result = true;
+      }
+    }
+
+    content = region = container = iframeContainer = undefined;
+
+    return result;
   });
 

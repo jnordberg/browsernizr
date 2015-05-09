@@ -3,7 +3,7 @@ var testXhrType = require('./../../lib/testXhrType');
 
 /*!
 {
-  "name": "XMLHttpRequest xhr.responseType='text'",
+  "name": "XHR responseType='text'",
   "property": "xhrresponsetypetext",
   "tags": ["network"],
   "notes": [{
@@ -13,9 +13,7 @@ var testXhrType = require('./../../lib/testXhrType');
 }
 !*/
 /* DOC
-
 Tests for XMLHttpRequest xhr.responseType='text'.
-
 */
 
   Modernizr.addTest('xhrresponsetypetext', testXhrType('text'));

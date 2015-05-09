@@ -13,11 +13,9 @@ var toStringFn = require('./../../lib/toStringFn');
 }
 !*/
 /* DOC
-
 Detects support for clip paths in SVG (only, not on HTML content).
 
 See [this discussion](http://github.com/Modernizr/Modernizr/issues/213) regarding applying SVG clip paths to HTML content.
-
 */
 
   Modernizr.addTest('svgclippaths', function() {

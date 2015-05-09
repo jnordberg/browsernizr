@@ -7,8 +7,7 @@ var prefixes = require('./../../lib/prefixes');
   "name": "CSS Opacity",
   "caniuse": "css-opacity",
   "property": "opacity",
-  "tags": ["css"],
-  "notes": ["Opacity must be be in the range of [0.0,1.0], according to the spec."]
+  "tags": ["css"]
 }
 !*/
 
@@ -17,8 +16,7 @@ var prefixes = require('./../../lib/prefixes');
   // range of [0.0,1.0] - including the leading zero.
 
   Modernizr.addTest('opacity', function() {
-    var elem = createElement('div');
-    var style = elem.style;
+    var style = createElement('a').style;
     style.cssText = prefixes.join('opacity:.55;');
 
     // The non-literal . in this regex is intentional:

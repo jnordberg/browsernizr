@@ -12,9 +12,7 @@ require('./../lib/test/canvas');
 }
 !*/
 /* DOC
-
 Detects support for the text APIs for `<canvas>` elements.
-
 */
 
   Modernizr.addTest('canvastext',  function() {
