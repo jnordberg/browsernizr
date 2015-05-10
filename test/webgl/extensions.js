@@ -1,6 +1,6 @@
 var Modernizr = require('./../../lib/Modernizr');
 var createElement = require('./../../lib/createElement');
-require('./../../lib/test/webgl');
+require('./../../test/webgl');
 
 /*!
 {

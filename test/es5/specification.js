@@ -1,13 +1,13 @@
 var Modernizr = require('./../../lib/Modernizr');
-require('./../../lib/test/es5/array');
-require('./../../lib/test/es5/date');
-require('./../../lib/test/es5/function');
-require('./../../lib/test/es5/object');
-require('./../../lib/test/es5/strictmode');
-require('./../../lib/test/es5/string');
-require('./../../lib/test/json');
-require('./../../lib/test/es5/syntax');
-require('./../../lib/test/es5/undefined');
+require('./../../test/es5/array');
+require('./../../test/es5/date');
+require('./../../test/es5/function');
+require('./../../test/es5/object');
+require('./../../test/es5/strictmode');
+require('./../../test/es5/string');
+require('./../../test/json');
+require('./../../test/es5/syntax');
+require('./../../test/es5/undefined');
 
 /*!
 {

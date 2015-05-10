@@ -1,7 +1,7 @@
 var Modernizr = require('./../../lib/Modernizr');
 var prefixed = require('./../../lib/prefixed');
 var domPrefixes = require('./../../lib/domPrefixes');
-require('./../../lib/test/webrtc/peerconnection');
+require('./../../test/webrtc/peerconnection');
 
 /*!
 {

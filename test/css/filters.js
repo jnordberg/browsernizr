@@ -2,7 +2,7 @@ var Modernizr = require('./../../lib/Modernizr');
 var createElement = require('./../../lib/createElement');
 var testAllProps = require('./../../lib/prefixes');
 var prefixes = require('./../../lib/testAllProps');
-require('./../../lib/test/css/supports');
+require('./../../test/css/supports');
 
 /*!
 {

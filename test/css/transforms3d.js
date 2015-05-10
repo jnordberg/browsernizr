@@ -2,7 +2,7 @@ var Modernizr = require('./../../lib/Modernizr');
 var testAllProps = require('./../../lib/testAllProps');
 var testStyles = require('./../../lib/testStyles');
 var docElement = require('./../../lib/docElement');
-require('./../../lib/test/css/supports');
+require('./../../test/css/supports');
 
 /*!
 {

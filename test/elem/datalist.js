@@ -1,5 +1,5 @@
 var Modernizr = require('./../../lib/Modernizr');
-require('./../../lib/test/input');
+require('./../../test/input');
 
 /*!
 {

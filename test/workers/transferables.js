@@ -1,9 +1,9 @@
 var Modernizr = require('./../../lib/Modernizr');
 var addTest = require('./../../lib/addTest');
-require('./../../lib/test/blob');
-require('./../../lib/test/url/bloburls');
-require('./../../lib/test/workers/webworkers');
-require('./../../lib/test/typed-arrays');
+require('./../../test/blob');
+require('./../../test/url/bloburls');
+require('./../../test/workers/webworkers');
+require('./../../test/typed-arrays');
 
 /*!
 {

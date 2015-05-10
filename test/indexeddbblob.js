@@ -1,7 +1,7 @@
 var Modernizr = require('./../lib/Modernizr');
 var addTest = require('./../lib/addTest');
 var prefixed = require('./../lib/prefixed');
-require('./../lib/test/indexeddb');
+require('./../test/indexeddb');
 
 /*!
 {

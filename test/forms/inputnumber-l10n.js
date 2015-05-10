@@ -2,8 +2,8 @@ var Modernizr = require('./../../lib/Modernizr');
 var createElement = require('./../../lib/createElement');
 var docElement = require('./../../lib/docElement');
 var getBody = require('./../../lib/getBody');
-require('./../../lib/test/inputtypes');
-require('./../../lib/test/forms/validation');
+require('./../../test/inputtypes');
+require('./../../test/forms/validation');
 
 /*!
 {

@@ -1,7 +1,7 @@
 var Modernizr = require('./../../lib/Modernizr');
 var createElement = require('./../../lib/createElement');
 var addTest = require('./../../lib/addTest');
-require('./../../lib/test/canvas');
+require('./../../test/canvas');
 
 /*!
 {
