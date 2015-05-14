@@ -15,9 +15,7 @@ var Modernizr = require('./../../lib/Modernizr');
 }
 !*/
 /* DOC
-
 Detects support for the ':target' CSS pseudo-class.
-
 */
 
   // querySelector

@@ -1,5 +1,4 @@
 var Modernizr = require('./../../lib/Modernizr');
-var prefixed = require('./../../lib/prefixed');
 
 /*!
 {

@@ -19,9 +19,7 @@ var prefixed = require('./../lib/prefixed');
 }
 !*/
 /* DOC
-
 Detects support for the Navigation Timing API, for measuring browser and connection performance.
-
 */
 
   Modernizr.addTest('performance', !!prefixed('performance', window));

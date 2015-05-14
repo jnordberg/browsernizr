@@ -8,6 +8,7 @@ var testAllProps = require('./../../lib/testAllProps');
   "caniuse": "css3-boxsizing",
   "polyfills": ["borderboxmodel", "boxsizingpolyfill", "borderbox"],
   "tags": ["css"],
+  "builderAliases": ["css_boxsizing"],
   "notes": [{
     "name": "MDN Docs",
     "href": "http://developer.mozilla.org/en/CSS/box-sizing"

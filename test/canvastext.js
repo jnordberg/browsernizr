@@ -1,6 +1,6 @@
 var Modernizr = require('./../lib/Modernizr');
 var createElement = require('./../lib/createElement');
-require('./../lib/test/canvas');
+require('./../test/canvas');
 
 /*!
 {
@@ -12,9 +12,7 @@ require('./../lib/test/canvas');
 }
 !*/
 /* DOC
-
 Detects support for the text APIs for `<canvas>` elements.
-
 */
 
   Modernizr.addTest('canvastext',  function() {

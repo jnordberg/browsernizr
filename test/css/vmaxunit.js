@@ -1,5 +1,7 @@
 var Modernizr = require('./../../lib/Modernizr');
+var docElement = require('./../../lib/docElement');
 var testStyles = require('./../../lib/testStyles');
+var roundedEquals = require('./../../lib/roundedEquals');
 
 /*!
 {
@@ -7,6 +9,7 @@ var testStyles = require('./../../lib/testStyles');
   "property": "cssvmaxunit",
   "caniuse": "viewport-units",
   "tags": ["css"],
+  "builderAliases": ["css_vmaxunit"],
   "notes": [{
     "name": "Related Modernizr Issue",
     "href": "https://github.com/Modernizr/Modernizr/issues/572"
@@ -17,12 +20,18 @@ var testStyles = require('./../../lib/testStyles');
 }
 !*/
 
-  testStyles('#modernizr { width: 50vmax; }', function( elem, rule ) {
-    var one_vw = window.innerWidth/100;
-    var one_vh = window.innerHeight/100;
+  testStyles('#modernizr1{width: 50vmax}#modernizr2{width:50px;height:50px;overflow:scroll}', function(node) {
+    var elem = node.childNodes[1];
+    var scroller = node.childNodes[0];
+    var scrollbarWidth = parseInt((scroller.offsetWidth - scroller.clientWidth) / 2, 10);
+
+    var one_vw = docElement.clientWidth/100;
+    var one_vh = docElement.clientHeight/100;
+    var expectedWidth = parseInt(Math.max(one_vw, one_vh) * 50, 10);
     var compWidth = parseInt((window.getComputedStyle ?
                           getComputedStyle(elem, null) :
                           elem.currentStyle)['width'],10);
-    Modernizr.addTest('cssvmaxunit', parseInt(Math.max(one_vw, one_vh)*50,10) == compWidth );
-  });
+
+    Modernizr.addTest('cssvmaxunit', roundedEquals(expectedWidth, compWidth) || roundedEquals(expectedWidth, compWidth - scrollbarWidth));
+  }, 2);
 

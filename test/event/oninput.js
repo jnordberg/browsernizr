@@ -23,17 +23,16 @@ var hasEvent = require('./../../lib/hasEvent');
 }
 !*/
 /* DOC
-
 `oninput` tests if the browser is able to detect the input event
-
 */
 
 
   Modernizr.addTest('oninput', function() {
     var input = createElement('input');
-    input.setAttribute("oninput", "return");
+    var supportsOnInput;
+    input.setAttribute('oninput', 'return');
 
-    if (hasEvent('oninput', docElement) || typeof input.oninput == "function") {
+    if (hasEvent('oninput', docElement) || typeof input.oninput == 'function') {
       return true;
     }
 
@@ -42,22 +41,24 @@ var hasEvent = require('./../../lib/hasEvent');
     // their trident equivalent.
     try {
       // Older Firefox didn't map oninput attribute to oninput property
-      var testEvent  = document.createEvent("KeyboardEvent");
-      var supportsOnInput = false;
+      var testEvent  = document.createEvent('KeyboardEvent');
+      supportsOnInput = false;
       var handler = function(e) {
         supportsOnInput = true;
         e.preventDefault();
         e.stopPropagation();
       };
 
-      testEvent.initKeyEvent("keypress", true, true, window, false, false, false, false, 0, "e".charCodeAt(0));
+      testEvent.initKeyEvent('keypress', true, true, window, false, false, false, false, 0, 'e'.charCodeAt(0));
       docElement.appendChild(input);
-      input.addEventListener("input", handler, false);
+      input.addEventListener('input', handler, false);
       input.focus();
       input.dispatchEvent(testEvent);
-      input.removeEventListener("input", handler, false);
+      input.removeEventListener('input', handler, false);
       docElement.removeChild(input);
+    } catch (e) {
+      supportsOnInput = false;
+    }
       return supportsOnInput;
-    } catch (e) {}
   });
 

@@ -1,16 +1,17 @@
 var Modernizr = require('./../../lib/Modernizr');
 var createElement = require('./../../lib/createElement');
-require('./../../lib/test/canvas');
+require('./../../test/canvas');
 
 /*!
 {
   "name": "canvas.toDataURL type support",
   "property": ["todataurljpeg", "todataurlpng", "todataurlwebp"],
   "tags": ["canvas"],
+  "builderAliases": ["canvas_todataurl_type"],
   "async" : false,
   "notes": [{
-    "name": "HTML5 Spec",
-    "href": "http://www.w3.org/TR/html5/the-canvas-element.html#dom-canvas-todataurl"
+    "name": "MDN article",
+    "href": "https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement.toDataURL"
   }]
 }
 !*/
@@ -25,7 +26,14 @@ require('./../../lib/test/canvas');
     return !!Modernizr.canvas && canvas.toDataURL('image/png').indexOf('data:image/png') === 0;
   });
   Modernizr.addTest('todataurlwebp', function() {
-    return !!Modernizr.canvas && canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+    var supports = false;
+
+    // firefox 3 throws an error when you use an "invalid" toDataUrl
+    try {
+      supports = !!Modernizr.canvas && canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+    } catch(e) {}
+
+    return supports;
   });
 
 

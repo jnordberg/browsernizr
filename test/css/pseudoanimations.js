@@ -1,6 +1,6 @@
 var Modernizr = require('./../../lib/Modernizr');
 require('./../../lib/testStyles');
-require('./../../lib/test/css/animations');
+require('./../../test/css/animations');
 
 /*!
 {

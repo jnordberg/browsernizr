@@ -1,6 +1,6 @@
 {
   "name": "browsernizr",
-  "version": "1.0.2",
+  "version": "3.0.0-alpha.4",
   "description": "Modernizr wrapper for use with browserify",
   "main": "index.js",
   "repository": "https://github.com/jnordberg/browsernizr",
@@ -10,8 +10,12 @@
     "browserify"
   ],
   "devDependencies": {
-    "shelljs": "*",
-    "Modernizr": "git://github.com/Modernizr/Modernizr.git"
+    "coffee-script": "^1.9.2",
+    "modernizr": "3.0.0-alpha.4",
+    "shelljs": "^0.4.0"
+  },
+  "scripts": {
+    "build": "bin/build"
   },
   "author": "Johan Nordberg <its@johan-nordberg.com>",
   "license": "MIT"

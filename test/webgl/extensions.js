@@ -1,12 +1,13 @@
 var Modernizr = require('./../../lib/Modernizr');
 var createElement = require('./../../lib/createElement');
-require('./../../lib/test/webgl');
+require('./../../test/webgl');
 
 /*!
 {
   "name": "WebGL Extensions",
   "property": "webglextensions",
   "tags": ["webgl", "graphics"],
+  "builderAliases": ["webgl_extensions"],
   "async" : true,
   "authors": ["Ilmari Heikkinen"],
   "knownBugs": [],
@@ -17,7 +18,6 @@ require('./../../lib/test/webgl');
 }
 !*/
 /* DOC
-
 Detects support for OpenGL extensions in WebGL. It's `true` if the [WebGL extensions API](https://developer.mozilla.org/en-US/docs/Web/WebGL/Using_Extensions) is supported, then exposes the supported extensions as subproperties, e.g.:
 
 ```javascript
@@ -28,7 +28,6 @@ if ('OES_vertex_array_object' in Modernizr.webglextensions) {
   // Vertex Array Objects extension supported
 }
 ```
-
 */
 
   // based on code from ilmari heikkinen

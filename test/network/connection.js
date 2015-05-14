@@ -4,11 +4,11 @@ var Modernizr = require('./../../lib/Modernizr');
 {
   "name": "Low Bandwidth Connection",
   "property": "lowbandwidth",
-  "tags": ["network"]
+  "tags": ["network"],
+  "builderAliases": ["network_connection"]
 }
 !*/
 /* DOC
-
 Tests for determining low-bandwidth via `navigator.connection`
 
 There are two iterations of the `navigator.connection` interface.
@@ -25,7 +25,6 @@ The second is specced at http://dev.w3.org/2009/dap/netinfo/ and perhaps landing
 Unknown devices are assumed as fast
 
 For more rigorous network testing, consider boomerang.js: http://github.com/bluesmoon/boomerang/
-
 */
 
   Modernizr.addTest('lowbandwidth', function() {

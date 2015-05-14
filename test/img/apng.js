@@ -1,7 +1,7 @@
 var Modernizr = require('./../../lib/Modernizr');
 var createElement = require('./../../lib/createElement');
 var addTest = require('./../../lib/addTest');
-require('./../../lib/test/canvas');
+require('./../../test/canvas');
 
 /*!
 {
@@ -9,6 +9,7 @@ require('./../../lib/test/canvas');
   "async": true,
   "property": "apng",
   "tags": ["image"],
+  "builderAliases": ["img_apng"],
   "notes": [{
     "name": "Wikipedia Article",
     "href": "http://en.wikipedia.org/wiki/APNG"
@@ -16,9 +17,7 @@ require('./../../lib/test/canvas');
 }
 !*/
 /* DOC
-
 Test for animated png support.
-
 */
 
   Modernizr.addAsyncTest(function () {
@@ -42,6 +41,6 @@ Test for animated png support.
       });
     };
 
-    image.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACGFjVEwAAAABAAAAAcMq2TYAAAANSURBVAiZY2BgYPgPAAEEAQB9ssjfAAAAGmZjVEwAAAAAAAAAAQAAAAEAAAAAAAAAAAD6A+gBAbNU+2sAAAARZmRBVAAAAAEImWNgYGBgAAAABQAB6MzFdgAAAABJRU5ErkJggg==";
+    image.src = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAACGFjVEwAAAABAAAAAcMq2TYAAAANSURBVAiZY2BgYPgPAAEEAQB9ssjfAAAAGmZjVEwAAAAAAAAAAQAAAAEAAAAAAAAAAAD6A+gBAbNU+2sAAAARZmRBVAAAAAEImWNgYGBgAAAABQAB6MzFdgAAAABJRU5ErkJggg==';
   });
 

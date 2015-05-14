@@ -9,6 +9,7 @@ var testStyles = require('./../../lib/testStyles');
   "caniuse": "details",
   "property": "details",
   "tags": ["elem"],
+  "builderAliases": ["elem_details"],
   "authors": ["@mathias"],
   "notes": [{
     "name": "Mathias' Original",

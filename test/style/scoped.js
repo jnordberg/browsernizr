@@ -7,6 +7,7 @@ var createElement = require('./../../lib/createElement');
   "property": "stylescoped",
   "caniuse": "style-scoped",
   "tags": ["dom"],
+  "builderAliases": ["style_scoped"],
   "authors": ["Cătălin Mariș"],
   "notes": [{
     "name": "WHATWG Specification",
@@ -16,9 +17,7 @@ var createElement = require('./../../lib/createElement');
 }
 !*/
 /* DOC
-
 Support for the `scoped` attribute of the `<style>` element.
-
 */
 
   Modernizr.addTest('stylescoped', 'scoped' in createElement('style'));

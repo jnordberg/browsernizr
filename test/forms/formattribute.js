@@ -6,14 +6,13 @@ var docElement = require('./../../lib/docElement');
 {
   "name": "input[form] Attribute",
   "property": "formattribute",
-  "tags": ["attribute", "forms", "input"]
+  "tags": ["attribute", "forms", "input"],
+  "builderAliases": ["forms_formattribute"]
 }
 !*/
 /* DOC
-
 Detects whether input form="form_id" is available on the platform
 E.g. IE 10 (and below), don't support this
-
 */
 
 
@@ -29,11 +28,11 @@ E.g. IE 10 (and below), don't support this
 
     //IE6/7 confuses the form idl attribute and the form content attribute, so we use document.createAttribute
     try {
-      input.setAttribute("form", id);
+      input.setAttribute('form', id);
     }
     catch( e ) {
       if( document.createAttribute ) {
-        attr = document.createAttribute("form");
+        attr = document.createAttribute('form');
         attr.nodeValue = id;
         input.setAttributeNode(attr);
       }
@@ -44,7 +43,7 @@ E.g. IE 10 (and below), don't support this
 
     docElement.appendChild(div);
 
-    bool = form.elements.length === 1 && input.form == form;
+    bool = form.elements && form.elements.length === 1 && input.form == form;
 
     div.parentNode.removeChild(div);
     return bool;

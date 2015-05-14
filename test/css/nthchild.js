@@ -22,9 +22,7 @@ var testStyles = require('./../../lib/testStyles');
 }
 !*/
 /* DOC
-
 Detects support for the ':nth-child()' CSS pseudo-selector.
-
 */
 
   // 5 `<div>` elements with `1px` width are created.

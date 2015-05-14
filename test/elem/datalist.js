@@ -1,5 +1,5 @@
 var Modernizr = require('./../../lib/Modernizr');
-require('./../../lib/test/input');
+require('./../../test/input');
 
 /*!
 {
@@ -7,6 +7,7 @@ require('./../../lib/test/input');
   "caniuse": "datalist",
   "property": "datalistelem",
   "tags": ["elem"],
+  "builderAliases": ["elem_datalist"],
   "warnings": ["This test is a dupe of Modernizr.input.list. Only around for legacy reasons."],
   "notes": [{
     "name": "CSS Tricks Article",

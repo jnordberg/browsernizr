@@ -32,13 +32,14 @@ var createElement = require('./../../lib/createElement');
     var str2 = 'gradient(linear,left top,right bottom,from(#9f9),to(white));';
     var str3 = 'linear-gradient(left top,#9f9, white);';
 
-    var css =
-      // legacy webkit syntax (FIXME: remove when syntax not in use anymore)
-      (str1 + '-webkit- '.split(' ').join(str2 + str1) +
-       // standard syntax             // trailing 'background-image:'
-       prefixes.join(str3 + str1)).slice(0, -str1.length);
+    // standard syntax             // trailing 'background-image:'
+    var css = str1 + prefixes.join(str3 + str1).slice(0, -str1.length);
+    if (Modernizr._config.usePrefixes) {
+    // legacy webkit syntax (FIXME: remove when syntax not in use anymore)
+      css += str1 + '-webkit-' + str2;
+    }
 
-    var elem = createElement('div');
+    var elem = createElement('a');
     var style = elem.style;
     style.cssText = css;
 

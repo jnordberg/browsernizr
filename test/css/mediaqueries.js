@@ -6,7 +6,8 @@ var mq = require('./../../lib/mq');
   "name": "CSS Media Queries",
   "caniuse": "css-mediaqueries",
   "property": "mediaqueries",
-  "tags": ["css"]
+  "tags": ["css"],
+  "builderAliases": ["css_mediaqueries"]
 }
 !*/
 

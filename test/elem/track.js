@@ -3,9 +3,10 @@ var createElement = require('./../../lib/createElement');
 
 /*!
 {
-  "name": "Track element and Timed Text Track API",
+  "name": "Track element and Timed Text Track",
   "property": ["texttrackapi", "track"],
   "tags": ["elem"],
+  "builderAliases": ["elem_track"],
   "authors": ["Addy Osmani"],
   "notes": [{
     "name": "W3 track Element Spec",

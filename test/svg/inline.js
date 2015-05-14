@@ -15,9 +15,7 @@ var createElement = require('./../../lib/createElement');
 }
 !*/
 /* DOC
-
 Detects support for inline SVG in HTML (not within XHTML).
-
 */
 
   Modernizr.addTest('inlinesvg', function() {

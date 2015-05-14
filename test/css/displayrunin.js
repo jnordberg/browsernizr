@@ -7,6 +7,7 @@ var testAllProps = require('./../../lib/testAllProps');
   "property": "display-runin",
   "authors": ["alanhogan"],
   "tags": ["css"],
+  "builderAliases": ["css_displayrunin"],
   "notes": [{
     "name": "CSS Tricks Article",
     "href": "http://css-tricks.com/596-run-in/"

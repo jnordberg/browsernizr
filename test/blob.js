@@ -5,6 +5,7 @@ var Modernizr = require('./../lib/Modernizr');
   "name": "Blob constructor",
   "property": "blobconstructor",
   "aliases": ["blob-constructor"],
+  "builderAliases": ["blob_constructor"],
   "caniuse": "blobbuilder",
   "notes": [{
     "name": "W3C spec",
@@ -14,9 +15,7 @@ var Modernizr = require('./../lib/Modernizr');
 }
 !*/
 /* DOC
-
 Detects support for the Blob constructor, for creating file-like objects of immutable, raw data.
-
 */
 
   Modernizr.addTest('blobconstructor', function () {

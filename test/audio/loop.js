@@ -8,6 +8,9 @@ var createElement = require('./../../lib/createElement');
   "tags": ["audio", "media"]
 }
 !*/
+/* DOC
+Detects if an audio element can automatically restart, once it has finished
+*/
 
-    Modernizr.addTest('audioloop', 'loop' in createElement('audio'));
+  Modernizr.addTest('audioloop', 'loop' in createElement('audio'));
 
