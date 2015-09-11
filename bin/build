@@ -16,7 +16,11 @@ unAMD = (src, reqPath='./') ->
     req = ''
     for i in [0...modules.length]
       req += "var #{ names[i] } = " if names[i]?.length > 0
-      req += "require('#{ reqPath }#{ modules[i] }');\n"
+      if modules[i].match /^test\//
+        modulePath = reqPath.replace /lib\//, '' + modules[i]
+      else
+        modulePath = reqPath + modules[i]
+      req += "require('#{ modulePath }');\n"
     src = "#{ req }\n#{ src }\n"
   if exports?
     src += "\nmodule.exports = #{ exports[1] };"
