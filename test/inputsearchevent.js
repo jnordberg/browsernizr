@@ -17,10 +17,8 @@ var hasEvent = require('./../lib/hasEvent');
 }
 !*/
 /* DOC
+There is a custom `search` event implemented in webkit browsers when using an `input[search]` element.
+*/
 
- There is a custom `search` event implemented in webkit browsers when using an `input[search]` element.
-
- */
-
-    Modernizr.addTest('inputsearchevent',  hasEvent('search'));
+  Modernizr.addTest('inputsearchevent',  hasEvent('search'));
 

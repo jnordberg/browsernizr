@@ -6,6 +6,7 @@ var Modernizr = require('./../../lib/Modernizr');
   "property": "sharedworkers",
   "caniuse" : "sharedworkers",
   "tags": ["performance", "workers"],
+  "builderAliases": ["workers_sharedworkers"],
   "notes": [{
     "name": "W3C Reference",
     "href": "http://www.w3.org/TR/workers/"
@@ -13,9 +14,7 @@ var Modernizr = require('./../../lib/Modernizr');
 }
 !*/
 /* DOC
-
 Detects support for the `SharedWorker` API from the Web Workers spec.
-
 */
 
   Modernizr.addTest('sharedworkers', 'SharedWorker' in window);

@@ -5,6 +5,7 @@ var Modernizr = require('./../../lib/Modernizr');
   "name": "XML HTTP Request Level 2 XHR2",
   "property": "xhr2",
   "tags": ["network"],
+  "builderAliases": ["network_xhr2"],
   "notes": [{
     "name": "W3 Spec",
     "href": "http://www.w3.org/TR/XMLHttpRequest2/"
@@ -15,13 +16,11 @@ var Modernizr = require('./../../lib/Modernizr');
 }
 !*/
 /* DOC
-
 Tests for XHR2.
 */
 
   // all three of these details report consistently across all target browsers:
   //   !!(window.ProgressEvent);
-  //   !!(window.FormData);
-  //   window.XMLHttpRequest && "withCredentials" in new XMLHttpRequest;
-  Modernizr.addTest('xhr2', 'FormData' in window);
+  //   'XMLHttpRequest' in window && 'withCredentials' in new XMLHttpRequest
+  Modernizr.addTest('xhr2', 'XMLHttpRequest' in window && 'withCredentials' in new XMLHttpRequest());
 

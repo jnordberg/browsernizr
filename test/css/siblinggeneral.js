@@ -16,7 +16,7 @@ var testStyles = require('./../../lib/testStyles');
 !*/
 
   Modernizr.addTest('siblinggeneral', function(){
-   return testStyles('#modernizr div {width:100px} #modernizr div ~ div {width:200px;display:block}', function(elem, rule){
+    return testStyles('#modernizr div {width:100px} #modernizr div ~ div {width:200px;display:block}', function( elem ) {
       return elem.lastChild.offsetWidth == 200;
     }, 2);
   });

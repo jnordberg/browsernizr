@@ -23,14 +23,12 @@ var smile = require('./../lib/smile');
     "galleryhtml5forms",
     "jscolor",
     "html5formshim",
-    "jqueryformshim",
     "selectedoptionsjs",
     "formvalidationjs"
   ]
 }
 !*/
 /* DOC
-
 Detects support for HTML5 form input types and exposes Boolean subproperties with the results:
 
 ```javascript
@@ -48,7 +46,6 @@ Modernizr.inputtypes.time
 Modernizr.inputtypes.url
 Modernizr.inputtypes.week
 ```
-
 */
 
   // Run through HTML5's new input types to see if the UA understands any.
@@ -66,7 +63,7 @@ Modernizr.inputtypes.week
     for ( var i = 0; i < len; i++ ) {
 
       inputElem.setAttribute('type', inputElemType = props[i]);
-      bool = inputElem.type !== 'text';
+      bool = inputElem.type !== 'text' && 'style' in inputElem;
 
       // We first check to see if the type we give it sticks..
       // If the type does, we feed it a textual value, which shouldn't be valid.
@@ -97,7 +94,7 @@ Modernizr.inputtypes.week
           // Interestingly, opera fails the earlier test, so it doesn't
           //  even make it here.
 
-        } else if ( /^(url|email)$/.test(inputElemType) ) {
+        } else if ( /^(url|email|number)$/.test(inputElemType) ) {
           // Real url and email support comes with prebaked validation.
           bool = inputElem.checkValidity && inputElem.checkValidity() === false;
 

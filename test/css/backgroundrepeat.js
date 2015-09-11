@@ -6,6 +6,7 @@ var testAllProps = require('./../../lib/testAllProps');
   "name": "Background Repeat",
   "property": ["bgrepeatspace", "bgrepeatround"],
   "tags": ["css"],
+  "builderAliases": ["css_backgroundrepeat"],
   "authors": ["Ryan Seddon"],
   "notes": [{
     "name": "MDN Docs",
@@ -19,6 +20,9 @@ var testAllProps = require('./../../lib/testAllProps');
   }]
 }
 !*/
+/* DOC
+Detects the ability to use round and space as properties for background-repeat
+*/
 
   // Must value-test these
   Modernizr.addTest('bgrepeatround', testAllProps('backgroundRepeat', 'round'));

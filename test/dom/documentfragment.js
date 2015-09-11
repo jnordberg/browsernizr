@@ -21,9 +21,7 @@ var docElement = require('./../../lib/docElement');
 }
 !*/
 /* DOC
-
 Append multiple elements to the DOM within a single insertion.
-
 */
 
   Modernizr.addTest('documentfragment', function() {

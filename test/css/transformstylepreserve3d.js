@@ -17,9 +17,7 @@ var testAllProps = require('./../../lib/testAllProps');
 }
 !*/
 /* DOC
-
 Detects support for `transform-style: preserve-3d`, for getting a proper 3D perspective on elements.
-
 */
 
   Modernizr.addTest('preserve3d', testAllProps('transformStyle', 'preserve-3d'));

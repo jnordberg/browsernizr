@@ -8,6 +8,7 @@ var createElement = require('./../../lib/createElement');
   "property": "csspointerevents",
   "authors": ["ausi"],
   "tags": ["css"],
+  "builderAliases": ["css_pointerevents"],
   "notes": [
     {
       "name": "MDN Docs",
@@ -28,8 +29,8 @@ var createElement = require('./../../lib/createElement');
 !*/
 
   Modernizr.addTest('csspointerevents', function() {
-    var element = createElement('x');
-    element.style.cssText = 'pointer-events:auto';
-    return element.style.pointerEvents === 'auto';
+    var style = createElement('a').style;
+    style.cssText = 'pointer-events:auto';
+    return style.pointerEvents === 'auto';
   });
 

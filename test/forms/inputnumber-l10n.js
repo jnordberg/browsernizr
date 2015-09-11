@@ -2,6 +2,8 @@ var Modernizr = require('./../../lib/Modernizr');
 var createElement = require('./../../lib/createElement');
 var docElement = require('./../../lib/docElement');
 var getBody = require('./../../lib/getBody');
+require('./../../lib/test/inputtypes');
+require('./../../lib/test/forms/validation');
 
 /*!
 {
@@ -15,17 +17,20 @@ var getBody = require('./../../lib/getBody');
   },{
     "name": "Based on This",
     "href": "http://trac.webkit.org/browser/trunk/LayoutTests/fast/forms/script-tests/input-number-keyoperation.js?rev=80096#L9"
-  }]
+  }],
+  "knownBugs": ["Only ever returns true if the browser/OS is configured to use comma as a decimal separator. This is probably fine for most use cases."]
 }
 !*/
 /* DOC
-
-Detects whether input type="number" is capable of receiving and
-displaying localized numbers, e.g. with comma separator
-
+Detects whether input type="number" is capable of receiving and displaying localized numbers, e.g. with comma separator.
 */
 
   Modernizr.addTest('localizednumber', function() {
+    // this extends our testing of input[type=number], so bomb out if that's missing
+    if (!Modernizr.inputtypes.number) { return false; }
+    // we rely on checkValidity later, so bomb out early if we don't have it
+    if (!Modernizr.formvalidation) { return false; }
+
     var el = createElement('div');
     var diff;
     var body = getBody();
