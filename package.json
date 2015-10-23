@@ -10,8 +10,9 @@
     "browserify"
   ],
   "devDependencies": {
-    "shelljs": "*",
-    "Modernizr": "git://github.com/Modernizr/Modernizr.git"
+    "Modernizr": "git://github.com/Modernizr/Modernizr.git",
+    "nodefy": "git://github.com/jnordberg/nodefy.git",
+    "shelljs": "^0.5.3"
   },
   "author": "Johan Nordberg <its@johan-nordberg.com>",
   "license": "MIT"
