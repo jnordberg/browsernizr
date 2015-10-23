@@ -1,8 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var createElement = require('./../lib/createElement');
-var testStyles = require('./../lib/testStyles');
-var isSVG = require('./../lib/isSVG');
-
 /*!
 {
   "name": "Unicode characters",
@@ -16,7 +11,10 @@ var isSVG = require('./../lib/isSVG');
 /* DOC
 Detects if unicode characters are supported in the current document.
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
+var createElement = require('./../lib/createElement.js');
+var testStyles = require('./../lib/testStyles.js');
+var isSVG = require('./../lib/isSVG.js');
   /**
    * Unicode special character support
    *
@@ -29,7 +27,7 @@ Detects if unicode characters are supported in the current document.
     var missingGlyph = createElement('span');
     var star = createElement('span');
 
-    testStyles('#modernizr{font-family:Arial,sans;font-size:300em;}', function( node ) {
+    testStyles('#modernizr{font-family:Arial,sans;font-size:300em;}', function(node) {
 
       missingGlyph.innerHTML = isSVG ? '\u5987' : '&#5987';
       star.innerHTML = isSVG ? '\u2606' : '&#9734';

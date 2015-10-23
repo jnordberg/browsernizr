@@ -1,7 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var createElement = require('./../lib/createElement');
-var isSVG = require('./../lib/isSVG');
-
 /*!
 {
   "name": "VML",
@@ -21,7 +17,9 @@ var isSVG = require('./../lib/isSVG');
 /* DOC
 Detects support for VML.
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
+var createElement = require('./../lib/createElement.js');
+var isSVG = require('./../lib/isSVG.js');
   Modernizr.addTest('vml', function() {
     var containerDiv = createElement('div');
     var supports = false;
@@ -31,7 +29,7 @@ Detects support for VML.
       containerDiv.innerHTML = '<v:shape id="vml_flag1" adj="1" />';
       shape = containerDiv.firstChild;
       shape.style.behavior = 'url(#default#VML)';
-      supports = shape ? typeof shape.adj == 'object': true;
+      supports = shape ? typeof shape.adj == 'object' : true;
     }
 
     return supports;

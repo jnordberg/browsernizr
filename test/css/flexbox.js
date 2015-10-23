@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testAllProps = require('./../../lib/testAllProps');
-
 /*!
 {
   "name": "Flexbox",
@@ -19,6 +16,7 @@ var testAllProps = require('./../../lib/testAllProps');
 /* DOC
 Detects support for the Flexible Box Layout model, a.k.a. Flexbox, which allows easy manipulation of layout order and sizing within a container.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var testAllProps = require('./../../lib/testAllProps.js');
   Modernizr.addTest('flexbox', testAllProps('flexBasis', '1px', true));
 

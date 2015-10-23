@@ -1,8 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-var docElement = require('./../../lib/docElement');
-var testStyles = require('./../../lib/testStyles');
-
 /*!
 {
   "name": "Form Validation",
@@ -19,10 +14,13 @@ the test can be combined:
 - `Modernizr.inputtypes.number && Modernizr.formvalidation` (browser supports rangeOverflow, typeMismatch etc. for type=number)
 - `Modernizr.input.required && Modernizr.formvalidation` (browser supports valueMissing)
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
+var docElement = require('./../../lib/docElement.js');
+var testStyles = require('./../../lib/testStyles.js');
   Modernizr.addTest('formvalidation', function() {
     var form = createElement('form');
-    if ( !('checkValidity' in form) || !('addEventListener' in form) ) {
+    if (!('checkValidity' in form) || !('addEventListener' in form)) {
       return false;
     }
     if ('reportValidity' in form) {
@@ -35,8 +33,9 @@ the test can be combined:
 
     // Prevent form from being submitted
     form.addEventListener('submit', function(e) {
-      //Opera does not validate form, if submit is prevented
-      if ( !window.opera ) {
+      // Old Presto based Opera does not validate form, if submit is prevented
+      // although Opera Mini servers use newer Presto.
+      if (!window.opera || window.operamini) {
         e.preventDefault();
       }
       e.stopPropagation();
@@ -47,7 +46,7 @@ the test can be combined:
     //older opera browsers need a name attribute
     form.innerHTML = '<input name="modTest" required><button></button>';
 
-    testStyles('#modernizr form{position:absolute;top:-99999em}', function( node ) {
+    testStyles('#modernizr form{position:absolute;top:-99999em}', function(node) {
       node.appendChild(form);
 
       input = form.getElementsByTagName('input')[0];

@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "Orientation and Motion Events",
@@ -27,7 +25,7 @@ Part of Device Access aspect of HTML5, same category as geolocation.
 
 `deviceorientation` tests for Device Orientation Event support, returns boolean value true/false
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
   Modernizr.addTest('devicemotion', 'DeviceMotionEvent' in window);
   Modernizr.addTest('deviceorientation', 'DeviceOrientationEvent' in window);
 

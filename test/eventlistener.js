@@ -1,5 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-
 /*!
 {
   "name": "Event Listener",
@@ -15,6 +13,6 @@ var Modernizr = require('./../lib/Modernizr');
 /* DOC
 Detects native support for addEventListener
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
   Modernizr.addTest('eventlistener', 'addEventListener' in window);
 

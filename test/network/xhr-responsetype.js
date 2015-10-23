@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "XHR responseType",
@@ -14,7 +12,7 @@ var Modernizr = require('./../../lib/Modernizr');
 /* DOC
 Tests for XMLHttpRequest xhr.responseType.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
   Modernizr.addTest('xhrresponsetype', (function() {
     if (typeof XMLHttpRequest == 'undefined') {
       return false;

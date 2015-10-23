@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "Web SQL Database",
@@ -8,7 +6,7 @@ var Modernizr = require('./../../lib/Modernizr');
   "tags": ["storage"]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
   // Chrome incognito mode used to throw an exception when using openDatabase
   // It doesn't anymore.
   Modernizr.addTest('websqldatabase', 'openDatabase' in window);

@@ -1,6 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var hasEvent = require('./../lib/hasEvent');
-
 /*!
 {
   "name": "Hashchange event",
@@ -23,7 +20,8 @@ var hasEvent = require('./../lib/hasEvent');
 /* DOC
 Detects support for the `hashchange` event, fired when the current location fragment changes.
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
+var hasEvent = require('./../lib/hasEvent.js');
   Modernizr.addTest('hashchange', function() {
     if (hasEvent('hashchange', window) === false) {
       return false;

@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "authors": ["Cătălin Mariș"],
@@ -15,6 +13,6 @@ var Modernizr = require('./../../lib/Modernizr');
 }
 !*/
 
-
+var Modernizr = require('./../../lib/Modernizr.js');
   Modernizr.addTest('speechsynthesis', 'SpeechSynthesisUtterance' in window);
 

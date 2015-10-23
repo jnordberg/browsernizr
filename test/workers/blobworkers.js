@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var addTest = require('./../../lib/addTest');
-
 /*!
 {
   "name": "Workers from Blob URIs",
@@ -19,7 +16,8 @@ var addTest = require('./../../lib/addTest');
 /* DOC
 Detects support for creating Web Workers from Blob URIs.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var addTest = require('./../../lib/addTest.js');
   Modernizr.addAsyncTest(function() {
     try {
       // we're avoiding using Modernizr._domPrefixes as the prefix capitalization on
@@ -40,7 +38,7 @@ Detects support for creating Web Workers from Blob URIs.
 
       try {
         blob = new Blob([scriptText], {type:'text/javascript'});
-      } catch(e) {
+      } catch (e) {
         // we'll fall back to the deprecated BlobBuilder
       }
       if (!blob) {

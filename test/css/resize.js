@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testAllProps = require('./../../lib/testAllProps');
-
 /*!
 {
   "name": "CSS UI Resize",
@@ -20,6 +17,7 @@ var testAllProps = require('./../../lib/testAllProps');
 /* DOC
 Test for CSS 3 UI "resize" property
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var testAllProps = require('./../../lib/testAllProps.js');
   Modernizr.addTest('cssresize', testAllProps('resize', 'both', true));
 

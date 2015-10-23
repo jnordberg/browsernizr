@@ -1,7 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var prefixes = require('./../lib/prefixes');
-var testStyles = require('./../lib/testStyles');
-
 /*!
 {
   "name": "Touch Events",
@@ -37,15 +33,17 @@ It's recommended to bind both mouse and touch/pointer events simultaneously – 
 
 This test will also return `true` for Firefox 4 Multitouch support.
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
+var prefixes = require('./../lib/prefixes.js');
+var testStyles = require('./../lib/testStyles.js');
   // Chrome (desktop) used to lie about its support on this, but that has since been rectified: http://crbug.com/36415
   Modernizr.addTest('touchevents', function() {
     var bool;
-    if(('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+    if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
       bool = true;
     } else {
-      var query = ['@media (',prefixes.join('touch-enabled),('),'heartz',')','{#modernizr{top:9px;position:absolute}}'].join('');
-      testStyles(query, function( node ) {
+      var query = ['@media (', prefixes.join('touch-enabled),('), 'heartz', ')', '{#modernizr{top:9px;position:absolute}}'].join('');
+      testStyles(query, function(node) {
         bool = node.offsetTop === 9;
       });
     }

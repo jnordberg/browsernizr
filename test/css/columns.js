@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testAllProps = require('./../../lib/testAllProps');
-
 /*!
 {
   "name": "CSS Columns",
@@ -10,19 +7,20 @@ var testAllProps = require('./../../lib/testAllProps');
   "tags": ["css"]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var testAllProps = require('./../../lib/testAllProps.js');
 
   (function() {
 
     /* jshint -W053 */
-    Modernizr.addTest('csscolumns', function(){
+    Modernizr.addTest('csscolumns', function() {
       var bool = false;
       var test = testAllProps('columnCount');
       try {
-        if ( bool = !!test ) {
+        if (bool = !!test) {
           bool = new Boolean(bool);
         }
-      } catch(e){}
+      } catch (e) {}
 
       return bool;
     });

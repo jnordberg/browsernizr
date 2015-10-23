@@ -1,6 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var prefixed = require('./../lib/prefixed');
-
 /*!
 {
   "name": "Battery API",
@@ -18,6 +15,7 @@ var prefixed = require('./../lib/prefixed');
 /* DOC
 Detect support for the Battery API, for accessing information about the system's battery charge level.
 */
-
-  Modernizr.addTest('batteryapi', !!prefixed('battery', navigator), { aliases: ['battery-api'] });
+var Modernizr = require('./../lib/Modernizr.js');
+var prefixed = require('./../lib/prefixed.js');
+  Modernizr.addTest('batteryapi', !!prefixed('battery', navigator), {aliases: ['battery-api']});
 

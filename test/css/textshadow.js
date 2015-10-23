@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testProp = require('./../../lib/testProp');
-
 /*!
 {
   "name": "CSS textshadow",
@@ -10,6 +7,7 @@ var testProp = require('./../../lib/testProp');
   "knownBugs": ["FF3.0 will false positive on this test"]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var testProp = require('./../../lib/testProp.js');
   Modernizr.addTest('textshadow', testProp('textShadow', '1px 1px'));
 

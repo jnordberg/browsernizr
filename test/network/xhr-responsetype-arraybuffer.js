@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testXhrType = require('./../../lib/testXhrType');
-
 /*!
 {
   "name": "XHR responseType='arraybuffer'",
@@ -15,6 +12,7 @@ var testXhrType = require('./../../lib/testXhrType');
 /* DOC
 Tests for XMLHttpRequest xhr.responseType='arraybuffer'.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var testXhrType = require('./../../lib/testXhrType.js');
   Modernizr.addTest('xhrresponsetypearraybuffer', testXhrType('arraybuffer'));
 

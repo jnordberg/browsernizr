@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "CSS Supports",
@@ -19,7 +17,7 @@ var Modernizr = require('./../../lib/Modernizr');
   }]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
   var newSyntax = 'CSS' in window && 'supports' in window.CSS;
   var oldSyntax = 'supportsCSS' in window;
   Modernizr.addTest('supports', newSyntax || oldSyntax);

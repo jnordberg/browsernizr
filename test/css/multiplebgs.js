@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "CSS Multiple Backgrounds",
@@ -9,7 +6,8 @@ var createElement = require('./../../lib/createElement');
   "tags": ["css"]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
   // Setting multiple images AND a color on the background shorthand property
   // and then querying the style.background property value for the number of
   // occurrences of "url(" is a reliable method for detecting ACTUAL support for this!

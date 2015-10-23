@@ -1,7 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-var contains = require('./../../lib/contains');
-
 /*!
 {
   "name": "CSS HSLA Colors",
@@ -10,7 +6,9 @@ var contains = require('./../../lib/contains');
   "tags": ["css"]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
+var contains = require('./../../lib/contains.js');
   Modernizr.addTest('hsla', function() {
     var style = createElement('a').style;
     style.cssText = 'background-color:hsla(120,40%,100%,.5)';

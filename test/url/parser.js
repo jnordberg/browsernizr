@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "URL parser",
@@ -16,8 +14,8 @@ var Modernizr = require('./../../lib/Modernizr');
 /* DOC
 Check if browser implements the URL constructor for parsing URLs.
 */
-
-  Modernizr.addTest('urlparser', function () {
+var Modernizr = require('./../../lib/Modernizr.js');
+  Modernizr.addTest('urlparser', function() {
     var url;
     try {
       // have to actually try use it, because Safari defines a dud constructor

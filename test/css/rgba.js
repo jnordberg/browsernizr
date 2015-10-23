@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "CSS rgba",
@@ -13,7 +10,8 @@ var createElement = require('./../../lib/createElement');
   }]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
   Modernizr.addTest('rgba', function() {
     var style = createElement('a').style;
     style.cssText = 'background-color:rgba(150,255,150,.5)';

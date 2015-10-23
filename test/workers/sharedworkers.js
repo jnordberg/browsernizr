@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "Shared Workers",
@@ -16,6 +14,6 @@ var Modernizr = require('./../../lib/Modernizr');
 /* DOC
 Detects support for the `SharedWorker` API from the Web Workers spec.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
   Modernizr.addTest('sharedworkers', 'SharedWorker' in window);
 

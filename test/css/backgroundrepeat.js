@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testAllProps = require('./../../lib/testAllProps');
-
 /*!
 {
   "name": "Background Repeat",
@@ -23,7 +20,8 @@ var testAllProps = require('./../../lib/testAllProps');
 /* DOC
 Detects the ability to use round and space as properties for background-repeat
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var testAllProps = require('./../../lib/testAllProps.js');
   // Must value-test these
   Modernizr.addTest('bgrepeatround', testAllProps('backgroundRepeat', 'round'));
   Modernizr.addTest('bgrepeatspace', testAllProps('backgroundRepeat', 'space'));

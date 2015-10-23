@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "ES5 Syntax",
@@ -19,8 +17,8 @@ var Modernizr = require('./../../lib/Modernizr');
 /* DOC
 Check if browser accepts ECMAScript 5 syntax.
 */
-
-  Modernizr.addTest('es5syntax', function () {
+var Modernizr = require('./../../lib/Modernizr.js');
+  Modernizr.addTest('es5syntax', function() {
     var value, obj, stringAccess, getter, setter, reservedWords, zeroWidthChars;
     try {
       // Property access on strings

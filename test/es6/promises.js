@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "ES6 Promises",
@@ -23,7 +21,7 @@ var Modernizr = require('./../../lib/Modernizr');
 /* DOC
 Check if browser implements ECMAScript 6 Promises per specification.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
   Modernizr.addTest('promises', function() {
     return 'Promise' in window &&
     // Some of these methods are missing from

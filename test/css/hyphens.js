@@ -1,9 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var prefixes = require('./../../lib/prefixes');
-var createElement = require('./../../lib/createElement');
-var testAllProps = require('./../../lib/testAllProps');
-var addTest = require('./../../lib/addTest');
-
 /*!
 {
   "name": "CSS Hyphens",
@@ -33,7 +27,11 @@ var addTest = require('./../../lib/addTest');
   }]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var prefixes = require('./../../lib/prefixes.js');
+var createElement = require('./../../lib/createElement.js');
+var testAllProps = require('./../../lib/testAllProps.js');
+var addTest = require('./../../lib/addTest.js');
 
   Modernizr.addAsyncTest(function() {
     var waitTime = 300;
@@ -69,8 +67,8 @@ var addTest = require('./../../lib/addTest');
           spanWidth = span.offsetWidth;
 
           /* compare size with hyphenated text */
-          divStyle.cssText = 'position:absolute;top:0;left:0;width:5em;text-align:justify;'+
-            'text-justification:newspaper;'+
+          divStyle.cssText = 'position:absolute;top:0;left:0;width:5em;text-align:justify;' +
+            'text-justification:newspaper;' +
             prefixes.join('hyphens:auto; ');
 
           result = (span.offsetHeight != spanHeight || span.offsetWidth != spanWidth);
@@ -80,13 +78,13 @@ var addTest = require('./../../lib/addTest');
           div.removeChild(span);
 
           return result;
-        } catch(e) {
+        } catch (e) {
           return false;
         }
       }
 
       // for the softhyphens test
-      function test_hyphens( delimiter, testWidth ) {
+      function test_hyphens(delimiter, testWidth) {
         try {
           /* create a div container and a span within that
            * these have to be appended to document.body, otherwise some browsers can give false negative */
@@ -132,13 +130,13 @@ var addTest = require('./../../lib/addTest');
           div.removeChild(span);
 
           return result;
-        } catch(e) {
+        } catch (e) {
           return false;
         }
       }
 
       // testing if in-browser Find functionality will work on hyphenated text
-      function test_hyphens_find( delimiter ) {
+      function test_hyphens_find(delimiter) {
         try {
           /* create a dummy input for resetting selection location, and a div container
            * these have to be appended to document.body, otherwise some browsers can give false negative
@@ -161,7 +159,7 @@ var addTest = require('./../../lib/addTest');
            *   stackoverflow.com/questions/499126/jquery-set-cursor-position-in-text-area */
           if (dummy.setSelectionRange) {
             dummy.focus();
-            dummy.setSelectionRange(0,0);
+            dummy.setSelectionRange(0, 0);
           } else if (dummy.createTextRange) {
             textrange = dummy.createTextRange();
             textrange.collapse(true);
@@ -177,7 +175,7 @@ var addTest = require('./../../lib/addTest');
             try {
               textrange = window.self.document.body.createTextRange();
               result = textrange.findText(testword + testword);
-            } catch(e) {
+            } catch (e) {
               result = false;
             }
           }
@@ -186,21 +184,23 @@ var addTest = require('./../../lib/addTest');
           document.body.removeChild(dummy);
 
           return result;
-        } catch(e) {
+        } catch (e) {
           return false;
         }
       }
 
       addTest('csshyphens', function() {
 
-        if (!testAllProps('hyphens', 'auto', true)) return false;
+        if (!testAllProps('hyphens', 'auto', true)) {
+          return false;
+        }
 
         /* Chrome lies about its hyphens support so we need a more robust test
            crbug.com/107111
            */
         try {
           return test_hyphens_css();
-        } catch(e) {
+        } catch (e) {
           return false;
         }
       });
@@ -209,7 +209,7 @@ var addTest = require('./../../lib/addTest');
         try {
           // use numeric entity instead of &shy; in case it's XHTML
           return test_hyphens('&#173;', true) && test_hyphens('&#8203;', false);
-        } catch(e) {
+        } catch (e) {
           return false;
         }
       });
@@ -217,7 +217,7 @@ var addTest = require('./../../lib/addTest');
       addTest('softhyphensfind', function() {
         try {
           return test_hyphens_find('&#173;') && test_hyphens_find('&#8203;');
-        } catch(e) {
+        } catch (e) {
           return false;
         }
       });

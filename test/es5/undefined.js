@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "ES5 Immutable Undefined",
@@ -18,8 +16,8 @@ var Modernizr = require('./../../lib/Modernizr');
 /* DOC
 Check if browser prevents assignment to global `undefined` per ECMAScript 5.
 */
-
-  Modernizr.addTest('es5undefined', function () {
+var Modernizr = require('./../../lib/Modernizr.js');
+  Modernizr.addTest('es5undefined', function() {
     var result, originalUndefined;
     try {
       originalUndefined = window.undefined;

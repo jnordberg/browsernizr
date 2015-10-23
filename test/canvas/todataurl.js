@@ -1,7 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-require('./../../lib/test/canvas');
-
 /*!
 {
   "name": "canvas.toDataURL type support",
@@ -15,7 +11,8 @@ require('./../../lib/test/canvas');
   }]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
 
   var canvas = createElement('canvas');
 
@@ -31,7 +28,7 @@ require('./../../lib/test/canvas');
     // firefox 3 throws an error when you use an "invalid" toDataUrl
     try {
       supports = !!Modernizr.canvas && canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
-    } catch(e) {}
+    } catch (e) {}
 
     return supports;
   });

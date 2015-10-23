@@ -1,7 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-var prefixes = require('./../../lib/prefixes');
-
 /*!
 {
   "name": "CSS Opacity",
@@ -10,7 +6,9 @@ var prefixes = require('./../../lib/prefixes');
   "tags": ["css"]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
+var prefixes = require('./../../lib/prefixes.js');
   // Browsers that actually have CSS Opacity implemented have done so
   // according to spec, which means their return values are within the
   // range of [0.0,1.0] - including the leading zero.

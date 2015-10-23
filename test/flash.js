@@ -1,10 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var createElement = require('./../lib/createElement');
-var docElement = require('./../lib/docElement');
-var addTest = require('./../lib/addTest');
-var getBody = require('./../lib/getBody');
-var isSVG = require('./../lib/isSVG');
-
 /*!
   {
   "name": "Flash",
@@ -14,13 +7,18 @@ var isSVG = require('./../lib/isSVG');
   }
   !*/
 /* DOC
-Detects support flash, as well as flash blocking plugins
+Detects Flash support as well as Flash-blocking plugins
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
+var createElement = require('./../lib/createElement.js');
+var docElement = require('./../lib/docElement.js');
+var addTest = require('./../lib/addTest.js');
+var getBody = require('./../lib/getBody.js');
+var isSVG = require('./../lib/isSVG.js');
   Modernizr.addAsyncTest(function() {
     /* jshint -W053 */
 
-    var removeFakeBody = function (body) {
+    var removeFakeBody = function(body) {
       // If we’re rockin’ an attached fake body, clean it up
       if (body.fake && body.parentNode) {
         body.parentNode.removeChild(body);
@@ -47,20 +45,20 @@ Detects support flash, as well as flash blocking plugins
     };
     var easy_detect;
     var activex;
-    // we wrap activex in a try/catch because when flash is disabled through
+    // we wrap activex in a try/catch because when Flash is disabled through
     // ActiveX controls, it throws an error.
     try {
-      // Pan is an API that exists for flash objects.
+      // Pan is an API that exists for Flash objects.
       activex = 'ActiveXObject' in window && 'Pan' in new window.ActiveXObject('ShockwaveFlash.ShockwaveFlash');
-    } catch(e) {}
+    } catch (e) {}
 
-    easy_detect = !( ( 'plugins' in navigator && 'Shockwave Flash' in navigator.plugins ) || activex );
+    easy_detect = !(('plugins' in navigator && 'Shockwave Flash' in navigator.plugins) || activex);
 
     if (easy_detect || isSVG) {
       runTest(false);
     }
     else {
-      // flash seems to be installed, but it might be blocked. We have to
+      // Flash seems to be installed, but it might be blocked. We have to
       // actually create an element to see what happens to it.
       var embed = createElement('embed');
       var body = getBody();
@@ -99,7 +97,7 @@ Detects support flash, as well as flash blocking plugins
           inline_style = embed.style.cssText;
           if (inline_style !== '') {
             // the style of the element has changed automatically. This is a
-            // really poor heuristic, but for lower end flash blocks, it the
+            // really poor heuristic, but for lower end Flash blocks, it the
             // only change they can make.
             runTest('blocked', embed);
           }

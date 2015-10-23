@@ -1,5 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-
 /*!
 {
   "name": "Template strings",
@@ -13,7 +11,7 @@ var Modernizr = require('./../lib/Modernizr');
 /* DOC
 Template strings are string literals allowing embedded expressions.
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
   Modernizr.addTest('templatestrings', function() {
     var supports;
     try {

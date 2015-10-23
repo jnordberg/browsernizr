@@ -1,7 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var createElement = require('./../lib/createElement');
-require('./../lib/test/canvastext');
-
 /*!
 {
   "name": "Emoji",
@@ -11,9 +7,12 @@ require('./../lib/test/canvastext');
 /* DOC
 Detects support for emoji character sets.
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
+var createElement = require('./../lib/createElement.js');
   Modernizr.addTest('emoji', function() {
-    if (!Modernizr.canvastext) return false;
+    if (!Modernizr.canvastext) {
+      return false;
+    }
     var pixelRatio = window.devicePixelRatio || 1;
     var offset = 12 * pixelRatio;
     var node = createElement('canvas');

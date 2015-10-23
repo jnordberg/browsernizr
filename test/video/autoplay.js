@@ -1,9 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var addTest = require('./../../lib/addTest');
-var docElement = require('./../../lib/docElement');
-var createElement = require('./../../lib/createElement');
-require('./../../lib/test/video');
-
 /*!
 {
   "name": "Video Autoplay",
@@ -17,7 +11,10 @@ require('./../../lib/test/video');
 /* DOC
 Checks for support of the autoplay attribute of the video element.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var addTest = require('./../../lib/addTest.js');
+var docElement = require('./../../lib/docElement.js');
+var createElement = require('./../../lib/createElement.js');
 
   Modernizr.addAsyncTest(function() {
     var timeout;
@@ -61,7 +58,7 @@ Checks for support of the autoplay attribute of the video element.
       return;
     }
 
-    elem.setAttribute('autoplay','');
+    elem.setAttribute('autoplay', '');
     elem.style.cssText = 'display:none';
     docElement.appendChild(elem);
     // wait for the next tick to add the listener, otherwise the element may

@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testAllProps = require('./../../lib/testAllProps');
-
 /*!
 {
   "name": "CSS Background Clip Text",
@@ -27,7 +24,8 @@ var testAllProps = require('./../../lib/testAllProps');
 Detects the ability to control specifies whether or not an element's background
 extends beyond its border in CSS
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var testAllProps = require('./../../lib/testAllProps.js');
   Modernizr.addTest('backgroundcliptext', function() {
     return testAllProps('backgroundClip', 'text');
   });

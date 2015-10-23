@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var addTest = require('./../../lib/addTest');
-
 /*!
 {
   "name": "Webp Lossless",
@@ -20,16 +17,17 @@ var addTest = require('./../../lib/addTest');
 /* DOC
 Tests for non-alpha lossless webp support.
 */
-
-  Modernizr.addAsyncTest(function(){
+var Modernizr = require('./../../lib/Modernizr.js');
+var addTest = require('./../../lib/addTest.js');
+  Modernizr.addAsyncTest(function() {
     var image = new Image();
 
     image.onerror = function() {
-      addTest('webplossless', false, { aliases: ['webp-lossless'] });
+      addTest('webplossless', false, {aliases: ['webp-lossless']});
     };
 
     image.onload = function() {
-      addTest('webplossless', image.width == 1, { aliases: ['webp-lossless'] });
+      addTest('webplossless', image.width == 1, {aliases: ['webp-lossless']});
     };
 
     image.src = 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=';

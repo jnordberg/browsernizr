@@ -1,7 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-require('./../../lib/test/canvas');
-
 /*!
 {
   "name": "canvas winding support",
@@ -17,10 +13,13 @@ require('./../../lib/test/canvas');
 /* DOC
 Determines if winding rules, which controls if a path can go clockwise or counterclockwise
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
 
   Modernizr.addTest('canvaswinding', function() {
-    if (Modernizr.canvas === false) return false;
+    if (Modernizr.canvas === false) {
+      return false;
+    }
     var ctx = createElement('canvas').getContext('2d');
 
     ctx.rect(0, 0, 10, 10);

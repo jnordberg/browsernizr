@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var mq = require('./../../lib/mq');
-
 /*!
 {
   "name": "CSS Media Queries",
@@ -10,6 +7,7 @@ var mq = require('./../../lib/mq');
   "builderAliases": ["css_mediaqueries"]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var mq = require('./../../lib/mq.js');
   Modernizr.addTest('mediaqueries', mq('only all'));
 

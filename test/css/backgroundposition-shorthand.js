@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "Background Position Shorthand",
@@ -25,7 +22,8 @@ element's background-position simultaniously.
 
 eg `background-position: right 10px bottom 10px`
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
   Modernizr.addTest('bgpositionshorthand', function() {
     var elem = createElement('a');
     var eStyle = elem.style;

@@ -1,5 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-
 /*!
 {
   "name": "Notification",
@@ -19,6 +17,6 @@ var Modernizr = require('./../lib/Modernizr');
 /* DOC
 Detects support for the Notifications API
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
   Modernizr.addTest('notification', 'Notification' in window && 'permission' in window.Notification && 'requestPermission' in window.Notification);
 

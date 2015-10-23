@@ -1,8 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var prefixed = require('./../../lib/prefixed');
-var domPrefixes = require('./../../lib/domPrefixes');
-require('./../../lib/test/webrtc/peerconnection');
-
 /*!
 {
   "name": "RTC Data Channel",
@@ -16,7 +11,9 @@ require('./../../lib/test/webrtc/peerconnection');
 /* DOC
 Detect for the RTCDataChannel API that allows for transfer data directly from one peer to another
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var prefixed = require('./../../lib/prefixed.js');
+var domPrefixes = require('./../../lib/domPrefixes.js');
 
   Modernizr.addTest('datachannel', function() {
     if (!Modernizr.peerconnection) {
@@ -27,7 +24,7 @@ Detect for the RTCDataChannel API that allows for transfer data directly from on
 
       if (peerConnectionConstructor) {
         var peerConnection = new peerConnectionConstructor({
-          'iceServers': [{ 'url': 'stun:0' }]
+          'iceServers': [{'url': 'stun:0'}]
         });
 
         return 'createDataChannel' in peerConnection;

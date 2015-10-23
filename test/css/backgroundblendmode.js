@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var prefixed = require('./../../lib/prefixed');
-
 /*!
 {
   "name": "CSS Background Blend Mode",
@@ -21,6 +18,7 @@ var prefixed = require('./../../lib/prefixed');
 /* DOC
 Detects the ability for the browser to composite backgrounds using blending modes similar to ones found in Photoshop or Illustrator.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var prefixed = require('./../../lib/prefixed.js');
   Modernizr.addTest('backgroundblendmode', prefixed('backgroundBlendMode', 'text'));
 

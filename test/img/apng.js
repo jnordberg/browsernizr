@@ -1,8 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-var addTest = require('./../../lib/addTest');
-require('./../../lib/test/canvas');
-
 /*!
 {
   "name": "Animated PNG",
@@ -19,8 +14,10 @@ require('./../../lib/test/canvas');
 /* DOC
 Test for animated png support.
 */
-
-  Modernizr.addAsyncTest(function () {
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
+var addTest = require('./../../lib/addTest.js');
+  Modernizr.addAsyncTest(function() {
     if (!Modernizr.canvas) {
       return false;
     }
@@ -29,8 +26,8 @@ Test for animated png support.
     var canvas = createElement('canvas');
     var ctx = canvas.getContext('2d');
 
-    image.onload = function () {
-      addTest('apng', function () {
+    image.onload = function() {
+      addTest('apng', function() {
         if (typeof canvas.getContext == 'undefined') {
           return false;
         }

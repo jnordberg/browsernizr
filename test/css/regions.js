@@ -1,8 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-var docElement = require('./../../lib/docElement');
-var isSVG = require('./../../lib/isSVG');
-
 /*!
 {
   "name": "CSS Regions",
@@ -17,7 +12,10 @@ var isSVG = require('./../../lib/isSVG');
   }]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
+var docElement = require('./../../lib/docElement.js');
+var isSVG = require('./../../lib/isSVG.js');
   // We start with a CSS parser test then we check page geometry to see if it's affected by regions
   // Later we might be able to retire the second part, as WebKit builds with the false positives die out
 
@@ -35,7 +33,7 @@ var isSVG = require('./../../lib/isSVG');
     var flowIntoProperty = Modernizr.prefixed('flowInto');
     var result = false;
 
-    if (!flowFromProperty || !flowIntoProperty){
+    if (!flowFromProperty || !flowIntoProperty) {
       return result;
     }
 

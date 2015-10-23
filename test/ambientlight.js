@@ -1,6 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var hasEvent = require('./../lib/hasEvent');
-
 /*!
 {
   "name": "Ambient Light Events",
@@ -14,6 +11,7 @@ var hasEvent = require('./../lib/hasEvent');
 /* DOC
 Detects support for the API that provides information about the ambient light levels, as detected by the device's light detector, in terms of lux units.
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
+var hasEvent = require('./../lib/hasEvent.js');
   Modernizr.addTest('ambientlight', hasEvent('devicelight', window));
 

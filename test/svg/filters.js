@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "SVG filters",
@@ -14,7 +12,7 @@ var Modernizr = require('./../../lib/Modernizr');
   }]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
   // Should fail in Safari: http://stackoverflow.com/questions/9739955/feature-detecting-support-for-svg-filters.
   Modernizr.addTest('svgfilters', function() {
     var result = false;
@@ -22,7 +20,7 @@ var Modernizr = require('./../../lib/Modernizr');
       result = 'SVGFEColorMatrixElement' in window &&
         SVGFEColorMatrixElement.SVG_FECOLORMATRIX_TYPE_SATURATE == 2;
     }
-    catch(e) {}
+    catch (e) {}
     return result;
   });
 

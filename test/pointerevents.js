@@ -1,7 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var domPrefixes = require('./../lib/domPrefixes');
-var hasEvent = require('./../lib/hasEvent');
-
 /*!
 {
   "name": "DOM Pointer Events API",
@@ -21,10 +17,12 @@ var hasEvent = require('./../lib/hasEvent');
 /* DOC
 Detects support for the DOM Pointer Events API, which provides a unified event interface for pointing input devices, as implemented in IE10+.
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
+var domPrefixes = require('./../lib/domPrefixes.js');
+var hasEvent = require('./../lib/hasEvent.js');
   // **Test name hijacked!**
   // Now refers to W3C DOM PointerEvents spec rather than the CSS pointer-events property.
-  Modernizr.addTest('pointerevents', function () {
+  Modernizr.addTest('pointerevents', function() {
     // Cannot use `.prefixed()` for events, so test each prefix
     var bool = false,
     i = domPrefixes.length;

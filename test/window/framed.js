@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "Framed window",
@@ -11,7 +9,7 @@ var Modernizr = require('./../../lib/Modernizr');
 /* DOC
 Tests if page is iframed.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
   // github.com/Modernizr/Modernizr/issues/242
 
   Modernizr.addTest('framed', window.location != top.location);

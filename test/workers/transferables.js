@@ -1,10 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var addTest = require('./../../lib/addTest');
-require('./../../lib/test/blob');
-require('./../../lib/test/url/bloburls');
-require('./../../lib/test/workers/webworkers');
-require('./../../lib/test/typed-arrays');
-
 /*!
 {
   "name": "Transferables Objects",
@@ -21,7 +14,8 @@ require('./../../lib/test/typed-arrays');
 /* DOC
 Detects whether web workers can use `transferables` objects.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var addTest = require('./../../lib/addTest.js');
   Modernizr.addAsyncTest(function() {
     var prerequisites = !!(Modernizr.blobconstructor &&
                            Modernizr.bloburls &&

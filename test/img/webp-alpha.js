@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var addTest = require('./../../lib/addTest');
-
 /*!
 {
   "name": "Webp Alpha",
@@ -24,16 +21,17 @@ var addTest = require('./../../lib/addTest');
 /* DOC
 Tests for transparent webp support.
 */
-
-  Modernizr.addAsyncTest(function(){
+var Modernizr = require('./../../lib/Modernizr.js');
+var addTest = require('./../../lib/addTest.js');
+  Modernizr.addAsyncTest(function() {
     var image = new Image();
 
     image.onerror = function() {
-      addTest('webpalpha', false, { aliases: ['webp-alpha'] });
+      addTest('webpalpha', false, {aliases: ['webp-alpha']});
     };
 
     image.onload = function() {
-      addTest('webpalpha', image.width == 1, { aliases: ['webp-alpha'] });
+      addTest('webpalpha', image.width == 1, {aliases: ['webp-alpha']});
     };
 
     image.src = 'data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==';

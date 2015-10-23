@@ -1,5 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-
 /*!
 {
   "name": "CustomEvent",
@@ -21,6 +19,6 @@ var Modernizr = require('./../lib/Modernizr');
 Detects support for CustomEvent.
 
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
   Modernizr.addTest('customevent', 'CustomEvent' in window && typeof window.CustomEvent === 'function');
 

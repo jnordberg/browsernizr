@@ -1,7 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var domPrefixes = require('./../lib/domPrefixes');
-var prefixed = require('./../lib/prefixed');
-
 /*!
 {
   "name": "Fullscreen API",
@@ -18,7 +14,8 @@ var prefixed = require('./../lib/prefixed');
 /* DOC
 Detects support for the ability to make the current website take over the user's entire screen
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
+var prefixed = require('./../lib/prefixed.js');
   // github.com/Modernizr/Modernizr/issues/739
   Modernizr.addTest('fullscreen', !!(prefixed('exitFullscreen', document, false) || prefixed('cancelFullScreen', document, false)));
 

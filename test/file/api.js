@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "File API",
@@ -21,6 +19,6 @@ Tests for objects specific to the File API W3C specification without
 being redundant (don't bother testing for Blob since it is assumed
 to be the File object's prototype.)
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
   Modernizr.addTest('filereader', !!(window.File && window.FileList && window.FileReader));
 

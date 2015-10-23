@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "ES5 Strict Mode",
@@ -17,5 +15,6 @@ var Modernizr = require('./../../lib/Modernizr');
 /* DOC
 Check if browser implements ECMAScript 5 Object strict mode.
 */
+var Modernizr = require('./../../lib/Modernizr.js');
+  Modernizr.addTest('strictmode', (function() {'use strict'; return !this; })());
 
-  Modernizr.addTest('strictmode', (function(){'use strict'; 

@@ -1,10 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-var docElement = require('./../../lib/docElement');
-var getBody = require('./../../lib/getBody');
-require('./../../lib/test/inputtypes');
-require('./../../lib/test/forms/validation');
-
 /*!
 {
   "name": "input[type=\"number\"] Localization",
@@ -24,7 +17,10 @@ require('./../../lib/test/forms/validation');
 /* DOC
 Detects whether input type="number" is capable of receiving and displaying localized numbers, e.g. with comma separator.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
+var docElement = require('./../../lib/docElement.js');
+var getBody = require('./../../lib/getBody.js');
   Modernizr.addTest('localizednumber', function() {
     // this extends our testing of input[type=number], so bomb out if that's missing
     if (!Modernizr.inputtypes.number) { return false; }
@@ -44,7 +40,7 @@ Detects whether input type="number" is capable of receiving and displaying local
     input.focus();
     try {
       document.execCommand('InsertText', false, '1,1');
-    } catch(e) { // prevent warnings in IE
+    } catch (e) { // prevent warnings in IE
     }
     diff = input.type === 'number' && input.valueAsNumber === 1.1 && input.checkValidity();
     root.removeChild(el);

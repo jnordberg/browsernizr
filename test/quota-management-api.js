@@ -1,6 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var prefixed = require('./../lib/prefixed');
-
 /*!
 {
   "name": "Quota Storage Management API",
@@ -16,7 +13,8 @@ var prefixed = require('./../lib/prefixed');
 /* DOC
 Detects the ability to request a specific amount of space for filesystem access
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
+var prefixed = require('./../lib/prefixed.js');
   Modernizr.addTest('quotamanagement', function() {
     var tempStorage = prefixed('temporaryStorage', navigator);
     var persStorage = prefixed('persistentStorage', navigator);

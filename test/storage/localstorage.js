@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "Local Storage",
@@ -18,7 +16,7 @@ var Modernizr = require('./../../lib/Modernizr');
   ]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
   // In FF4, if disabled, window.localStorage should === null.
 
   // Normally, we could not test that directly and need to do a
@@ -27,7 +25,7 @@ var Modernizr = require('./../../lib/Modernizr');
 
   // Also in iOS5 Private Browsing mode, attempting to use localStorage.setItem
   // will throw the exception:
-  //   QUOTA_EXCEEDED_ERRROR DOM Exception 22.
+  //   QUOTA_EXCEEDED_ERROR DOM Exception 22.
   // Peculiarly, getItem and removeItem calls do not throw.
 
   // Because we are forced to try/catch this, we'll go aggressive.
@@ -42,7 +40,7 @@ var Modernizr = require('./../../lib/Modernizr');
       localStorage.setItem(mod, mod);
       localStorage.removeItem(mod);
       return true;
-    } catch(e) {
+    } catch (e) {
       return false;
     }
   });

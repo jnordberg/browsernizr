@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testAllProps = require('./../../lib/testAllProps');
-
 /*!
 {
   "name": "Background Position XY",
@@ -20,8 +17,9 @@ var testAllProps = require('./../../lib/testAllProps');
 /* DOC
 Detects the ability to control an element's background position using css
 */
-
-  Modernizr.addTest('bgpositionxy', function () {
+var Modernizr = require('./../../lib/Modernizr.js');
+var testAllProps = require('./../../lib/testAllProps.js');
+  Modernizr.addTest('bgpositionxy', function() {
     return testAllProps('backgroundPositionX', '3px', true) && testAllProps('backgroundPositionY', '5px', true);
   });
 

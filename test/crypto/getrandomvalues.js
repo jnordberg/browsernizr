@@ -1,7 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var prefixed = require('./../../lib/prefixed');
-var is = require('./../../lib/is');
-
 /*!
 {
   "name": "getRandomValues",
@@ -21,7 +17,9 @@ var is = require('./../../lib/is');
 /* DOC
 Detects support for the window.crypto.getRandomValues for generate cryptographically secure random numbers
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var prefixed = require('./../../lib/prefixed.js');
+var is = require('./../../lib/is.js');
   // In Safari <=5.0 `window.crypto` exists (for some reason) but is `undefined`, so we have to check
   // it’s truthy before checking for existence of `getRandomValues`
   var crypto = prefixed('crypto', window);

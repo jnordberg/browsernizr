@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var prefixed = require('./../../lib/prefixed');
-
 /*!
 {
   "name": "Filesystem API",
@@ -16,6 +13,7 @@ var prefixed = require('./../../lib/prefixed');
   "knownBugs": ["The API will be present in Chrome incognito, but will throw an exception. See crbug.com/93417"]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var prefixed = require('./../../lib/prefixed.js');
   Modernizr.addTest('filesystem', !!prefixed('requestFileSystem', window));
 

@@ -1,5 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-
 /*!
 {
   "name": "Geolocation API",
@@ -21,7 +19,7 @@ var Modernizr = require('./../lib/Modernizr');
 /* DOC
 Detects support for the Geolocation API for users to provide their location to web applications.
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
   // geolocation is often considered a trivial feature detect...
   // Turns out, it's quite tricky to get right:
   //

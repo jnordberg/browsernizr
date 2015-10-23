@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "[hidden] Attribute",
@@ -20,6 +17,7 @@ var createElement = require('./../../lib/createElement');
 /* DOC
 Does the browser support the HTML5 [hidden] attribute?
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
   Modernizr.addTest('hidden', 'hidden' in createElement('a'));
 

@@ -1,5 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-
 /*!
 {
   "name": "Cookies",
@@ -11,10 +9,10 @@ var Modernizr = require('./../lib/Modernizr');
 /* DOC
 Detects whether cookie support is enabled.
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
   // https://github.com/Modernizr/Modernizr/issues/191
 
-  Modernizr.addTest('cookies', function () {
+  Modernizr.addTest('cookies', function() {
     // navigator.cookieEnabled cannot detect custom or nuanced cookie blocking
     // configurations. For example, when blocking cookies via the Advanced
     // Privacy Settings in IE9, it always returns true. And there have been

@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var addTest = require('./../../lib/addTest');
-
 /*!
 {
   "name": "Webp",
@@ -29,7 +26,6 @@ var addTest = require('./../../lib/addTest');
 !*/
 /* DOC
 Tests for lossy, non-alpha webp support.
-=======
 
 Tests for all forms of webp support (lossless, lossy, alpha, and animated)..
 
@@ -39,17 +35,18 @@ Tests for all forms of webp support (lossless, lossy, alpha, and animated)..
   Modernizr.webp.animation    // Animated WebP
 
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var addTest = require('./../../lib/addTest.js');
 
   Modernizr.addAsyncTest(function() {
 
     var webpTests = [{
       'uri': 'data:image/webp;base64,UklGRiQAAABXRUJQVlA4IBgAAAAwAQCdASoBAAEAAwA0JaQAA3AA/vuUAAA=',
       'name': 'webp'
-    },{
+    }, {
       'uri': 'data:image/webp;base64,UklGRkoAAABXRUJQVlA4WAoAAAAQAAAAAAAAAAAAQUxQSAwAAAABBxAR/Q9ERP8DAABWUDggGAAAADABAJ0BKgEAAQADADQlpAADcAD++/1QAA==',
       'name': 'webp.alpha'
-    },{
+    }, {
       'uri': 'data:image/webp;base64,UklGRlIAAABXRUJQVlA4WAoAAAASAAAAAAAAAAAAQU5JTQYAAAD/////AABBTk1GJgAAAAAAAAAAAAAAAAAAAGQAAABWUDhMDQAAAC8AAAAQBxAREYiI/gcA',
       'name': 'webp.animation'
     }, {
@@ -72,7 +69,9 @@ Tests for all forms of webp support (lossless, lossy, alpha, and animated)..
         /* jshint -W053 */
         addTest(name, baseTest ? new Boolean(result) : result);
 
-        if (cb) cb(event);
+        if (cb) {
+          cb(event);
+        }
       }
 
       image.onerror = addResult;

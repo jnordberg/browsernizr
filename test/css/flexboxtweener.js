@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testAllProps = require('./../../lib/testAllProps');
-
 /*!
 {
   "name": "Flexbox (tweener)",
@@ -14,6 +11,7 @@ var testAllProps = require('./../../lib/testAllProps');
   "warnings": ["This represents an old syntax, not the latest standard syntax."]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var testAllProps = require('./../../lib/testAllProps.js');
   Modernizr.addTest('flexboxtweener', testAllProps('flexAlign', 'end', true));
 

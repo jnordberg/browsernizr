@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "a[download] Attribute",
@@ -17,6 +14,7 @@ var createElement = require('./../../lib/createElement');
 /* DOC
 When used on an `<a>`, this attribute signifies that the resource it points to should be downloaded by the browser rather than navigating to it.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
   Modernizr.addTest('adownload', !window.externalHost && 'download' in createElement('a'));
 

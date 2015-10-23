@@ -1,7 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-require('./../../lib/test/canvas');
-
 /*!
 {
   "name": "canvas blending support",
@@ -21,10 +17,13 @@ require('./../../lib/test/canvas');
 /* DOC
 Detects if Photoshop style blending modes are available in canvas.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
 
   Modernizr.addTest('canvasblending', function() {
-    if (Modernizr.canvas === false) return false;
+    if (Modernizr.canvas === false) {
+      return false;
+    }
     var ctx = createElement('canvas').getContext('2d');
     // firefox 3 throws an error when setting an invalid `globalCompositeOperation`
     try {

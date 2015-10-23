@@ -1,6 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var addTest = require('./../lib/addTest');
-
 /*!
 {
   "name": "EXIF Orientation",
@@ -23,7 +20,8 @@ Detects support for EXIF Orientation in JPEG images.
 
 iOS looks at the EXIF Orientation flag in JPEGs and rotates the image accordingly. Most desktop browsers just ignore this data.
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
+var addTest = require('./../lib/addTest.js');
   // Bug trackers:
   //    bugzil.la/298619 (unimplemented)
   //    crbug.com/56845 (looks incomplete)
@@ -32,11 +30,11 @@ iOS looks at the EXIF Orientation flag in JPEGs and rotates the image accordingl
     var img = new Image();
 
     img.onerror = function() {
-      addTest('exiforientation', false, { aliases: ['exif-orientation'] });
+      addTest('exiforientation', false, {aliases: ['exif-orientation']});
     };
 
     img.onload = function() {
-      addTest('exiforientation', img.width !== 2, { aliases: ['exif-orientation'] });
+      addTest('exiforientation', img.width !== 2, {aliases: ['exif-orientation']});
     };
 
     // There may be a way to shrink this more, it's a 1x2 white jpg with the orientation flag set to 6

@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testAllProps = require('./../../lib/testAllProps');
-
 /*!
 {
   "name": "CSS text-align-last",
@@ -16,6 +13,7 @@ var testAllProps = require('./../../lib/testAllProps');
     }]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var testAllProps = require('./../../lib/testAllProps.js');
   Modernizr.addTest('textalignlast', testAllProps('textAlignLast'));
 

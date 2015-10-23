@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var prefixed = require('./../../lib/prefixed');
-
 /*!
 {
   "name": "matchMedia",
@@ -23,6 +20,7 @@ var prefixed = require('./../../lib/prefixed');
 Detects support for matchMedia.
 
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var prefixed = require('./../../lib/prefixed.js');
   Modernizr.addTest('matchmedia', !!prefixed('matchMedia', window));
 

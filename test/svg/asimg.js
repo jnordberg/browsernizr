@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-require('./../../lib/addTest');
-
 /*!
 {
   "name": "SVG as an <img> tag source",
@@ -14,7 +11,7 @@ require('./../../lib/addTest');
   }]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
 
   // Original Async test by Stu Cox
   // https://gist.github.com/chriscoyier/8774501

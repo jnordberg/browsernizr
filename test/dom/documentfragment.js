@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var docElement = require('./../../lib/docElement');
-
 /*!
 {
   "name": "Document Fragment",
@@ -23,9 +20,11 @@ var docElement = require('./../../lib/docElement');
 /* DOC
 Append multiple elements to the DOM within a single insertion.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var docElement = require('./../../lib/docElement.js');
   Modernizr.addTest('documentfragment', function() {
     return 'createDocumentFragment' in document &&
       'appendChild' in docElement;
   });
+
 

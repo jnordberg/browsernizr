@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "Session Storage",
@@ -8,7 +6,7 @@ var Modernizr = require('./../../lib/Modernizr');
   "polyfills": ["joshuabell-polyfill", "cupcake", "sessionstorage"]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
   // Because we are forced to try/catch this, we'll go aggressive.
 
   // Just FWIW: IE8 Compat mode supports these features completely:
@@ -20,7 +18,7 @@ var Modernizr = require('./../../lib/Modernizr');
       sessionStorage.setItem(mod, mod);
       sessionStorage.removeItem(mod);
       return true;
-    } catch(e) {
+    } catch (e) {
       return false;
     }
   });

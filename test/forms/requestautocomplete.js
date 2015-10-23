@@ -1,7 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-var prefixed = require('./../../lib/prefixed');
-
 /*!
 {
   "name": "form#requestAutocomplete()",
@@ -17,6 +13,8 @@ var prefixed = require('./../../lib/prefixed');
 When used with input[autocomplete] to annotate a form, form.requestAutocomplete() shows a dialog in Chrome that speeds up
 checkout flows (payments specific for now).
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
+var prefixed = require('./../../lib/prefixed.js');
   Modernizr.addTest('requestautocomplete', !!prefixed('requestAutocomplete', createElement('form')));
 

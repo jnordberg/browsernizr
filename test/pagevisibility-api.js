@@ -1,6 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var prefixed = require('./../lib/prefixed');
-
 /*!
 {
   "name": "Page Visibility API",
@@ -23,6 +20,7 @@ var prefixed = require('./../lib/prefixed');
 /* DOC
 Detects support for the Page Visibility API, which can be used to disable unnecessary actions and otherwise improve user experience.
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
+var prefixed = require('./../lib/prefixed.js');
   Modernizr.addTest('pagevisibility', !!prefixed('hidden', document, false));
 

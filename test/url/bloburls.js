@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var prefixed = require('./../../lib/prefixed');
-
 /*!
 {
   "name": "Blob URLs",
@@ -17,7 +14,8 @@ var prefixed = require('./../../lib/prefixed');
 /* DOC
 Detects support for creating Blob URLs
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var prefixed = require('./../../lib/prefixed.js');
   var url = prefixed('URL', window, false);
   url = url && window[url];
   Modernizr.addTest('bloburls', url && 'revokeObjectURL' in url && 'createObjectURL' in url);

@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testStyles = require('./../../lib/testStyles');
-
 /*!
 {
   "name": "CSS vh unit",
@@ -17,12 +14,13 @@ var testStyles = require('./../../lib/testStyles');
   }]
 }
 !*/
-
-  testStyles('#modernizr { height: 50vh; }', function( elem ) {
-    var height = parseInt(window.innerHeight/2,10);
+var Modernizr = require('./../../lib/Modernizr.js');
+var testStyles = require('./../../lib/testStyles.js');
+  testStyles('#modernizr { height: 50vh; }', function(elem) {
+    var height = parseInt(window.innerHeight / 2, 10);
     var compStyle = parseInt((window.getComputedStyle ?
                               getComputedStyle(elem, null) :
-                              elem.currentStyle)['height'],10);
+                              elem.currentStyle)['height'], 10);
     Modernizr.addTest('cssvhunit', compStyle == height);
   });
 

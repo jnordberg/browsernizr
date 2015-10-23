@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var addTest = require('./../../lib/addTest');
-
 /*!
 {
   "name": "Workers from Data URIs",
@@ -19,7 +16,8 @@ var addTest = require('./../../lib/addTest');
 /* DOC
 Detects support for creating Web Workers from Data URIs.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var addTest = require('./../../lib/addTest.js');
   Modernizr.addAsyncTest(function() {
     try {
       var data    = 'Modernizr',
@@ -43,7 +41,7 @@ Detects support for creating Web Workers from Data URIs.
 
       worker.postMessage(data);
     } catch (e) {
-      setTimeout(function () {
+      setTimeout(function() {
         addTest('dataworkers', false);
       }, 0);
     }

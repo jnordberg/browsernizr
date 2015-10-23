@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "script[defer]",
@@ -16,6 +13,7 @@ var createElement = require('./../../lib/createElement');
 /* DOC
 Detects support for the `defer` attribute on the `<script>` element.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
   Modernizr.addTest('scriptdefer', 'defer' in createElement('script'));
 

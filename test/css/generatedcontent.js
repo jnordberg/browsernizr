@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testStyles = require('./../../lib/testStyles');
-
 /*!
 {
   "name": "CSS Generated Content",
@@ -19,8 +16,9 @@ var testStyles = require('./../../lib/testStyles');
   }]
 }
 !*/
-
-  testStyles('#modernizr{font:0/0 a}#modernizr:after{content:":)";visibility:hidden;font:7px/1 a}', function( node ) {
+var Modernizr = require('./../../lib/Modernizr.js');
+var testStyles = require('./../../lib/testStyles.js');
+  testStyles('#modernizr{font:0/0 a}#modernizr:after{content:":)";visibility:hidden;font:7px/1 a}', function(node) {
     Modernizr.addTest('generatedcontent', node.offsetHeight >= 7);
   });
 

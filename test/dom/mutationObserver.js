@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "DOM4 MutationObserver",
@@ -19,7 +17,7 @@ var Modernizr = require('./../../lib/Modernizr');
 Determines if DOM4 MutationObserver support is available.
 
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
   Modernizr.addTest('mutationobserver',
     !!window.MutationObserver || !!window.WebKitMutationObserver);
 

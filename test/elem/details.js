@@ -1,8 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-var docElement = require('./../../lib/docElement');
-var testStyles = require('./../../lib/testStyles');
-
 /*!
 {
   "name": "details Element",
@@ -17,7 +12,10 @@ var testStyles = require('./../../lib/testStyles');
   }]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
+var docElement = require('./../../lib/docElement.js');
+var testStyles = require('./../../lib/testStyles.js');
   Modernizr.addTest('details', function() {
     var el = createElement('details');
     var diff;
@@ -27,7 +25,7 @@ var testStyles = require('./../../lib/testStyles');
       return false;
     }
 
-    testStyles('#modernizr details{display:block}', function( node ) {
+    testStyles('#modernizr details{display:block}', function(node) {
       node.appendChild(el);
       el.innerHTML = '<summary>a</summary>b';
       diff = el.offsetHeight;

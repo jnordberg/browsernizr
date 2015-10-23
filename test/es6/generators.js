@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "ES6 Generators",
@@ -11,12 +9,12 @@ var Modernizr = require('./../../lib/Modernizr');
 /* DOC
 Check if browser implements ECMAScript 6 Generators per specification.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
   Modernizr.addTest('generators', function() {
     try {
       /* jshint evil: true */
       new Function('function* test() {}')();
-    } catch(e) {
+    } catch (e) {
       return false;
     }
     return true;

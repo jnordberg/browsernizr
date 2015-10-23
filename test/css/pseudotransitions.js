@@ -1,7 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-require('./../../lib/testStyles');
-require('./../../lib/test/css/transitions');
-
 /*!
 {
   "name": "CSS Generated Content Transitions",
@@ -9,8 +5,8 @@ require('./../../lib/test/css/transitions');
   "tags": ["css"]
 }
 !*/
-
-  Modernizr.addTest('csspseudotransitions', function () {
+var Modernizr = require('./../../lib/Modernizr.js');
+  Modernizr.addTest('csspseudotransitions', function() {
     var result = false;
 
     if (!Modernizr.csstransitions || !window.getComputedStyle) {
@@ -21,7 +17,7 @@ require('./../../lib/test/css/transitions');
       '#modernizr:before { content:" "; font-size:5px;' + Modernizr._prefixes.join('transition:0s 100s;') + '}' +
       '#modernizr.trigger:before { font-size:10px; }';
 
-    Modernizr.testStyles(styles, function (elem) {
+    Modernizr.testStyles(styles, function(elem) {
       // Force rendering of the element's styles so that the transition will trigger
       window.getComputedStyle(elem, ':before').getPropertyValue('font-size');
       elem.className += 'trigger';

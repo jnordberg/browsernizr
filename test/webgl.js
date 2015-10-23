@@ -1,6 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var createElement = require('./../lib/createElement');
-
 /*!
 {
   "name": "WebGL",
@@ -10,7 +7,8 @@ var createElement = require('./../lib/createElement');
   "polyfills": ["jebgl", "cwebgl", "iewebgl"]
 }
 !*/
-
+var Modernizr = require('./../lib/Modernizr.js');
+var createElement = require('./../lib/createElement.js');
   Modernizr.addTest('webgl', function() {
     var canvas = createElement('canvas');
     var supports = 'probablySupportsContext' in canvas ? 'probablySupportsContext' :  'supportsContext';

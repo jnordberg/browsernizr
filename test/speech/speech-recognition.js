@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var prefixed = require('./../../lib/prefixed');
-
 /*!
 {
   "authors": ["Cătălin Mariș"],
@@ -20,6 +17,7 @@ var prefixed = require('./../../lib/prefixed');
 }
 !*/
 
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var prefixed = require('./../../lib/prefixed.js');
   Modernizr.addTest('speechrecognition', !!prefixed('SpeechRecognition', window));
 

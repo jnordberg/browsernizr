@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var toStringFn = require('./../../lib/toStringFn');
-
 /*!
 {
   "name": "SVG SMIL animation",
@@ -13,7 +10,8 @@ var toStringFn = require('./../../lib/toStringFn');
   }]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var toStringFn = require('./../../lib/toStringFn.js');
   // SVG SMIL animation
   Modernizr.addTest('smil', function() {
     return !!document.createElementNS &&

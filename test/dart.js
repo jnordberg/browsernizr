@@ -1,6 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var prefixed = require('./../lib/prefixed');
-
 /*!
 {
   "name": "Dart",
@@ -15,6 +12,7 @@ var prefixed = require('./../lib/prefixed');
 /* DOC
 Detects native support for the Dart programming language.
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
+var prefixed = require('./../lib/prefixed.js');
   Modernizr.addTest('dart', !!prefixed('startDart', navigator));
 

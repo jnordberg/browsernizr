@@ -1,5 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-
 /*!
 {
   "name": "Blob constructor",
@@ -17,8 +15,8 @@ var Modernizr = require('./../lib/Modernizr');
 /* DOC
 Detects support for the Blob constructor, for creating file-like objects of immutable, raw data.
 */
-
-  Modernizr.addTest('blobconstructor', function () {
+var Modernizr = require('./../lib/Modernizr.js');
+  Modernizr.addTest('blobconstructor', function() {
     try {
       return !!new Blob();
     } catch (e) {

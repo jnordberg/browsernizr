@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "ES5 Array",
@@ -16,8 +14,8 @@ var Modernizr = require('./../../lib/Modernizr');
 /* DOC
 Check if browser implements ECMAScript 5 Array per specification.
 */
-
-  Modernizr.addTest('es5array', function () {
+var Modernizr = require('./../../lib/Modernizr.js');
+  Modernizr.addTest('es5array', function() {
     return !!(Array.prototype &&
       Array.prototype.every &&
       Array.prototype.filter &&

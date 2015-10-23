@@ -1,5 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-
 /*!
 {
   "name": "ServiceWorker API",
@@ -13,6 +11,6 @@ var Modernizr = require('./../lib/Modernizr');
 /* DOC
 ServiceWorkers (formerly Navigation Controllers) are a way to persistently cache resources to built apps that work better offline.
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
   Modernizr.addTest('serviceworker', 'serviceWorker' in navigator);
 

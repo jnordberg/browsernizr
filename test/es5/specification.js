@@ -1,14 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-require('./../../lib/test/es5/array');
-require('./../../lib/test/es5/date');
-require('./../../lib/test/es5/function');
-require('./../../lib/test/es5/object');
-require('./../../lib/test/es5/strictmode');
-require('./../../lib/test/es5/string');
-require('./../../lib/test/json');
-require('./../../lib/test/es5/syntax');
-require('./../../lib/test/es5/undefined');
-
 /*!
 {
   "name": "ES5",
@@ -25,8 +14,8 @@ require('./../../lib/test/es5/undefined');
 /* DOC
 Check if browser implements everything as specified in ECMAScript 5.
 */
-
-  Modernizr.addTest('es5', function () {
+var Modernizr = require('./../../lib/Modernizr.js');
+  Modernizr.addTest('es5', function() {
     return !!(
       Modernizr.es5array &&
       Modernizr.es5date &&

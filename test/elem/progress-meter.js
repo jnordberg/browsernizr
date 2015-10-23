@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "progress Element",
@@ -11,7 +8,8 @@ var createElement = require('./../../lib/createElement');
   "authors": ["Stefan Wallin"]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
   // Tests for progressbar-support. All browsers that don't support progressbar returns undefined =)
   Modernizr.addTest('progressbar', createElement('progress').max !== undefined);
 

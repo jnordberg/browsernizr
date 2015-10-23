@@ -1,6 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var createElement = require('./../lib/createElement');
-
 /*!
 {
   "name": "Reverse Ordered Lists",
@@ -15,6 +12,7 @@ var createElement = require('./../lib/createElement');
 /* DOC
 Detects support for the `reversed` attribute on the `<ol>` element.
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
+var createElement = require('./../lib/createElement.js');
   Modernizr.addTest('olreversed', 'reversed' in createElement('ol'));
 

@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "microdata",
@@ -12,6 +10,6 @@ var Modernizr = require('./../../lib/Modernizr');
   }]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
   Modernizr.addTest('microdata', 'getItems' in document);
 

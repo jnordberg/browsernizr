@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "XML HTTP Request Level 2 XHR2",
@@ -18,7 +16,7 @@ var Modernizr = require('./../../lib/Modernizr');
 /* DOC
 Tests for XHR2.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
   // all three of these details report consistently across all target browsers:
   //   !!(window.ProgressEvent);
   //   'XMLHttpRequest' in window && 'withCredentials' in new XMLHttpRequest

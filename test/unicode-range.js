@@ -1,7 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var testStyles = require('./../lib/testStyles');
-var createElement = require('./../lib/createElement');
-
 /*!
 {
   "name": "Unicode Range",
@@ -15,10 +11,12 @@ var createElement = require('./../lib/createElement');
   }]
 }
 !*/
+var Modernizr = require('./../lib/Modernizr.js');
+var testStyles = require('./../lib/testStyles.js');
+var createElement = require('./../lib/createElement.js');
+  Modernizr.addTest('unicoderange', function() {
 
-  Modernizr.addTest('unicoderange', function () {
-
-    return Modernizr.testStyles('@font-face{font-family:"unicodeRange";src:local("Arial");unicode-range:U+0020,U+002E}#modernizr span{font-size:20px;display:inline-block;font-family:"unicodeRange",monospace}#modernizr .mono{font-family:monospace}', function (elem) {
+    return Modernizr.testStyles('@font-face{font-family:"unicodeRange";src:local("Arial");unicode-range:U+0020,U+002E}#modernizr span{font-size:20px;display:inline-block;font-family:"unicodeRange",monospace}#modernizr .mono{font-family:monospace}', function(elem) {
 
       // we use specify a unicode-range of 002E (the `.` glyph,
       // and a monospace font as the fallback. If the first of

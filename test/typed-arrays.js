@@ -1,5 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-
 /*!
 {
   "name": "Typed arrays",
@@ -22,7 +20,7 @@ Detects support for native binary data manipulation via Typed Arrays in JavaScri
 
 Does not check for DataView support; use `Modernizr.dataview` for that.
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
   // Should fail in:
   // Internet Explorer <= 9
   // Firefox <= 3.6
@@ -34,5 +32,5 @@ Does not check for DataView support; use `Modernizr.dataview` for that.
   // Android Browser < 4.0
   // Blackberry Browser < 10.0
 
-  Modernizr.addTest('typedarrays', 'ArrayBuffer' in window );
+  Modernizr.addTest('typedarrays', 'ArrayBuffer' in window);
 

@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "script[async]",
@@ -14,6 +11,7 @@ var createElement = require('./../../lib/createElement');
 /* DOC
 Detects support for the `async` attribute on the `<script>` element.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
   Modernizr.addTest('scriptasync', 'async' in createElement('script'));
 

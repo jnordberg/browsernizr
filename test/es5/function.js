@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "ES5 Function",
@@ -16,8 +14,8 @@ var Modernizr = require('./../../lib/Modernizr');
 /* DOC
 Check if browser implements ECMAScript 5 Function per specification.
 */
-
-  Modernizr.addTest('es5function', function () {
+var Modernizr = require('./../../lib/Modernizr.js');
+  Modernizr.addTest('es5function', function() {
     return !!(Function.prototype && Function.prototype.bind);
   });
 

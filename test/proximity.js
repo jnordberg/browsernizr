@@ -1,6 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var addTest = require('./../lib/addTest');
-
 /*!
 {
   "authors": ["Cătălin Mariș"],
@@ -20,9 +17,10 @@ var addTest = require('./../lib/addTest');
 /* DOC
 Detects support for an API that allows users to get proximity related information from the device's proximity sensor.
 */
+var Modernizr = require('./../lib/Modernizr.js');
+var addTest = require('./../lib/addTest.js');
 
-
-  Modernizr.addAsyncTest(function () {
+  Modernizr.addAsyncTest(function() {
 
     var timeout;
     var timeoutTime = 300;
@@ -40,7 +38,7 @@ Detects support for an API that allows users to get proximity related informatio
     }
 
     // Check if the browser has support for the API
-    if ( 'ondeviceproximity' in window && 'onuserproximity' in window ) {
+    if ('ondeviceproximity' in window && 'onuserproximity' in window) {
 
       // Check if the device has a proximity sensor
       // ( devices without such a sensor support the events but

@@ -1,6 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var prefixed = require('./../lib/prefixed');
-
 /*!
  {
  "name": "Internationalization API",
@@ -18,6 +15,7 @@ var prefixed = require('./../lib/prefixed');
 Detects support for the Internationalization API which allow easy formatting of number and dates and sorting string
 based on a locale
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
+var prefixed = require('./../lib/prefixed.js');
   Modernizr.addTest('intl', !!prefixed('Intl', window));
 

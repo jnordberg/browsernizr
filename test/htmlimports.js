@@ -1,6 +1,3 @@
-var addTest = require('./../lib/addTest');
-var createElement = require('./../lib/createElement');
-
 /*!
 {
   "name": "HTML Imports",
@@ -23,6 +20,7 @@ var createElement = require('./../lib/createElement');
 Detects support for HTML import, a feature that is used for loading in Web Components.
  */
 
-
+var addTest = require('./../lib/addTest.js');
+var createElement = require('./../lib/createElement.js');
   addTest('htmlimports', 'import' in createElement('link'));
 

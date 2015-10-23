@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "ES6 String",
@@ -17,7 +15,7 @@ var Modernizr = require('./../../lib/Modernizr');
 /* DOC
 Check if browser implements ECMAScript 6 String per specification.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
   Modernizr.addTest('es6string', !!(String.fromCodePoint &&
     String.raw &&
     String.prototype.codePointAt &&

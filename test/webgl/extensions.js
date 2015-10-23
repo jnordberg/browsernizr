@@ -1,7 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-require('./../../lib/test/webgl');
-
 /*!
 {
   "name": "WebGL Extensions",
@@ -29,7 +25,8 @@ if ('OES_vertex_array_object' in Modernizr.webglextensions) {
 }
 ```
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
   // based on code from ilmari heikkinen
   // code.google.com/p/graphics-detect/source/browse/js/detect.js
 
@@ -61,7 +58,7 @@ if ('OES_vertex_array_object' in Modernizr.webglextensions) {
       Modernizr.webglextensions = new Boolean(true);
     }
 
-    for (var i = -1, len = exts.length; ++i < len; ){
+    for (var i = -1, len = exts.length; ++i < len;) {
       Modernizr.webglextensions[exts[i]] = true;
     }
 

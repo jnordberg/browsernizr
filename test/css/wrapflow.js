@@ -1,9 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var prefixed = require('./../../lib/prefixed');
-var docElement = require('./../../lib/docElement');
-var createElement = require('./../../lib/createElement');
-var isSVG = require('./../../lib/isSVG');
-
 /*!
 {
   "name": "CSS wrap-flow",
@@ -21,14 +15,18 @@ var isSVG = require('./../../lib/isSVG');
   ]
 }
 !*/
-
-  Modernizr.addTest('wrapflow', function () {
+var Modernizr = require('./../../lib/Modernizr.js');
+var prefixed = require('./../../lib/prefixed.js');
+var docElement = require('./../../lib/docElement.js');
+var createElement = require('./../../lib/createElement.js');
+var isSVG = require('./../../lib/isSVG.js');
+  Modernizr.addTest('wrapflow', function() {
     var prefixedProperty = prefixed('wrapFlow');
     if (!prefixedProperty || isSVG) {
       return false;
     }
 
-    var wrapFlowProperty = prefixedProperty.replace(/([A-Z])/g, function (str, m1) { return '-' + m1.toLowerCase(); }).replace(/^ms-/, '-ms-');
+    var wrapFlowProperty = prefixedProperty.replace(/([A-Z])/g, function(str, m1) { return '-' + m1.toLowerCase(); }).replace(/^ms-/, '-ms-');
 
     /* If the CSS parsing is there we need to determine if wrap-flow actually works to avoid false positive cases, e.g. the browser parses
        the property, but it hasn't got the implementation for the functionality yet. */

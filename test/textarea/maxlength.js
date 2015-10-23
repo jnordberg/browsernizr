@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "textarea maxlength",
@@ -18,6 +15,7 @@ var createElement = require('./../../lib/createElement');
 /* DOC
 Detect support for the maxlength attribute of a textarea element
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
   Modernizr.addTest('textareamaxlength', !!('maxLength' in createElement('textarea')));
 

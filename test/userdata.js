@@ -1,6 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var createElement = require('./../lib/createElement');
-
 /*!
 {
   "name": "IE User Data API",
@@ -16,6 +13,7 @@ var createElement = require('./../lib/createElement');
 /* DOC
 Detects support for IE userData for persisting data, an API similar to localStorage but supported since IE5.
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
+var createElement = require('./../lib/createElement.js');
   Modernizr.addTest('userdata', !!createElement('div').addBehavior);
 

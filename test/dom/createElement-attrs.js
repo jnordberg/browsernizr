@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "createElement with Attributes",
@@ -14,11 +11,12 @@ var createElement = require('./../../lib/createElement');
   }]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
   Modernizr.addTest('createelementattrs', function() {
     try {
       return createElement('<input name="test" />').getAttribute('name') == 'test';
-    } catch( e ) {
+    } catch (e) {
       return false;
     }
   }, {

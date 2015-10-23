@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "iframe[sandbox] Attribute",
@@ -18,6 +15,7 @@ var createElement = require('./../../lib/createElement');
 /* DOC
 Test for `sandbox` attribute in iframes.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
   Modernizr.addTest('sandbox', 'sandbox' in createElement('iframe'));
 

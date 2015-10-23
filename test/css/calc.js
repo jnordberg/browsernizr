@@ -1,7 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-var prefixes = require('./../../lib/prefixes');
-
 /*!
 {
   "name": "CSS Calc",
@@ -16,12 +12,14 @@ var prefixes = require('./../../lib/prefixes');
 Method of allowing calculated values for length units. For example:
 
 ```css
-#elem {
+//lem {
   width: calc(100% - 3em);
 }
 ```
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
+var prefixes = require('./../../lib/prefixes.js');
   Modernizr.addTest('csscalc', function() {
     var prop = 'width:';
     var value = 'calc(10px);';

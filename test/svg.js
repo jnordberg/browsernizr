@@ -1,5 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-
 /*!
 {
   "name": "SVG",
@@ -22,6 +20,6 @@ var Modernizr = require('./../lib/Modernizr');
 /* DOC
 Detects support for SVG in `<embed>` or `<object>` elements.
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
   Modernizr.addTest('svg', !!document.createElementNS && !!document.createElementNS('http://www.w3.org/2000/svg', 'svg').createSVGRect);
 

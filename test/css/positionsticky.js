@@ -1,7 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-var prefixes = require('./../../lib/prefixes');
-
 /*!
 {
   "name": "CSS position: sticky",
@@ -15,7 +11,9 @@ var prefixes = require('./../../lib/prefixes');
   "warnings": [ "using position:sticky on anything but top aligned elements is buggy in Chrome < 37 and iOS <=7+" ]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
+var prefixes = require('./../../lib/prefixes.js');
   // Sticky positioning - constrains an element to be positioned inside the
   // intersection of its container box, and the viewport.
   Modernizr.addTest('csspositionsticky', function() {

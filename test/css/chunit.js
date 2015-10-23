@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var modElem = require('./../../lib/modElem');
-
 /*!
 {
   "name": "CSS Font ch Units",
@@ -13,8 +10,9 @@ var modElem = require('./../../lib/modElem');
   }]
 }
 !*/
-
-  Modernizr.addTest('csschunit', function () {
+var Modernizr = require('./../../lib/Modernizr.js');
+var modElem = require('./../../lib/modElem.js');
+  Modernizr.addTest('csschunit', function() {
     var elemStyle = modElem.elem.style;
     var supports;
     try {

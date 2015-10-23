@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testStyles = require('./../../lib/testStyles');
-
 /*!
 {
   "name": "CSS vw unit",
@@ -17,8 +14,9 @@ var testStyles = require('./../../lib/testStyles');
   }]
 }
 !*/
-
-  testStyles('#modernizr { width: 50vw; }', function( elem ) {
+var Modernizr = require('./../../lib/Modernizr.js');
+var testStyles = require('./../../lib/testStyles.js');
+  testStyles('#modernizr { width: 50vw; }', function(elem) {
     var width = parseInt(window.innerWidth / 2, 10);
     var compStyle = parseInt((window.getComputedStyle ?
                               getComputedStyle(elem, null) :

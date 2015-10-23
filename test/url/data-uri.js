@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var addTest = require('./../../lib/addTest');
-
 /*!
 {
   "name": "Data URI",
@@ -24,7 +21,8 @@ Modernizr.datauri           // true
 Modernizr.datauri.over32kb  // false in IE8
 ```
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var addTest = require('./../../lib/addTest.js');
   // https://github.com/Modernizr/Modernizr/issues/14
   Modernizr.addAsyncTest(function() {
     /* jshint -W053 */
@@ -32,9 +30,9 @@ Modernizr.datauri.over32kb  // false in IE8
     // IE7 throw a mixed content warning on HTTPS for this test, so we'll
     // just blacklist it (we know it doesn't support data URIs anyway)
     // https://github.com/Modernizr/Modernizr/issues/362
-    if(navigator.userAgent.indexOf('MSIE 7.') !== -1) {
+    if (navigator.userAgent.indexOf('MSIE 7.') !== -1) {
       // Keep the test async
-      setTimeout(function () {
+      setTimeout(function() {
         addTest('datauri', false);
       }, 10);
     }
@@ -45,7 +43,7 @@ Modernizr.datauri.over32kb  // false in IE8
       addTest('datauri', false);
     };
     datauri.onload = function() {
-      if(datauri.width == 1 && datauri.height == 1) {
+      if (datauri.width == 1 && datauri.height == 1) {
         testOver32kb();
       }
       else {
@@ -57,7 +55,7 @@ Modernizr.datauri.over32kb  // false in IE8
 
     // Once we have datauri, let's check to see if we can use data URIs over
     // 32kb (IE8 can't). https://github.com/Modernizr/Modernizr/issues/321
-    function testOver32kb(){
+    function testOver32kb() {
 
       var datauriBig = new Image();
 
@@ -76,7 +74,7 @@ Modernizr.datauri.over32kb  // false in IE8
       while (base64str.length < 33000) {
         base64str = '\r\n' + base64str;
       }
-      datauriBig.src= 'data:image/gif;base64,' + base64str;
+      datauriBig.src = 'data:image/gif;base64,' + base64str;
     }
 
   });

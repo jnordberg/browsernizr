@@ -1,7 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-var docElement = require('./../../lib/docElement');
-
 /*!
 {
   "name": "input[form] Attribute",
@@ -14,7 +10,9 @@ var docElement = require('./../../lib/docElement');
 Detects whether input form="form_id" is available on the platform
 E.g. IE 10 (and below), don't support this
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
+var docElement = require('./../../lib/docElement.js');
 
   Modernizr.addTest('formattribute', function() {
     var form = createElement('form');
@@ -30,8 +28,8 @@ E.g. IE 10 (and below), don't support this
     try {
       input.setAttribute('form', id);
     }
-    catch( e ) {
-      if( document.createAttribute ) {
+    catch (e) {
+      if (document.createAttribute) {
         attr = document.createAttribute('form');
         attr.nodeValue = id;
         input.setAttributeNode(attr);

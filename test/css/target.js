@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "CSS :target pseudo-class",
@@ -17,18 +15,18 @@ var Modernizr = require('./../../lib/Modernizr');
 /* DOC
 Detects support for the ':target' CSS pseudo-class.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
   // querySelector
   Modernizr.addTest('target', function() {
     var doc = window.document;
-    if(!('querySelectorAll' in doc) ) {
+    if (!('querySelectorAll' in doc)) {
       return false;
     }
 
     try {
       doc.querySelectorAll(':target');
       return true;
-    } catch(e) {
+    } catch (e) {
       return false;
     }
   });

@@ -1,7 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-var docElement = require('./../../lib/docElement');
-
 /*!
 {
   "name": "ruby, rp, rt Elements",
@@ -16,8 +12,10 @@ var docElement = require('./../../lib/docElement');
   }]
 }
 !*/
-
-  Modernizr.addTest('ruby', function () {
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
+var docElement = require('./../../lib/docElement.js');
+  Modernizr.addTest('ruby', function() {
 
     var ruby = createElement('ruby');
     var rt = createElement('rt');
@@ -31,10 +29,10 @@ var docElement = require('./../../lib/docElement');
     docElement.appendChild(ruby);
 
     // browsers that support <ruby> hide the <rp> via "display:none"
-    if ( getStyle(rp, displayStyleProperty) == 'none' ||                                                        // for non-IE browsers
+    if (getStyle(rp, displayStyleProperty) == 'none' ||                                                        // for non-IE browsers
          // but in IE browsers <rp> has "display:inline" so, the test needs other conditions:
          getStyle(ruby, displayStyleProperty) == 'ruby' && getStyle(rt, displayStyleProperty) == 'ruby-text' || // for IE8+
-         getStyle(rp, fontSizeStyleProperty) == '6pt' && getStyle(rt, fontSizeStyleProperty) == '6pt' ) {       // for IE6 & IE7
+         getStyle(rp, fontSizeStyleProperty) == '6pt' && getStyle(rt, fontSizeStyleProperty) == '6pt') {       // for IE6 & IE7
 
       cleanUp();
       return true;
@@ -44,12 +42,12 @@ var docElement = require('./../../lib/docElement');
       return false;
     }
 
-    function getStyle( element, styleProperty ) {
+    function getStyle(element, styleProperty) {
       var result;
 
-      if ( window.getComputedStyle ) {     // for non-IE browsers
-        result = document.defaultView.getComputedStyle(element,null).getPropertyValue(styleProperty);
-      } else if ( element.currentStyle ) { // for IE
+      if (window.getComputedStyle) {     // for non-IE browsers
+        result = document.defaultView.getComputedStyle(element, null).getPropertyValue(styleProperty);
+      } else if (element.currentStyle) { // for IE
         result = element.currentStyle[styleProperty];
       }
 

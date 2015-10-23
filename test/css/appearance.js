@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testAllProps = require('./../../lib/testAllProps');
-
 /*!
 {
   "name": "Appearance",
@@ -21,6 +18,7 @@ Detects support for the `appearance` css property, which is used to make an
 element inherit the style of a standard user interface element. It can also be
 used to remove the default styles of an element, such as input and buttons.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var testAllProps = require('./../../lib/testAllProps.js');
   Modernizr.addTest('appearance', testAllProps('appearance'));
 

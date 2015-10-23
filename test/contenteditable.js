@@ -1,7 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var createElement = require('./../lib/createElement');
-var docElement = require('./../lib/docElement');
-
 /*!
 {
   "name": "Content Editable",
@@ -16,10 +12,14 @@ var docElement = require('./../lib/docElement');
 /* DOC
 Detects support for the `contenteditable` attribute of elements, allowing their DOM text contents to be edited directly by the user.
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
+var createElement = require('./../lib/createElement.js');
+var docElement = require('./../lib/docElement.js');
   Modernizr.addTest('contenteditable', function() {
     // early bail out
-    if (!('contentEditable' in docElement)) return;
+    if (!('contentEditable' in docElement)) {
+      return;
+    }
 
     // some mobile browsers (android < 3.0, iOS < 5) claim to support
     // contentEditable, but but don't really. This test checks to see

@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testStyles = require('./../../lib/testStyles');
-
 /*!
 {
   "name": "CSS :last-child pseudo-selector",
@@ -14,8 +11,9 @@ var testStyles = require('./../../lib/testStyles');
   }]
 }
 !*/
-
-  testStyles('#modernizr div {width:100px} #modernizr :last-child{width:200px;display:block}', function( elem ) {
+var Modernizr = require('./../../lib/Modernizr.js');
+var testStyles = require('./../../lib/testStyles.js');
+  testStyles('#modernizr div {width:100px} #modernizr :last-child{width:200px;display:block}', function(elem) {
     Modernizr.addTest('lastchild', elem.lastChild.offsetWidth > elem.firstChild.offsetWidth);
   }, 2);
 

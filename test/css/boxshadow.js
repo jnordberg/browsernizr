@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testAllProps = require('./../../lib/testAllProps');
-
 /*!
 {
   "name": "Box Shadow",
@@ -13,6 +10,7 @@ var testAllProps = require('./../../lib/testAllProps');
   ]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var testAllProps = require('./../../lib/testAllProps.js');
   Modernizr.addTest('boxshadow', testAllProps('boxShadow', '1px 1px', true));
 

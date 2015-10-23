@@ -1,5 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-
 /*!
 {
   "name": "ES5 Date",
@@ -16,8 +14,8 @@ var Modernizr = require('./../../lib/Modernizr');
 /* DOC
 Check if browser implements ECMAScript 5 Date per specification.
 */
-
-  Modernizr.addTest('es5date', function () {
+var Modernizr = require('./../../lib/Modernizr.js');
+  Modernizr.addTest('es5date', function() {
     var isoDate = '2013-04-12T06:06:37.307Z',
       canParseISODate = false;
     try {

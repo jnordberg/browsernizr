@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var docElement = require('./../../lib/docElement');
-
 /*!
 {
   "name": "will-change",
@@ -15,6 +12,7 @@ var docElement = require('./../../lib/docElement');
 Detects support for the `will-change` css property, which formally signals to the
 browser that an element will be animating.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var docElement = require('./../../lib/docElement.js');
   Modernizr.addTest('willchange', 'willChange' in docElement.style);
 

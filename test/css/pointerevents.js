@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "CSS Pointer Events",
@@ -27,7 +24,8 @@ var createElement = require('./../../lib/createElement');
   ]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var createElement = require('./../../lib/createElement.js');
   Modernizr.addTest('csspointerevents', function() {
     var style = createElement('a').style;
     style.cssText = 'pointer-events:auto';

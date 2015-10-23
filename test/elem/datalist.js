@@ -1,6 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-require('./../../lib/test/input');
-
 /*!
 {
   "name": "datalist Element",
@@ -21,9 +18,9 @@ require('./../../lib/test/input');
   }]
 }
 !*/
-
+var Modernizr = require('./../../lib/Modernizr.js');
   // lol. we already have a test for datalist built in! silly you.
   // Leaving it around in case anyone's using it
 
-  Modernizr.addTest('datalistelem', Modernizr.input.list );
+  Modernizr.addTest('datalistelem', Modernizr.input.list);
 

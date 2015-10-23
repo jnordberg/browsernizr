@@ -1,7 +1,3 @@
-var Modernizr = require('./../../lib/Modernizr');
-var testStyles = require('./../../lib/testStyles');
-var createElement = require('./../../lib/createElement');
-
 /*!
 {
   "name": "CSS :valid pseudo-class",
@@ -15,7 +11,9 @@ var createElement = require('./../../lib/createElement');
 /* DOC
   Detects support for the ':valid' CSS pseudo-class.
 */
-
+var Modernizr = require('./../../lib/Modernizr.js');
+var testStyles = require('./../../lib/testStyles.js');
+var createElement = require('./../../lib/createElement.js');
   Modernizr.addTest('cssvalid', function() {
     return testStyles('#modernizr input{height:0;border:0;padding:0;margin:0;width:10px} #modernizr input:valid{width:50px}', function(elem) {
       var input = createElement('input');

@@ -1,6 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-var docElement = require('./../lib/docElement');
-
 /*!
 {
   "name": "Context menus",
@@ -19,7 +16,8 @@ var docElement = require('./../lib/docElement');
 /* DOC
 Detects support for custom context menus.
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
+var docElement = require('./../lib/docElement.js');
   Modernizr.addTest(
     'contextmenu',
     ('contextMenu' in docElement && 'HTMLMenuItemElement' in window)

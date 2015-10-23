@@ -1,5 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-
 /*!
 {
   "name": "History API",
@@ -20,7 +18,7 @@ var Modernizr = require('./../lib/Modernizr');
 /* DOC
 Detects support for the History API for manipulating the browser session history.
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
   Modernizr.addTest('history', function() {
     // Issue #733
     // The stock browser on Android 2.2 & 2.3, and 4.0.x returns positive on history support

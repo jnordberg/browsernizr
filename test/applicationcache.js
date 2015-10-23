@@ -1,5 +1,3 @@
-var Modernizr = require('./../lib/Modernizr');
-
 /*!
 {
   "name": "Application Cache",
@@ -18,6 +16,6 @@ Detects support for the Application Cache, for storing data to enable web-based 
 
 The API has been [heavily criticized](http://alistapart.com/article/application-cache-is-a-douchebag) and discussions are underway to address this.
 */
-
+var Modernizr = require('./../lib/Modernizr.js');
   Modernizr.addTest('applicationcache', 'applicationCache' in window);
 
