@@ -6,9 +6,12 @@ fs = require 'fs'
 nodefy = require 'nodefy'
 path = require 'path'
 
-MODERNIZR_DIR = path.resolve __dirname, './../node_modules/Modernizr'
+MODERNIZR_DIR = do ->
+  src = require.resolve 'modernizr/src/Modernizr.js'
+  return path.dirname path.join src, '..'
+
 VERSION = "
-  #{ require(MODERNIZR_DIR + '/package.json').version }
+  #{ require('modernizr/package.json').version }
   (browsernizr #{ require('./../package.json').version })
 "
 
