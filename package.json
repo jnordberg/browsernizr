@@ -10,7 +10,7 @@
     "browserify"
   ],
   "devDependencies": {
-    "Modernizr": "git://github.com/Modernizr/Modernizr.git",
+    "modernizr": "git://github.com/Modernizr/Modernizr.git",
     "nodefy": "git://github.com/jnordberg/nodefy.git",
     "shelljs": "^0.5.3"
   },
