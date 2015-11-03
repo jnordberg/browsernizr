@@ -14,8 +14,8 @@
 !*/
 var Modernizr = require('./../../lib/Modernizr.js');
 var createElement = require('./../../lib/createElement.js');
-var testAllProps = require('./../../lib/prefixes.js');
-var prefixes = require('./../../lib/testAllProps.js');
+var prefixes = require('./../../lib/prefixes.js');
+var testAllProps = require('./../../lib/testAllProps.js');
   Modernizr.addTest('cssfilters', function() {
     if (Modernizr.supports) {
       return testAllProps('filter', 'blur(2px)');

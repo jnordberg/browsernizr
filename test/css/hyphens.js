@@ -169,15 +169,15 @@ var addTest = require('./../../lib/addTest.js');
           }
 
           /* try to find the doubled testword, without the delimiter */
-          if (window.find) {
-            result = window.find(testword + testword);
-          } else {
-            try {
+          try {
+            if (window.find) {
+              result = window.find(testword + testword);
+            } else {
               textrange = window.self.document.body.createTextRange();
               result = textrange.findText(testword + testword);
-            } catch (e) {
-              result = false;
             }
+          } catch (e) {
+            result = false;
           }
 
           document.body.removeChild(div);

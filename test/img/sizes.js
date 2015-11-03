@@ -1,6 +1,7 @@
 /*!
 {
   "name": "sizes attribute",
+  "async": true,
   "property": "sizes",
   "tags": ["image"],
   "authors": ["Mat Marquis"],
@@ -18,5 +19,30 @@ Test for the `sizes` attribute on images
 */
 var Modernizr = require('./../../lib/Modernizr.js');
 var createElement = require('./../../lib/createElement.js');
-  Modernizr.addTest('sizes', 'sizes' in createElement('img'));
+var addTest = require('./../../lib/addTest.js');
+  Modernizr.addAsyncTest(function() {
+    var width1, width2, test;
+    var image = createElement('img');
+    // in a perfect world this would be the test...
+    var isSizes = 'sizes' in image;
+
+    // ... but we need to deal with Safari 9...
+    if (!isSizes && ('srcset' in  image)) {
+      width2 = 'data:image/gif;base64,R0lGODlhAgABAPAAAP///wAAACH5BAAAAAAALAAAAAACAAEAAAICBAoAOw==';
+      width1 = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
+
+      test = function() {
+        addTest('sizes', image.width == 2);
+      };
+
+      image.onload = test;
+      image.onerror = test;
+      image.setAttribute('sizes', '9px');
+
+      image.srcset = width1 + ' 1w,' + width2 + ' 8w';
+      image.src = width1;
+    } else {
+      addTest('sizes', isSizes);
+    }
+  });
 
