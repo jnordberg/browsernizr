@@ -16,7 +16,7 @@ for (var i = 0; i < Modernizr._q.length; i++) {
 }
 
 module.exports = Object.keys(Modernizr).reduce(function (modernizr, key) {
-    modernizr.key = Modernizr[key];
+    modernizr[key] = Modernizr[key];
 
     delete Modernizr[key];
 
