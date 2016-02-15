@@ -29,8 +29,8 @@ var isSVG = require('./../lib/isSVG.js');
 
     testStyles('#modernizr{font-family:Arial,sans;font-size:300em;}', function(node) {
 
-      missingGlyph.innerHTML = isSVG ? '\u5987' : '&#5987';
-      star.innerHTML = isSVG ? '\u2606' : '&#9734';
+      missingGlyph.innerHTML = isSVG ? '\u5987' : '&#5987;';
+      star.innerHTML = isSVG ? '\u2606' : '&#9734;';
 
       node.appendChild(missingGlyph);
       node.appendChild(star);

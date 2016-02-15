@@ -12,21 +12,20 @@
 Detect support for the bdi element, a way to have text that is isolated from its possibly bidirectional surroundings
 */
 var Modernizr = require('./../../lib/Modernizr.js');
-var addTest = require('./../../lib/addTest.js');
 var createElement = require('./../../lib/createElement.js');
 var docElement = require('./../../lib/docElement.js');
   Modernizr.addTest('bdi', function() {
     var div = createElement('div');
     var bdi = createElement('bdi');
 
-    bdi.innerHTML = '&#1573';
+    bdi.innerHTML = '&#1573;';
     div.appendChild(bdi);
 
     docElement.appendChild(div);
 
     var supports = ((window.getComputedStyle ?
           getComputedStyle(bdi, null) :
-          bdi.currentStyle)['direction'] === 'rtl');
+          bdi.currentStyle).direction === 'rtl');
 
     docElement.removeChild(div);
 

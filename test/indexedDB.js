@@ -17,7 +17,12 @@ var prefixed = require('./../lib/prefixed.js');
   // - Firefox shipped moz_indexedDB before FF4b9, but since then has been mozIndexedDB
   // For speed, we don't test the legacy (and beta-only) indexedDB
 
-  var indexeddb = prefixed('indexedDB', window);
+  var indexeddb;
+  try {
+    indexeddb = prefixed('indexedDB', window);
+  } catch (e) {
+  }
+
   Modernizr.addTest('indexeddb', !!indexeddb);
 
   if (!!indexeddb) {

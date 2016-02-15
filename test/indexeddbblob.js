@@ -17,13 +17,18 @@ var prefixed = require('./../lib/prefixed.js');
 
   Modernizr.addAsyncTest(function() {
     /* jshint -W053 */
-    var indexeddb = prefixed('indexedDB', window);
+    var indexeddb;
     var dbname = 'detect-blob-support';
     var supportsBlob = false;
     var request;
     var db;
 
-    if (!(Modernizr.indexeddb && Modernizr.indexeddb.deleteDatabase)) {
+    try {
+      indexeddb = prefixed('indexedDB', window);
+    } catch (e) {
+    }
+
+    if (!(Modernizr.indexeddb && Modernizr.indexeddb.deletedatabase)) {
       return false;
     }
 

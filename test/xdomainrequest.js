@@ -16,7 +16,7 @@
 }
 !*/
 /* DOC
-Detects support for XDomainReuqest in ie9 & ie8
+Detects support for XDomainRequest in IE9 & IE8
 */
 var Modernizr = require('./../lib/Modernizr.js');
   Modernizr.addTest('xdomainrequest', 'XDomainRequest' in window);

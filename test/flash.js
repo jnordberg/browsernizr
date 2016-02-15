@@ -18,6 +18,11 @@ var isSVG = require('./../lib/isSVG.js');
   Modernizr.addAsyncTest(function() {
     /* jshint -W053 */
 
+    var attachBody = function(body) {
+      if (!docElement.contains(body)) {
+        docElement.appendChild(body);
+      }
+    };
     var removeFakeBody = function(body) {
       // If we’re rockin’ an attached fake body, clean it up
       if (body.fake && body.parentNode) {
@@ -69,11 +74,11 @@ var isSVG = require('./../lib/isSVG.js');
 
       // Need to do this in the body (fake or otherwise) otherwise IE8 complains
       body.appendChild(embed);
-      docElement.appendChild(body);
 
       // Pan doesn't exist in the embed if its IE (its on the ActiveXObjeect)
       // so this check is for all other browsers.
       if (!('Pan' in embed) && !activex) {
+        attachBody(body);
         runTest('blocked', embed);
         removeFakeBody(body);
         return;
@@ -83,6 +88,7 @@ var isSVG = require('./../lib/isSVG.js');
         // if we used a fake body originally, we need to restart this test, since
         // we haven't been attached to the DOM, and therefore none of the blockers
         // have had time to work.
+        attachBody(body);
         if (!docElement.contains(body)) {
           body = document.body || body;
           embed = createElement('embed');
