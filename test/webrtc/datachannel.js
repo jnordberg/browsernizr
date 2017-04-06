@@ -23,9 +23,7 @@ var domPrefixes = require('./../../lib/domPrefixes.js');
       var PeerConnectionConstructor = window[domPrefixes[i] + 'RTCPeerConnection'];
 
       if (PeerConnectionConstructor) {
-        var peerConnection = new PeerConnectionConstructor({
-          'iceServers': [{'url': 'stun:0'}]
-        });
+        var peerConnection = new PeerConnectionConstructor(null);
 
         return 'createDataChannel' in peerConnection;
       }

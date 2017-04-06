@@ -16,12 +16,12 @@ var prefixed = require('./../lib/prefixed.js');
   // For speed, we don't test the legacy (and beta-only) indexedDB
 
   Modernizr.addAsyncTest(function() {
-    /* jshint -W053 */
     var indexeddb;
     var dbname = 'detect-blob-support';
     var supportsBlob = false;
-    var request;
+    var openRequest;
     var db;
+    var putRequest;
 
     try {
       indexeddb = prefixed('indexedDB', window);
@@ -36,15 +36,20 @@ var prefixed = require('./../lib/prefixed.js');
     // will throw a `SecurityError`
     try {
       indexeddb.deleteDatabase(dbname).onsuccess = function() {
-        request = indexeddb.open(dbname, 1);
-        request.onupgradeneeded = function() {
-          request.result.createObjectStore('store');
+        openRequest = indexeddb.open(dbname, 1);
+        openRequest.onupgradeneeded = function() {
+          openRequest.result.createObjectStore('store');
         };
-        request.onsuccess = function() {
-          db = request.result;
+        openRequest.onsuccess = function() {
+          db = openRequest.result;
           try {
-            db.transaction('store', 'readwrite').objectStore('store').put(new Blob(), 'key');
-            supportsBlob = true;
+            putRequest = db.transaction('store', 'readwrite').objectStore('store').put(new Blob(), 'key');
+            putRequest.onsuccess = function() {
+              supportsBlob = true;
+            };
+            putRequest.onerror = function() {
+              supportsBlob = false;
+            };
           }
           catch (e) {
             supportsBlob = false;

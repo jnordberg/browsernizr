@@ -16,6 +16,7 @@ var Modernizr = require('./../../lib/Modernizr.js');
 var createElement = require('./../../lib/createElement.js');
 var docElement = require('./../../lib/docElement.js');
 var isSVG = require('./../../lib/isSVG.js');
+var prefixed = require('./../../lib/prefixed.js');
   // We start with a CSS parser test then we check page geometry to see if it's affected by regions
   // Later we might be able to retire the second part, as WebKit builds with the false positives die out
 
@@ -29,8 +30,8 @@ var isSVG = require('./../../lib/isSVG.js');
 
     /* Get the 'flowFrom' property name available in the browser. Either default or vendor prefixed.
        If the property name can't be found we'll get Boolean 'false' and fail quickly */
-    var flowFromProperty = Modernizr.prefixed('flowFrom');
-    var flowIntoProperty = Modernizr.prefixed('flowInto');
+    var flowFromProperty = prefixed('flowFrom');
+    var flowIntoProperty = prefixed('flowInto');
     var result = false;
 
     if (!flowFromProperty || !flowIntoProperty) {

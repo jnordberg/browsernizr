@@ -13,5 +13,5 @@ Detects support for the crossOrigin attribute on images, which allow for cross d
 */
 var Modernizr = require('./../../lib/Modernizr.js');
 var createElement = require('./../../lib/createElement.js');
-    Modernizr.addTest('imgcrossorigin', 'crossOrigin' in createElement('img'));
+  Modernizr.addTest('imgcrossorigin', 'crossOrigin' in createElement('img'));
 

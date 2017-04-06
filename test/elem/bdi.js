@@ -14,6 +14,7 @@ Detect support for the bdi element, a way to have text that is isolated from its
 var Modernizr = require('./../../lib/Modernizr.js');
 var createElement = require('./../../lib/createElement.js');
 var docElement = require('./../../lib/docElement.js');
+var computedStyle = require('./../../lib/computedStyle.js');
   Modernizr.addTest('bdi', function() {
     var div = createElement('div');
     var bdi = createElement('bdi');
@@ -23,9 +24,7 @@ var docElement = require('./../../lib/docElement.js');
 
     docElement.appendChild(div);
 
-    var supports = ((window.getComputedStyle ?
-          getComputedStyle(bdi, null) :
-          bdi.currentStyle).direction === 'rtl');
+    var supports = computedStyle(bdi, null, 'direction') === 'rtl';
 
     docElement.removeChild(div);
 

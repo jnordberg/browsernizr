@@ -66,8 +66,9 @@ var addTest = require('./../../lib/addTest.js');
         var result = event && event.type === 'load' ? image.width == 1 : false;
         var baseTest = name === 'webp';
 
-        /* jshint -W053 */
-        addTest(name, baseTest ? new Boolean(result) : result);
+        // if it is the base test, and the result is false, just set a literal false
+        // rather than use the Boolean contrsuctor
+        addTest(name, (baseTest && result) ? new Boolean(result) : result);
 
         if (cb) {
           cb(event);

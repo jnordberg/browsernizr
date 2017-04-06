@@ -39,12 +39,15 @@ var getBody = require('./../../lib/getBody.js');
     root.appendChild(el);
     input.focus();
     try {
+      document.execCommand('SelectAll', false); // Overwrite current input value, rather than appending text
       document.execCommand('InsertText', false, '1,1');
     } catch (e) { // prevent warnings in IE
     }
     diff = input.type === 'number' && input.valueAsNumber === 1.1 && input.checkValidity();
     root.removeChild(el);
-    body.fake && root.parentNode.removeChild(root);
+    if (body.fake) {
+      root.parentNode.removeChild(root);
+    }
     return diff;
   });
 

@@ -25,7 +25,6 @@ var Modernizr = require('./../../lib/Modernizr.js');
 var addTest = require('./../../lib/addTest.js');
   // https://github.com/Modernizr/Modernizr/issues/14
   Modernizr.addAsyncTest(function() {
-    /* jshint -W053 */
 
     // IE7 throw a mixed content warning on HTTPS for this test, so we'll
     // just blacklist it (we know it doesn't support data URIs anyway)

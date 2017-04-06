@@ -21,6 +21,7 @@ var Modernizr = require('./../../lib/Modernizr.js');
   Modernizr.addTest('es5syntax', function() {
     var value, obj, stringAccess, getter, setter, reservedWords, zeroWidthChars;
     try {
+      /* eslint no-eval: "off" */
       // Property access on strings
       stringAccess = eval('"foobar"[3] === "b"');
       // Getter in property initializer

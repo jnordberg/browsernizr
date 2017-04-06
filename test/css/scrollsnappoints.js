@@ -17,5 +17,5 @@ Detects support for CSS Snap Points
 */
 var Modernizr = require('./../../lib/Modernizr.js');
 var testAllProps = require('./../../lib/testAllProps.js');
-    Modernizr.addTest('scrollsnappoints', testAllProps('scrollSnapType'));
+  Modernizr.addTest('scrollsnappoints', testAllProps('scrollSnapType'));
 

@@ -16,7 +16,6 @@ var addTest = require('./../lib/addTest.js');
 var getBody = require('./../lib/getBody.js');
 var isSVG = require('./../lib/isSVG.js');
   Modernizr.addAsyncTest(function() {
-    /* jshint -W053 */
 
     var attachBody = function(body) {
       if (!docElement.contains(body)) {

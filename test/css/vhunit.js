@@ -16,11 +16,10 @@
 !*/
 var Modernizr = require('./../../lib/Modernizr.js');
 var testStyles = require('./../../lib/testStyles.js');
+var computedStyle = require('./../../lib/computedStyle.js');
   testStyles('#modernizr { height: 50vh; }', function(elem) {
     var height = parseInt(window.innerHeight / 2, 10);
-    var compStyle = parseInt((window.getComputedStyle ?
-                              getComputedStyle(elem, null) :
-                              elem.currentStyle).height, 10);
+    var compStyle = parseInt(computedStyle(elem, null, 'height'), 10);
     Modernizr.addTest('cssvhunit', compStyle == height);
   });
 

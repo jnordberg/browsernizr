@@ -19,6 +19,7 @@
 var Modernizr = require('./../../lib/Modernizr.js');
 var testStyles = require('./../../lib/testStyles.js');
   testStyles('#modernizr{font:0/0 a}#modernizr:after{content:":)";visibility:hidden;font:7px/1 a}', function(node) {
-    Modernizr.addTest('generatedcontent', node.offsetHeight >= 7);
+    // See bug report on why this value is 6 crbug.com/608142
+    Modernizr.addTest('generatedcontent', node.offsetHeight >= 6);
   });
 

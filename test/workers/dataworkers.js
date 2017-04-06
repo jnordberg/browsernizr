@@ -21,7 +21,7 @@ var addTest = require('./../../lib/addTest.js');
   Modernizr.addAsyncTest(function() {
     try {
       var data    = 'Modernizr',
-      worker  = new Worker('data:text/javascript;base64,dGhpcy5vbm1lc3NhZ2U9ZnVuY3Rpb24oZSl7cG9zdE1lc3NhZ2UoZS5kYXRhKX0=');
+        worker  = new Worker('data:text/javascript;base64,dGhpcy5vbm1lc3NhZ2U9ZnVuY3Rpb24oZSl7cG9zdE1lc3NhZ2UoZS5kYXRhKX0=');
 
       worker.onmessage = function(e) {
         worker.terminate();

@@ -11,7 +11,7 @@
     }
   ],
   "warnings": ["This property name now refers to W3C DOM PointerEvents: https://github.com/Modernizr/Modernizr/issues/548#issuecomment-12812099"],
-  "polyfills": ["handjs"]
+  "polyfills": ["handjs","pep"]
 }
 !*/
 /* DOC
@@ -25,7 +25,7 @@ var hasEvent = require('./../lib/hasEvent.js');
   Modernizr.addTest('pointerevents', function() {
     // Cannot use `.prefixed()` for events, so test each prefix
     var bool = false,
-    i = domPrefixes.length;
+      i = domPrefixes.length;
 
     // Don't forget un-prefixed...
     bool = Modernizr.hasEvent('pointerdown');

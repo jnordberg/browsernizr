@@ -57,6 +57,6 @@ var hasEvent = require('./../../lib/hasEvent.js');
     } catch (e) {
       supportsOnInput = false;
     }
-      return supportsOnInput;
+    return supportsOnInput;
   });
 

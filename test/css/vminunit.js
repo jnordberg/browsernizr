@@ -18,6 +18,7 @@ var Modernizr = require('./../../lib/Modernizr.js');
 var docElement = require('./../../lib/docElement.js');
 var testStyles = require('./../../lib/testStyles.js');
 var roundedEquals = require('./../../lib/roundedEquals.js');
+var computedStyle = require('./../../lib/computedStyle.js');
   testStyles('#modernizr1{width: 50vm;width:50vmin}#modernizr2{width:50px;height:50px;overflow:scroll}#modernizr3{position:fixed;top:0;left:0;bottom:0;right:0}', function(node) {
     var elem = node.childNodes[2];
     var scroller = node.childNodes[1];
@@ -27,9 +28,7 @@ var roundedEquals = require('./../../lib/roundedEquals.js');
     var one_vw = fullSizeElem.clientWidth / 100;
     var one_vh = fullSizeElem.clientHeight / 100;
     var expectedWidth = parseInt(Math.min(one_vw, one_vh) * 50, 10);
-    var compWidth = parseInt((window.getComputedStyle ?
-                          getComputedStyle(elem, null) :
-                          elem.currentStyle).width, 10);
+    var compWidth = parseInt(computedStyle(elem, null, 'width'), 10);
 
     Modernizr.addTest('cssvminunit', roundedEquals(expectedWidth, compWidth) || roundedEquals(expectedWidth, compWidth - scrollbarWidth));
   }, 3);

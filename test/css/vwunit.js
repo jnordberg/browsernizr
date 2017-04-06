@@ -16,11 +16,10 @@
 !*/
 var Modernizr = require('./../../lib/Modernizr.js');
 var testStyles = require('./../../lib/testStyles.js');
+var computedStyle = require('./../../lib/computedStyle.js');
   testStyles('#modernizr { width: 50vw; }', function(elem) {
     var width = parseInt(window.innerWidth / 2, 10);
-    var compStyle = parseInt((window.getComputedStyle ?
-                              getComputedStyle(elem, null) :
-                              elem.currentStyle).width, 10);
+    var compStyle = parseInt(computedStyle(elem, null, 'width'), 10);
 
     Modernizr.addTest('cssvwunit', compStyle == width);
   });
