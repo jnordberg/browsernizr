@@ -1,6 +1,6 @@
 # Browsernizr
 
-Modernizer wrapper for use with browserify (or some other node-style browser module loading system).
+Modernizr wrapper for use with browserify (or some other node-style browser module loading system).
 
 ## Usage
 
