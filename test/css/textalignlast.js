@@ -5,12 +5,12 @@
   "tags": ["css"],
   "knownBugs": ["IE does not support the 'start' or 'end' values."],
   "notes": [{
-      "name": "Quicksmode",
-      "href": "http://www.quirksmode.org/css/text/textalignlast.html"
+      "name": "Quirksmode",
+      "href": "https://www.quirksmode.org/css/text/textalignlast.html"
     },{
-      "name": "MDN",
+      "name": "MDN Docs",
       "href": "https://developer.mozilla.org/en-US/docs/Web/CSS/text-align-last"
-    }]
+  }]
 }
 !*/
 var Modernizr = require('./../../lib/Modernizr.js');

@@ -27,7 +27,7 @@ var addTest = require('./../../lib/addTest.js');
     };
 
     image.onload = function() {
-      addTest('webplossless', image.width == 1, {aliases: ['webp-lossless']});
+      addTest('webplossless', image.width === 1, {aliases: ['webp-lossless']});
     };
 
     image.src = 'data:image/webp;base64,UklGRh4AAABXRUJQVlA4TBEAAAAvAAAAAAfQ//73v/+BiOh/AAA=';

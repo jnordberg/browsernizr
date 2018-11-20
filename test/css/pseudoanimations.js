@@ -6,6 +6,8 @@
 }
 !*/
 var Modernizr = require('./../../lib/Modernizr.js');
+var testStyles = require('./../../lib/testStyles.js');
+var prefixes = require('./../../lib/prefixes.js');
   Modernizr.addTest('csspseudoanimations', function() {
     var result = false;
 
@@ -14,13 +16,13 @@ var Modernizr = require('./../../lib/Modernizr.js');
     }
 
     var styles = [
-      '@', Modernizr._prefixes.join('keyframes csspseudoanimations { from { font-size: 10px; } }@').replace(/\@$/, ''),
+      '@', prefixes.join('keyframes csspseudoanimations { from { font-size: 10px; } }@').replace(/\@$/, ''),
       '#modernizr:before { content:" "; font-size:5px;',
-      Modernizr._prefixes.join('animation:csspseudoanimations 1ms infinite;'),
+      prefixes.join('animation:csspseudoanimations 1ms infinite;'),
       '}'
     ].join('');
 
-    Modernizr.testStyles(styles, function(elem) {
+    testStyles(styles, function(elem) {
       result = window.getComputedStyle(elem, ':before').getPropertyValue('font-size') === '10px';
     });
 

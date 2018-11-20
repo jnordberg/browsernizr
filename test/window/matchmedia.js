@@ -2,14 +2,14 @@
 {
   "name": "matchMedia",
   "property": "matchmedia",
-  "caniuse" : "matchmedia",
+  "caniuse": "matchmedia",
   "tags": ["matchmedia"],
   "authors": ["Alberto Elias"],
   "notes": [{
-    "name": "W3C CSSOM View Module",
+    "name": "W3C Spec",
     "href": "https://drafts.csswg.org/cssom-view/#the-mediaquerylist-interface"
   }, {
-    "name": "MDN documentation",
+    "name": "MDN Docs",
     "href": "https://developer.mozilla.org/en-US/docs/Web/API/Window.matchMedia"
   }],
   "polyfills": ["matchmediajs"]

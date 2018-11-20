@@ -4,9 +4,7 @@
   "property": "video",
   "caniuse": "video",
   "tags": ["html5"],
-  "knownBugs": [
-    "Without QuickTime, `Modernizr.video.h264` will be `undefined`; https://github.com/Modernizr/Modernizr/issues/546"
-  ],
+  "knownBugs": ["Without QuickTime, `Modernizr.video.h264` will be `undefined`; https://github.com/Modernizr/Modernizr/issues/546"],
   "polyfills": [
     "html5media",
     "mediaelementjs",
@@ -42,7 +40,7 @@ var createElement = require('./../lib/createElement.js');
 
     // IE9 Running on Windows Server SKU can cause an exception to be thrown, bug #224
     try {
-      bool = !!elem.canPlayType
+      bool = !!elem.canPlayType;
       if (bool) {
         bool = new Boolean(bool);
         bool.ogg = elem.canPlayType('video/ogg; codecs="theora"').replace(/^no$/, '');

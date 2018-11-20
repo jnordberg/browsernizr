@@ -6,11 +6,11 @@
   "tags": ["image"],
   "authors": ["Mat Marquis"],
   "notes": [{
-    "name": "Spec",
-    "href": "http://picture.responsiveimages.org/#parse-sizes-attr"
+    "name": "WHATWG Spec",
+    "href": "https://html.spec.whatwg.org/multipage/embedded-content.html#the-img-element"
     },{
-    "name": "Usage Details",
-    "href": "http://ericportis.com/posts/2014/srcset-sizes/"
+    "name": "Srcset and sizes",
+    "href": "https://ericportis.com/posts/2014/srcset-sizes/"
     }]
 }
 !*/
@@ -32,7 +32,7 @@ var addTest = require('./../../lib/addTest.js');
       width1 = 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==';
 
       test = function() {
-        addTest('sizes', image.width == 2);
+        addTest('sizes', image.width === 2);
       };
 
       image.onload = test;

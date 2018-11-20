@@ -3,8 +3,8 @@
   "name": "RTC Data Channel",
   "property": "datachannel",
   "notes": [{
-    "name": "HTML5 Rocks! Article",
-    "href": "http://www.html5rocks.com/en/tutorials/webrtc/datachannels/"
+    "name": "HTML5 Rocks Tutorial",
+    "href": "https://www.html5rocks.com/en/tutorials/webrtc/datachannels/"
   }]
 }
 !*/
@@ -14,7 +14,6 @@ Detect for the RTCDataChannel API that allows for transfer data directly from on
 var Modernizr = require('./../../lib/Modernizr.js');
 var prefixed = require('./../../lib/prefixed.js');
 var domPrefixes = require('./../../lib/domPrefixes.js');
-
   Modernizr.addTest('datachannel', function() {
     if (!Modernizr.peerconnection) {
       return false;

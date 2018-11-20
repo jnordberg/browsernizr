@@ -39,6 +39,5 @@ var isSVG = require('./../lib/isSVG.js');
     });
 
     return bool;
-
   });
 

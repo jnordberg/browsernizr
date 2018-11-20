@@ -16,7 +16,7 @@ var testAllProps = require('./../../lib/testAllProps.js');
       var bool = false;
       var test = testAllProps('columnCount');
       try {
-        bool = !!test
+        bool = !!test;
         if (bool) {
           bool = new Boolean(bool);
         }
@@ -33,14 +33,11 @@ var testAllProps = require('./../../lib/testAllProps.js');
       test = testAllProps('column' + props[i]);
 
       // break-before, break-after & break-inside are not "column"-prefixed in spec
-      if (name === 'breakbefore' || name === 'breakafter' || name == 'breakinside') {
+      if (name === 'breakbefore' || name === 'breakafter' || name === 'breakinside') {
         test = test || testAllProps(props[i]);
       }
 
       Modernizr.addTest('csscolumns.' + name, test);
     }
-
-
   })();
-
 

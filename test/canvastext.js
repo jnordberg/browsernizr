@@ -16,6 +16,6 @@ var createElement = require('./../lib/createElement.js');
     if (Modernizr.canvas  === false) {
       return false;
     }
-    return typeof createElement('canvas').getContext('2d').fillText == 'function';
+    return typeof createElement('canvas').getContext('2d').fillText === 'function';
   });
 

@@ -2,16 +2,15 @@
 {
   "name": "canvas blending support",
   "property": "canvasblending",
+  "caniuse": "canvas-blending",
   "tags": ["canvas"],
-  "async" : false,
   "notes": [{
-      "name": "HTML5 Spec",
-      "href": "https://dvcs.w3.org/hg/FXTF/rawfile/tip/compositing/index.html#blending"
-    },
-    {
+      "name": "W3C Spec",
+      "href": "https://drafts.fxtf.org/compositing-1/"
+    },{
       "name": "Article",
-      "href": "https://blogs.adobe.com/webplatform/2013/01/28/blending-features-in-canvas"
-    }]
+      "href": "https://web.archive.org/web/20171003232921/http://blogs.adobe.com/webplatform/2013/01/28/blending-features-in-canvas/"
+  }]
 }
 !*/
 /* DOC
@@ -19,7 +18,6 @@ Detects if Photoshop style blending modes are available in canvas.
 */
 var Modernizr = require('./../../lib/Modernizr.js');
 var createElement = require('./../../lib/createElement.js');
-
   Modernizr.addTest('canvasblending', function() {
     if (Modernizr.canvas === false) {
       return false;
@@ -32,5 +30,4 @@ var createElement = require('./../../lib/createElement.js');
 
     return ctx.globalCompositeOperation === 'screen';
   });
-
 

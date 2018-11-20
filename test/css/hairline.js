@@ -1,5 +1,5 @@
 /*! {
-  "name": "hairline",
+  "name": "CSS Hairline",
   "property": "hairline",
   "tags": ["css"],
   "authors": ["strarsis"],
@@ -15,7 +15,6 @@
 /* DOC
 Detects support for hidpi/retina hairlines, which are CSS borders with less than 1px in width, for being physically 1px on hidpi screens.
 */
-
 var Modernizr = require('./../../lib/Modernizr.js');
 var testStyles = require('./../../lib/testStyles.js');
   Modernizr.addTest('hairline', function() {

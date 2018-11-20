@@ -7,7 +7,7 @@
   "tags": ["css"],
   "builderAliases": ["css_regions"],
   "notes": [{
-    "name": "W3C Specification",
+    "name": "W3C Spec",
     "href": "https://www.w3.org/TR/css3-regions/"
   }]
 }
@@ -66,14 +66,13 @@ var prefixed = require('./../../lib/prefixed.js');
     var flowedRect, delta;
     var plainRect = content.getBoundingClientRect();
 
-
     content.style[flowIntoProperty] = flowName;
     flowedRect = content.getBoundingClientRect();
 
     delta = parseInt(flowedRect.left - plainRect.left, 10);
     docElement.removeChild(container);
 
-    if (delta == 42) {
+    if (delta === 42) {
       result = true;
     } else {
       /* IE only allows for the content to come from iframes. This has the

@@ -4,18 +4,22 @@
   "property": "pointerevents",
   "tags": ["input"],
   "authors": ["Stu Cox"],
-  "notes": [
-    {
-      "name": "W3C spec",
+  "notes": [{
+      "name": "W3C Spec (Pointer Events)",
       "href": "https://www.w3.org/TR/pointerevents/"
-    }
-  ],
+    },{
+      "name": "W3C Spec (Pointer Events Level 2)",
+      "href": "https://www.w3.org/TR/pointerevents2/"
+    },{
+      "name": "MDN Docs",
+      "href": "https://developer.mozilla.org/en-US/docs/Web/API/PointerEvent"
+  }],
   "warnings": ["This property name now refers to W3C DOM PointerEvents: https://github.com/Modernizr/Modernizr/issues/548#issuecomment-12812099"],
-  "polyfills": ["handjs","pep"]
+  "polyfills": ["pep"]
 }
 !*/
 /* DOC
-Detects support for the DOM Pointer Events API, which provides a unified event interface for pointing input devices, as implemented in IE10+.
+Detects support for the DOM Pointer Events API, which provides a unified event interface for pointing input devices, as implemented in IE10+, Edge and Blink.
 */
 var Modernizr = require('./../lib/Modernizr.js');
 var domPrefixes = require('./../lib/domPrefixes.js');

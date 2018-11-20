@@ -30,9 +30,8 @@ var testStyles = require('./../../lib/testStyles.js');
       el.innerHTML = '<summary>a</summary>b';
       diff = el.offsetHeight;
       el.open = true;
-      diff = diff != el.offsetHeight;
+      diff = diff !== el.offsetHeight;
     });
-
 
     return diff;
   });

@@ -2,20 +2,18 @@
 {
   "name": "getRandomValues",
   "property": "getrandomvalues",
-  "caniuse": "window.crypto.getRandomValues",
+  "caniuse": "getrandomvalues",
   "tags": ["crypto"],
   "authors": ["komachi"],
   "notes": [{
-    "name": "W3C Editor’s Draft",
-    "href": "https://dvcs.w3.org/hg/webcrypto-api/raw-file/tip/spec/Overview.html#RandomSource-method-getRandomValues"
+    "name": "W3C Editor’s Draft Spec",
+    "href": "https://w3c.github.io/webcrypto/#Crypto-interface-methods"
   }],
-  "polyfills": [
-    "polycrypt"
-  ]
+  "polyfills": ["polycrypt"]
 }
 !*/
 /* DOC
-Detects support for the window.crypto.getRandomValues for generate cryptographically secure random numbers
+Detects support for the window.crypto.getRandomValues method for generating cryptographically secure random numbers
 */
 var Modernizr = require('./../../lib/Modernizr.js');
 var prefixed = require('./../../lib/prefixed.js');

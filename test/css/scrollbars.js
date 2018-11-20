@@ -15,6 +15,6 @@ var prefixes = require('./../../lib/prefixes.js');
     .slice(1)
     .join('#') + 'scrollbar{width:10px}',
   function(node) {
-    Modernizr.addTest('cssscrollbar', 'scrollWidth' in node && node.scrollWidth == 30);
+    Modernizr.addTest('cssscrollbar', 'scrollWidth' in node && node.scrollWidth === 30);
   });
 

@@ -3,7 +3,7 @@
   "name": "Audio Preload",
   "property": "audiopreload",
   "tags": ["audio", "media"],
-  "async" : true,
+  "async": true,
   "warnings": ["This test is very large – only include it if you absolutely need it"]
 }
 !*/
@@ -26,7 +26,11 @@ var createElement = require('./../../lib/createElement.js');
       var result = event !== undefined && event.type === 'loadeddata' ? true : false; //need to check if event is not undefined here in case function is evoked from timeout (no parameters)
       elem.removeEventListener('loadeddata', testpreload, false);
       addTest('audiopreload', result);
-      elem.parentNode.removeChild(elem);
+      // Cleanup, but don't assume elem is still in the page -
+      // an extension (eg Flashblock) may already have removed it.
+      if (elem.parentNode) {
+        elem.parentNode.removeChild(elem);
+      }
     }
 
     //skip the test if audio itself, or the preload
@@ -42,7 +46,7 @@ var createElement = require('./../../lib/createElement.js');
 
     try {
       if (Modernizr.audio.mp3) {
-        //75ms of silence (minumum Mp3 duration loaded by Safari, not tested other formats thoroughly: may be possible to shrink base64 URI)
+        //75ms of silence (minimum Mp3 duration loaded by Safari, not tested other formats thoroughly: may be possible to shrink base64 URI)
         elem.src = 'data:audio/mpeg;base64,//MUxAAB6AXgAAAAAPP+c6nf//yi/6f3//MUxAMAAAIAAAjEcH//0fTX6C9Lf//0//MUxA4BeAIAAAAAAKX2/6zv//+IlR4f//MUxBMCMAH8AAAAABYWalVMQU1FMy45//MUxBUB0AH0AAAAADkuM1VVVVVVVVVV//MUxBgBUATowAAAAFVVVVVVVVVVVVVV';
       }
       else if (Modernizr.audio.m4a) {

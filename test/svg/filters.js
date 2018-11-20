@@ -18,7 +18,7 @@ var Modernizr = require('./../../lib/Modernizr.js');
     var result = false;
     try {
       result = 'SVGFEColorMatrixElement' in window &&
-        SVGFEColorMatrixElement.SVG_FECOLORMATRIX_TYPE_SATURATE == 2;
+        SVGFEColorMatrixElement.SVG_FECOLORMATRIX_TYPE_SATURATE === 2;
     }
     catch (e) {}
     return result;

@@ -15,7 +15,7 @@ var Modernizr = require('./../../lib/Modernizr.js');
 var createElement = require('./../../lib/createElement.js');
   Modernizr.addTest('createelementattrs', function() {
     try {
-      return createElement('<input name="test" />').getAttribute('name') == 'test';
+      return createElement('<input name="test" />').getAttribute('name') === 'test';
     } catch (e) {
       return false;
     }
